@@ -896,7 +896,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FullBannerHome.cshtml" />
+    <Content Include="Views\Shared\Home\_FullBannerHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\fonts\star.eot">
@@ -1014,31 +1014,31 @@
     <Content Include="vendor\simple-line-icons\scss\simple-line-icons.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_LeadBoxHome.cshtml" />
+    <Content Include="Views\Shared\Home\_LeadBoxHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ProductsHome.cshtml" />
+    <Content Include="Views\Shared\Home\_ProductsHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_CounterHome.cshtml" />
+    <Content Include="Views\Shared\Home\_CounterHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ProductsOnOffHome.cshtml" />
+    <Content Include="Views\Shared\Home\_ProductsOnOffHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_PostsHome.cshtml" />
+    <Content Include="Views\Shared\Home\_PostsHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TestimonialHome.cshtml" />
+    <Content Include="Views\Shared\Home\_TestimonialHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_EffectBoxHome.cshtml" />
+    <Content Include="Views\Shared\Home\_EffectBoxHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ClientsCarouselHome.cshtml" />
+    <Content Include="Views\Shared\Home\_ClientsCarouselHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_CallToActionHome.cshtml" />
+    <Content Include="Views\Shared\Home\_CallToActionHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Contact\Location.cshtml" />
@@ -1047,103 +1047,103 @@
     <Content Include="Views\Contact\Propose.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarPropose.cshtml" />
+    <Content Include="Views\Shared\Contact\Propose\_TitleBarPropose.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FormPropose.cshtml" />
+    <Content Include="Views\Shared\Contact\Propose\_FormPropose.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuPropose.cshtml" />
+    <Content Include="Views\Shared\Contact\Propose\_SideMenuPropose.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Services\QualifiedMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarMailing.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_TitleBarMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingMailing.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_HeadingMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FirstBoxMailing.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_FirstBoxMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SecondBoxMailing.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_SecondBoxMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ThirdBoxMailing.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_ThirdBoxMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonMailing.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_ButtonMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuMailing.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_SideMenuMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarLocation.cshtml" />
+    <Content Include="Views\Shared\Contact\Location\_TitleBarLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_MapLocation.cshtml" />
+    <Content Include="Views\Shared\Contact\Location\_MapLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_AddressLocation.cshtml" />
+    <Content Include="Views\Shared\Contact\Location\_AddressLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_BusinessHoursLocation.cshtml" />
+    <Content Include="Views\Shared\Contact\Location\_BusinessHoursLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Blog\BlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarBlogList.cshtml" />
+    <Content Include="Views\Shared\Blog\List\_TitleBarBlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_PostsBlogList.cshtml" />
+    <Content Include="Views\Shared\Blog\List\_PostsBlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_PaginationBlogList.cshtml" />
+    <Content Include="Views\Shared\Blog\List\_PaginationBlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SearchBlogList.cshtml" />
+    <Content Include="Views\Shared\Blog\List\_SearchBlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_CategoriesBlogList.cshtml" />
+    <Content Include="Views\Shared\Blog\List\_CategoriesBlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_PopularRecentTabsBlogList.cshtml" />
+    <Content Include="Views\Shared\Blog\List\_PopularRecentTabsBlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FacebookPluginBlogList.cshtml" />
+    <Content Include="Views\Shared\Blog\List\_FacebookPluginBlogList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Blog\BlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_TitleBarBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_BannerBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_BannerBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ContentBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_ContentBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_DateBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_DateBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ShareLinksBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_ShareLinksBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_AuthorBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_AuthorBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_CommentsBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_CommentsBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SearchBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_SearchBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_CategoriesBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_CategoriesBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Services\DataEnrichment.cshtml" />
@@ -1164,205 +1164,202 @@
     <Content Include="Views\Services\ProspectingSolutions.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_TitleBarDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_HeadingDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FirstBoxDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_FirstBoxDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SecondBoxDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_SecondBoxDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ThirdBoxDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_ThirdBoxDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_ButtonDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_SideMenuDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_TitleBarDataTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_HeadingDataTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FirstBoxDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_FirstBoxDataTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SecondBoxDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_SecondBoxDataTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ThirdBoxDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_ThirdBoxDataTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_ButtonDataTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_SideMenuDataTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_TitleBarAssigningDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_HeadingAssigningDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FirstBoxAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_FirstBoxAssigningDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SecondBoxAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_SecondBoxAssigningDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ThirdBoxAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_ThirdBoxAssigningDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_ButtonAssigningDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_SideMenuAssigningDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_TitleBarMailMarketing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_HeadingMailMarketing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FirstBoxMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_FirstBoxMailMarketing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SecondBoxMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_SecondBoxMailMarketing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ThirdBoxMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_ThirdBoxMailMarketing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_ButtonMailMarketing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_SideMenuMailMarketing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarSms.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_TitleBarSms.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingSms.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_HeadingSms.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FirstBoxSms.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_FirstBoxSms.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SecondBoxSms.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_SecondBoxSms.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ThirdBoxSms.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_ThirdBoxSms.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonSms.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_ButtonSms.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuSms.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_SideMenuSms.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarProspecting.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_TitleBarProspecting.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingProspecting.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_HeadingProspecting.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_IntroProspecting.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_IntroProspecting.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FirstBoxProspecting.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_FirstBoxProspecting.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SecondBoxProspecting.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_SecondBoxProspecting.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonProspecting.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_ButtonProspecting.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuProspecting.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_SideMenuProspecting.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_PopularRecentTabsBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_PopularRecentTabsBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_FacebookPluginBlogPost.cshtml" />
+    <Content Include="Views\Shared\Blog\Post\_FacebookPluginBlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\About\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarAboutUs.cshtml" />
+    <Content Include="Views\Shared\About\_TitleBarAboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_DescriptionAboutUs.cshtml" />
+    <Content Include="Views\Shared\About\_DescriptionAboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ImageAboutUs.cshtml" />
+    <Content Include="Views\Shared\About\_ImageAboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarMVV.cshtml" />
+    <Content Include="Views\Shared\About\_MVVAboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_MVVAboutUs.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_OnlineServiceDataEnrichment.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_OnlineServiceDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_OnlineServiceQualifiedMailing.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_OnlineServiceQualifiedMailing.cshtml" />
+    <Content Include="Views\Shared\About\_OurHistoryAboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_OurHistoryAboutUs.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\_CallToActionAboutUs.cshtml" />
+    <Content Include="Views\Shared\About\_CallToActionAboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Services\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarSearch.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_TitleBarSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingSearch.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_HeadingSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_IntroSearch.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_IntroSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_BoxSearch.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_BoxSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ButtonSearch.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_ButtonSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_SideMenuSearch.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_SideMenuSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_OnlineServiceSearch.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_OnlineServiceSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Services\AllServices.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_TitleBarAllServices.cshtml" />
+    <Content Include="Views\Shared\Services\AllServices\_TitleBarAllServices.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_HeadingAllServices.cshtml" />
+    <Content Include="Views\Shared\Services\AllServices\_HeadingAllServices.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_ServicesAllServices.cshtml" />
+    <Content Include="Views\Shared\Services\AllServices\_ServicesAllServices.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_CallToActionServices.cshtml" />
+    <Content Include="Views\Shared\Services\AllServices\_CallToActionServices.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_NewsletterFooter.cshtml" />
@@ -1430,26 +1427,14 @@
     <Content Include="HoverEffectIdeas\__MACOSX\HoverEffectIdeas\fonts\font-awesome-4.2.0\fonts\._fontawesome-webfont.woff" />
     <Content Include="HoverEffectIdeas\__MACOSX\HoverEffectIdeas\img\._.DS_Store" />
     <None Include="Properties\PublishProfiles\ServidorTeste.pubxml" />
-    <Content Include="Views\Shared\_ButtonMailingProducts.cshtml" />
-    <Content Include="Views\Shared\_FirstBoxMailingProducts.cshtml" />
-    <Content Include="Views\Shared\_FormContract.cshtml" />
-    <Content Include="Views\Shared\_GalleryAboutUs.cshtml" />
-    <Content Include="Views\Shared\_HeadingMailingProducts.cshtml" />
-    <Content Include="Views\Shared\_MissionMVV.cshtml" />
-    <Content Include="Views\Shared\_SecondBoxMailingProducts.cshtml" />
-    <Content Include="Views\Shared\_SideMenuContract.cshtml" />
-    <Content Include="Views\Shared\_ThirdBoxMailingProducts.cshtml" />
-    <Content Include="Views\Shared\_TitleBarContract.cshtml" />
-    <Content Include="Views\Shared\_TitleBarMailingProducts.cshtml" />
-    <Content Include="Views\Shared\_ValuesMVV.cshtml" />
-    <Content Include="Views\Shared\_VisionMVV.cshtml" />
+    <Content Include="Views\Shared\About\_GalleryAboutUs.cshtml" />
     <Content Include="Views\Newsletter\_NewsletterSubscriptionConfirmed.cshtml" />
     <Content Include="Views\Newsletter\_NewsletterSubscriptionNotOptIn.cshtml" />
     <Content Include="vendor\jquery\jquery-ui-1.11.4.custom.zip" />
     <Content Include="Views\Shared\_LayoutLogged.cshtml" />
     <Content Include="Views\Login\Logged.cshtml" />
-    <Content Include="Views\Shared\_HeadingLogged.cshtml" />
-    <Content Include="Views\Shared\_TitleBarLogged.cshtml" />
+    <Content Include="Views\Shared\Login\Logged\_HeadingLogged.cshtml" />
+    <Content Include="Views\Shared\Login\Logged\_TitleBarLogged.cshtml" />
     <Content Include="Views\Login\CpfPf.cshtml" />
     <Content Include="Views\Login\AddressPf.cshtml" />
     <Content Include="Views\Login\NamePf.cshtml" />
