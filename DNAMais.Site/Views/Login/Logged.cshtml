@@ -78,14 +78,15 @@
                     <h2><i class="fa fa-search-plus"></i> Pessoa <span>Física</span></h2>
                     <p>
                         Pesquisa: 
-                        <button class="btn btn-pf">CPF</button>
-                        <button class="btn btn-pf">Endereço</button>
-                        <button class="btn btn-pf">Nome</button>
-                        <button class="btn btn-pf">Telefone</button>
+                        <button class="btn btn-pf" id="btnCpf">CPF</button>
+                        <button class="btn btn-pf" id="btnAddr">Endereço</button>
+                        <button class="btn btn-pf" id="btnName">Nome</button>
+                        <button class="btn btn-pf" id="btnTel">Telefone</button>
                     </p>
                 </figcaption>
             </figure>
-            <figure class="effect-marley">
+
+            <figure class="effect-marley" id="divPj">
                 <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t2.png" alt="img11" />
                 <figcaption>
                     <h2><i class="fa fa-briefcase"></i> Pessoa <span>Jurídica</span></h2>
@@ -97,7 +98,7 @@
                     </p>
                 </figcaption>
             </figure>
-            <figure class="effect-dexter">
+            <figure class="effect-dexter" id="divVehicle">
                 <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t3.png" alt="img19" />
                 <figcaption>
                     <h2><i class="fa fa-car"></i> Veículos</h2>
@@ -109,7 +110,7 @@
                     </p>
                 </figcaption>
             </figure>
-            <figure class="effect-apollo">
+            <figure class="effect-apollo" id="divFtp">
                 <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t4.png" alt="img18" />
                 <figcaption>
                     <h2><i class="fa fa-exchange"></i> Arquivos <span>FTP</span></h2>
@@ -121,6 +122,58 @@
                     </p>
                 </figcaption>
             </figure>
+            
         </div>
+
+        <div class="col-md-6" hidden="hidden" id="pfCpf">
+            <label>CPF</label>
+            <input type="text" class="form-control" id="txtCpf" />
+            <input type="button" value="Pesquisar" class="btn btn-default" />
+        </div>
+
+        <div class="col-md-6" hidden="hidden" id="pfAddr">
+            <label>Endereço</label>
+            <input type="text" class="form-control" id="txtAddr" />
+            <input type="button" value="Pesquisar" class="btn btn-default" />
+        </div>
+        
+        <div class="col-md-12">
+            <input type="button" id="btnBack" value="Voltar" class="btn btn-primary" hidden="hidden"  />
+        </div>
+
     </div>
 </div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#btnCpf, #btnName, #btnTel').on('click', function () {
+
+            $('#divPj').fadeOut(500);
+            $('#divVehicle').fadeOut(500);
+            $('#divFtp').fadeOut(500);
+            $('#pfCpf').delay(600).fadeIn(500);
+            $('#pfCpf').focus();
+            $('#btnBack').fadeIn(800);
+
+        });
+
+        $('#btnAddr').on('click', function () {
+            $('#pfCpf').fadeOut(500);
+            $('#pfAddr').delay(500).fadeIn(500);
+        });
+
+        $('#btnBack').on('click', function () {
+
+            $('#divPj').fadeIn(1000);
+            $('#divVehicle').fadeIn(1000);
+            $('#divFtp').fadeIn(1000);
+            $('#pfCpf').fadeOut(800);
+            $('#btnBack').fadeOut(800);
+
+        });
+
+    });
+
+</script>
