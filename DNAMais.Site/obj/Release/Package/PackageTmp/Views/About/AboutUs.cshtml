@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "DNA+ | Sobre";
+}
+
+@Html.Partial("_TitleBarAboutUs")
+
+<div class="container">
+    @Html.Partial("_DescriptionAboutUs")
+    @Html.Partial("_ImageAboutUs")
+    @Html.Partial("_OurHistoryAboutUs")
+    @Html.Partial("_MVVAboutUs")
+</div>
+@Html.Partial("_CallToActionAboutUs")
+
+<script>
+
+    $(document).ready(function () {
+        $("#aboutMenu").addClass("active");
+    });
+
+</script>

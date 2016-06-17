@@ -1,0 +1,16 @@
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Domain.Services.dll.config
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Domain.Services.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Domain.Services.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Domain.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Framework.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Infrastructure.Data.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\EntityFramework.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\EntityFramework.SqlServer.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Domain.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Framework.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\DNAMais.Infrastructure.Data.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\EntityFramework.xml
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\bin\Release\EntityFramework.SqlServer.xml
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\obj\Release\DNAMais.Domain.Services.csprojResolveAssemblyReference.cache
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\obj\Release\DNAMais.Domain.Services.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain.Services\obj\Release\DNAMais.Domain.Services.pdb

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "DNA+ | Atribuição Documentos";
+}
+
+@Html.Partial("_TitleBarAssigningDocs")
+
+<div class="container">
+    @Html.Partial("_HeadingAssigningDocs")
+    <div class="row">
+        <div class="col-md-9">
+            @Html.Partial("_FirstBoxAssigningDocs")
+            @Html.Partial("_SecondBoxAssigningDocs")
+            @Html.Partial("_ThirdBoxAssigningDocs")
+            @Html.Partial("_ButtonAssigningDocs")
+        </div>
+        @Html.Partial("_SideMenuAssigningDocs")
+    </div>
+</div>
+
+<hr />
+
+<script>
+
+    $(document).ready(function () {
+        $("#servicesMenu").addClass("active");
+    });
+
+</script>

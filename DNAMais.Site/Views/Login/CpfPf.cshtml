@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "CpfPf";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+<section class="page-header page-header-color page-header-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Área <strong>Restrita</strong></h1>
+                <hr class="short visible-xs visible-sm" />
+                <ul class="breadcrumb breadcrumb-valign-mid">
+                    <li><a href="~/Home">Home</a></li>
+                    <li class="active">Logged</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="heading heading-secondary heading-border heading-bottom-border">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Consulta PF - <strong>CPF</strong></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="contenttxt bodytxt">
+            <span class="input input--chisato">
+                <input class="input__field input__field--chisato" type="text" id="txtCpf" onkeyup="CpfMask(this)" />
+                <label class="input__label input__label--chisato" for="input-13">
+                    <span class="input__label-content input__label-content--chisato" data-content="CPF">CPF</span>
+                </label>
+            </span>
+        </section>
+        <div class="left">
+            <button class="btn btn-lg btn-cpf"><i class="fa fa-search-plus"></i>Pesquisar</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#txtCpf').focus();
+    });
+
+    function CpfMask(e) {
+
+        var cpf = e.value;
+
+        if (event.keyCode == 8) {
+            return;
+        }
+
+        if (cpf.length == 3 || cpf.length == 7) {
+            e.value += ".";
+            return cpf;
+        }
+
+        if (cpf.length == 11) {
+            e.value += "-";
+        }
+
+    }
+
+</script>

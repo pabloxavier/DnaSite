@@ -1,0 +1,10 @@
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\DNAMais.Framework.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\DNAMais.Framework.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\Antlr3.Runtime.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\Newtonsoft.Json.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\WebGrease.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\Antlr3.Runtime.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\Newtonsoft.Json.xml
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\obj\Release\DNAMais.Framework.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\obj\Release\DNAMais.Framework.pdb

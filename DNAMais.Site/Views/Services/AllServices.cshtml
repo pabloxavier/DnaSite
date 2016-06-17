@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "DNA+ | Serviços";
+}
+
+@Html.Partial("_TitleBarAllServices")
+
+<div class="container">
+    @Html.Partial("_HeadingAllServices")
+    <div class="row">
+        @Html.Partial("_ServicesAllServices")
+    </div>
+</div>
+@Html.Partial("_CallToActionServices")
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#servicesMenu").addClass("active");
+    });
+
+</script>

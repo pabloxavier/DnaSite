@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "DNA+ | Solicite uma Proposta";
+}
+
+@Html.Partial("_TitleBarPropose")
+
+<div class="container">
+    <div class="row">
+        @Html.Partial("_FormPropose")
+        @Html.Partial("_SideMenuPropose")
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $("#contactMenu").addClass("active");
+        $("#txtName").focus();
+    });
+
+    if (document.referrer.indexOf(window.location.hostname) != -1) {
+        var referrer = document.referrer;
+    }
+
+    var split = referrer.split("/")
+
+    if (split[4] == "sms") {
+        $("#subject").val("SMS").attr("disabled","disabled");
+    }
+    else if (split[4] == "enriquecimento-de-dados") {
+        $("#subject").val("Enriquecimento de Dados").attr("disabled", "disabled");
+    }
+    else if (split[4] == "tratamento-e-higienizacao-de-dados") {
+        $("#subject").val("Tratamento e Higienização de Dados").attr("disabled", "disabled");
+    }
+    else if (split[4] == "atribuicao-de-documentos") {
+        $("#subject").val("Atribuição de Documentos").attr("disabled", "disabled");
+    }
+    else if (split[4] == "mailing-qualificado") {
+        $("#subject").val("Mailing Qualificado").attr("disabled", "disabled");
+    }
+    else if (split[4] == "email-marketing") {
+        $("#subject").val("E-mail Marketing").attr("disabled", "disabled");
+    }
+    else if (split[4] == "pesquisa-cpf-cnpj") {
+        $("#subject").val("Pesquisa de CPF e/ou CNPJ").attr("disabled", "disabled");
+    }
+    else if (split[4] == "analise-de-mercado-expansao-de-negocios") {
+        $("#subject").val("Análise de Mercado e/ou Expansão de Negócios").attr("disabled", "disabled");
+    }
+
+</script>

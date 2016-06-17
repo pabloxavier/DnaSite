@@ -1,0 +1,10 @@
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Release\DNAMais.Domain.dll.config
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Release\DNAMais.Domain.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Release\DNAMais.Domain.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Release\EntityFramework.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Release\EntityFramework.xml
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\obj\Release\DNAMais.Domain.dll
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\obj\Release\DNAMais.Domain.pdb
+C:\ProjetoDnaMais\DNAMais\DNAMais.Domain\obj\Release\DNAMais.Domain.csprojResolveAssemblyReference.cache

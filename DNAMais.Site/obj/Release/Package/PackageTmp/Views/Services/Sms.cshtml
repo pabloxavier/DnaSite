@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "DNA+ | SMS";
+}
+
+@Html.Partial("_TitleBarSms")
+
+<div class="container">
+    @Html.Partial("_HeadingSms")
+    <div class="row">
+        <div class="col-md-9">
+            @Html.Partial("_FirstBoxSms")
+            @Html.Partial("_SecondBoxSms")
+            @Html.Partial("_ThirdBoxSms")
+            @Html.Partial("_ButtonSms")
+        </div>
+        @Html.Partial("_SideMenuSms")
+    </div>
+</div>
+
+<hr/>
+
+<script>
+
+    $(document).ready(function () {
+        $("#servicesMenu").addClass("active");
+    });
+
+</script>
