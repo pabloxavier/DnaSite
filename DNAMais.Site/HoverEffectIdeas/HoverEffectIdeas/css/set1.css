@@ -191,6 +191,44 @@ figure.effect-sadie h2 {
     color: rgba(255,255,255,0.8);
 }
 
+/********************/
+/********************/
+/********************/
+/********************/
+
+figure.effect-sadie-2 h2 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: #484c61;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+    color: rgba(255,255,255,0.8);
+}
+
+figure.effect-sadie-2 p {
+	position: absolute;
+	top: 90%;
+    bottom:-60px;
+	left: 10px;
+	width: 100%;
+    text-align:center;
+	color: #484c61;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+    color: rgba(255,255,255,0.8);
+}
+
+/********************/
+/********************/
+/********************/
+/********************/
+
 figure.effect-sadie figcaption::before,
 figure.effect-sadie p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;

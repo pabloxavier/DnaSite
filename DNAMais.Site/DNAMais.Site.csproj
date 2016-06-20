@@ -666,6 +666,7 @@
     <Content Include="img\video-overlay.png" />
     <Content Include="img\vimeo-1.jpg" />
     <Content Include="img\youtube-1.jpg" />
+    <Content Include="js\contractServices.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\demos\demo-corporate-law-office.js" />
     <Content Include="js\examples\examples.carousels.js" />

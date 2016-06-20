@@ -24,6 +24,50 @@
 	cursor: pointer;
 }
 
+.grid-pf figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: rgb(68,99,103);
+	text-align: center;
+	cursor: pointer;
+
+    transition-duration:1s;
+}
+
+/********************/
+/********************/
+/********************/
+/********************/
+
+.test-grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 1000px;
+	max-height: 180px;
+	width: 100%;
+	height: 500px;
+	background: rgb(68,99,103);
+	text-align: center;
+	cursor: pointer;
+}
+
+
+
+/********************/
+/********************/
+/********************/
+/********************/
+
 .grid figure img {
 	position: relative;
 	display: block;
