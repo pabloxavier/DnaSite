@@ -673,6 +673,7 @@
     <Content Include="js\examples\examples.gallery.js" />
     <Content Include="js\examples\examples.lightboxes.js" />
     <Content Include="js\examples\examples.portfolio.js" />
+    <Content Include="js\jqueryFunctions.js" />
     <Content Include="js\theme.init.js" />
     <Content Include="js\theme.js" />
     <Content Include="js\views\view.contact.js" />

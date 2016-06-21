@@ -46,7 +46,7 @@
 /********************/
 /********************/
 
-.test-grid figure {
+.grid-pf-after figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
@@ -60,8 +60,6 @@
 	text-align: center;
 	cursor: pointer;
 }
-
-
 
 /********************/
 /********************/

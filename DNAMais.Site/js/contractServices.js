@@ -1,350 +1,202 @@
 ﻿$(document).ready(function () {
 
+    //Pessoa Física
+    //Clique em CPF, Endereço, Nome ou Telefone
     $('#btnCpf, #btnAddr, #btnName, #btnTel').on('click', function (e) {
 
         var idClick = e.target.id;
 
+        //Clicando em CPF
         if (idClick == "btnCpf") {
 
-            $('#divPj').fadeOut(500);
-            $('#divVehicle').fadeOut(500);
-            $('#divFtp').fadeOut(500);
-            $('div.grid-pf').addClass('test-grid');
-            $('#divPf').removeClass('effect-sadie');
-            $('#divPf').addClass('effect-sadie-2');
-            $('#btnBack').fadeIn(800);
+            transitionEffect();
 
             setTimeout(function () {
 
                 $('#pfCpf').fadeIn(500);
-                $('#pfAddr').hide();
-                $('#pfName').hide();
-                $('#pfTel').hide();
+                $('#pfAddr,#pfName,#pfTel').hide();
                 $('#txtCpf').focus();
 
             }, 500);
 
+            //Após Clique em CPF
             $('#btnCpf, #btnAddr, #btnName, #btnTel').on('click', function (e) {
 
                 var idClick = e.target.id;
 
                 if (idClick == "btnCpf") {
 
-                    setTimeout(function () {
+                    cpfClickPhaseTwo();
 
-                        $('#pfCpf').fadeIn(500);
-                        $('#pfAddr').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtCpf').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnAddr") {
 
-                    setTimeout(function () {
+                    addressClickPhaseTwo();
 
-                        $('#pfAddr').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtAddr').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnName") {
 
-                    setTimeout(function () {
+                    nameClickPhaseTwo();
 
-                        $('#pfName').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfAddr').hide();
-                        $('#pfTel').hide();
-                        $('#txtName').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnTel") {
 
-                    setTimeout(function () {
+                    telClickPhaseTwo();
 
-                        $('#pfTel').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfAddr').hide();
-                        $('#txtTel').focus();
-
-                    }, 10);
                 }
 
             });
         }
 
-
+        //Clicando em Endereço
         else if (idClick == "btnAddr") {
 
-            $('#divPj').fadeOut(500);
-            $('#divVehicle').fadeOut(500);
-            $('#divFtp').fadeOut(500);
-            $('div.grid-pf').addClass('test-grid');
-            $('#divPf').removeClass('effect-sadie');
-            $('#divPf').addClass('effect-sadie-2');
-            $('#btnBack').fadeIn(800);
+            transitionEffect();
 
             setTimeout(function () {
 
                 $('#pfAddr').fadeIn(500);
-                $('#pfCpf').hide();
-                $('#pfName').hide();
-                $('#pfTel').hide();
+                $('#pfCpf,#pfName,#pfTel').hide();
                 $('#txtAddr').focus();
 
             }, 500);
 
+            //Após clicar em Endereço
             $('#btnCpf, #btnAddr, #btnName, #btnTel').on('click', function (e) {
 
                 var idClick = e.target.id;
 
                 if (idClick == "btnCpf") {
 
-                    setTimeout(function () {
+                    cpfClickPhaseTwo();
 
-                        $('#pfCpf').fadeIn(500);
-                        $('#pfAddr').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtCpf').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnAddr") {
 
-                    setTimeout(function () {
+                    addressClickPhaseTwo();
 
-                        $('#pfAddr').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtAddr').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnName") {
 
-                    setTimeout(function () {
+                    nameClickPhaseTwo();
 
-                        $('#pfName').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfAddr').hide();
-                        $('#pfTel').hide();
-                        $('#txtName').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnTel") {
 
-                    setTimeout(function () {
+                    telClickPhaseTwo();
 
-                        $('#pfTel').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfAddr').hide();
-                        $('#txtTel').focus();
-
-                    }, 10);
                 }
 
             });
-
         }
 
+        //Clicando em Nome
         else if (idClick == "btnName") {
 
-            $('#divPj').fadeOut(500);
-            $('#divVehicle').fadeOut(500);
-            $('#divFtp').fadeOut(500);
-            $('div.grid-pf').addClass('test-grid');
-            $('#divPf').removeClass('effect-sadie');
-            $('#divPf').addClass('effect-sadie-2');
-            $('#btnBack').fadeIn(800);
+            transitionEffect();
 
             setTimeout(function () {
 
                 $('#pfName').fadeIn(500);
-                $('#pfCpf').hide();
-                $('#pfAddr').hide();
-                $('#pfTel').hide();
+                $('#pfCpf,#pfAddr,#pfTel').hide();
                 $('#txtName').focus();
 
             }, 500);
 
+            //Após clique em Nome
             $('#btnCpf, #btnAddr, #btnName, #btnTel').on('click', function (e) {
 
                 var idClick = e.target.id;
 
                 if (idClick == "btnCpf") {
 
-                    setTimeout(function () {
+                    cpfClickPhaseTwo();
 
-                        $('#pfCpf').fadeIn(500);
-                        $('#pfAddr').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtCpf').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnAddr") {
 
-                    setTimeout(function () {
+                    addressClickPhaseTwo();
 
-                        $('#pfAddr').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtAddr').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnName") {
 
-                    setTimeout(function () {
+                    nameClickPhaseTwo();
 
-                        $('#pfName').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfAddr').hide();
-                        $('#pfTel').hide();
-                        $('#txtName').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnTel") {
 
-                    setTimeout(function () {
+                    telClickPhaseTwo();
 
-                        $('#pfTel').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfAddr').hide();
-                        $('#txtTel').focus();
-
-                    }, 10);
                 }
 
             });
-
         }
 
+        //Clicando em Telefone
         else if (idClick == "btnTel") {
 
-            $('#divPj').fadeOut(500);
-            $('#divVehicle').fadeOut(500);
-            $('#divFtp').fadeOut(500);
-            $('div.grid-pf').addClass('test-grid');
-            $('#divPf').removeClass('effect-sadie');
-            $('#divPf').addClass('effect-sadie-2');
-            $('#btnBack').fadeIn(800);
+            transitionEffect();
 
             setTimeout(function () {
 
                 $('#pfTel').fadeIn(500);
-                $('#pfCpf').hide();
-                $('#pfName').hide();
-                $('#pfAddr').hide();
+                $('#pfCpf,#pfName,#pfAddr').hide();
                 $('#txtTel').focus();
 
             }, 500);
 
+            //Após clique em Telefone
             $('#btnCpf, #btnAddr, #btnName, #btnTel').on('click', function (e) {
 
                 var idClick = e.target.id;
 
                 if (idClick == "btnCpf") {
 
-                    setTimeout(function () {
+                    cpfClickPhaseTwo();
 
-                        $('#pfCpf').fadeIn(500);
-                        $('#pfAddr').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtCpf').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnAddr") {
 
-                    setTimeout(function () {
+                    addressClickPhaseTwo();
 
-                        $('#pfAddr').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfTel').hide();
-                        $('#txtAddr').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnName") {
 
-                    setTimeout(function () {
+                    nameClickPhaseTwo();
 
-                        $('#pfName').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfAddr').hide();
-                        $('#pfTel').hide();
-                        $('#txtName').focus();
-
-                    }, 10);
                 }
 
                 else if (idClick == "btnTel") {
 
-                    setTimeout(function () {
+                    telClickPhaseTwo();
 
-                        $('#pfTel').fadeIn(500);
-                        $('#pfCpf').hide();
-                        $('#pfName').hide();
-                        $('#pfAddr').hide();
-                        $('#txtTel').focus();
-
-                    }, 10);
                 }
 
             });
-
         }
-
-
 
     });
 
-
-
-
-
+    //Botão Voltar
     $('#btnBack').on('click', function () {
 
         $('p').hide();
         $('#divPf').removeClass('effect-sadie-2');
-        $('div.grid-pf').removeClass('test-grid');
+        $('div.grid-pf').removeClass('grid-pf-after');
         $('#divPf').addClass('effect-sadie');
-        $('#divPj').delay(1000).fadeIn(1000);
-        $('#divVehicle').delay(1000).fadeIn(1000);
-        $('#divFtp').delay(1000).fadeIn(1000);
-        $('#pfCpf').fadeOut(800);
-        $('#pfAddr').fadeOut(800);
-        $('#pfName').fadeOut(800);
-        $('#pfTel').fadeOut(800);
+        $('#divPj,#divVehicle,#divFtp').delay(1000).fadeIn(500);
+        $('#pfCpf,#pfAddr,#pfName,#pfTel').fadeOut(800);
         $('#btnBack').fadeOut(800);
 
         setTimeout(function () {
