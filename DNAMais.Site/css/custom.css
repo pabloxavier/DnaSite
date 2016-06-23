@@ -14,16 +14,24 @@
 .btn-pf {
     color: #EEE;
     background-color: #527e85;
+    border:solid;
+    border-width:0.1px;
+    border-color:#333;
+    text-shadow:-0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;
 }
 
 .btn-pf:hover {
     color: #000;
     background-color: #BBB;
+    text-shadow:none;
 }
 
 .btn-pj {
     color:#000;
     background-color:#96aebf;
+    border:solid;
+    border-width:0.1px;
+    border-color:#333;
 }
 
 .btn-pj:hover {
@@ -34,17 +42,22 @@
 .btn-vehicles {
     color:#EEE;
     background-color:#688a96;
+    border:solid;
+    border-width:0.1px;
+    border-color:#222;
+    text-shadow:-0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;
 }
 
 .btn-vehicles:hover {
     color:#333;
     background-color:#9eccdc;
+    text-shadow: none;
 }
 
 .btn-ftp {
     color:#222;
     background-color:#7b97c4;
-    border-color:rgba(255,255,255,0.8);
+    border-color:rgba(255,255,255,0.3);
     width:120px;
 }
 

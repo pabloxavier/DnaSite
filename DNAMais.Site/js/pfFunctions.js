@@ -1,12 +1,19 @@
-﻿function transitionEffect() {
+﻿function pfTransitionEffect() {
 
-    $('#divPj').fadeOut(500);
-    $('#divVehicle').fadeOut(500);
-    $('#divFtp').fadeOut(500);
+    $('#divPj').hide();
+    $('#divVehicle').hide();
+    $('#divFtp').hide();
+    $('#btnDefault').hide();
+    $('#btnPhaseTwo').show();
     $('div.grid-pf').addClass('grid-pf-after');
     $('#divPf').removeClass('effect-sadie');
     $('#divPf').addClass('effect-sadie-2');
-    $('#btnBack').fadeIn(800);
+
+    setTimeout(function () {
+
+        $('#btnBack').fadeIn(800);
+
+    }, 1000);
 
 }
 

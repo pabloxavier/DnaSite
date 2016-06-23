@@ -183,7 +183,6 @@ figure.effect-sadie h2 {
 	top: 50%;
 	left: 0;
 	width: 100%;
-	color: #484c61;
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
 	-webkit-transform: translate3d(0,-50%,0);
@@ -196,12 +195,12 @@ figure.effect-sadie h2 {
 /********************/
 /********************/
 
+/*Hover Effect - PF*/
 figure.effect-sadie-2 h2 {
 	position: absolute;
 	top: 50%;
 	left: 0;
 	width: 100%;
-	color: #484c61;
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
 	-webkit-transform: translate3d(0,-50%,0);
@@ -216,13 +215,14 @@ figure.effect-sadie-2 p {
 	left: 10px;
 	width: 100%;
     text-align:center;
-	color: #484c61;
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
 	-webkit-transform: translate3d(0,-50%,0);
 	transform: translate3d(0,-50%,0);
     color: rgba(255,255,255,0.8);
 }
+
+
 
 /********************/
 /********************/
@@ -744,12 +744,46 @@ figure.effect-marley p {
 }
 
 figure.effect-marley h2 {
+    text-align:center;
 	top: 30px;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,20px,0);
 	transform: translate3d(0,20px,0);
 }
+
+/********************/
+/********************/
+/********************/
+/********************/
+
+figure.effect-marley-2 p {
+    position: absolute;
+	top:100px;
+	left: 10px;
+	width: 100%;
+    text-align:center;
+	color: rgba(255,255,255,0.8);
+	line-height: 1.5;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+figure.effect-marley-2 h2 {
+    text-align:center;
+    top: 30px;
+    color: rgba(255,255,255,0.8);
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+    
+}
+
+/********************/
+/********************/
+/********************/
+/********************/
 
 figure.effect-marley:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
