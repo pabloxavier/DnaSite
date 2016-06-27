@@ -666,6 +666,7 @@
     <Content Include="img\video-overlay.png" />
     <Content Include="img\vimeo-1.jpg" />
     <Content Include="img\youtube-1.jpg" />
+    <Content Include="js\contractServicesVehicle.js" />
     <Content Include="js\contractServicesPj.js" />
     <Content Include="js\contractServicesPf.js" />
     <Content Include="js\custom.js" />
@@ -674,6 +675,7 @@
     <Content Include="js\examples\examples.gallery.js" />
     <Content Include="js\examples\examples.lightboxes.js" />
     <Content Include="js\examples\examples.portfolio.js" />
+    <Content Include="js\vehicleFunctions.js" />
     <Content Include="js\pjFunctions.js" />
     <Content Include="js\pfFunctions.js" />
     <Content Include="js\theme.init.js" />

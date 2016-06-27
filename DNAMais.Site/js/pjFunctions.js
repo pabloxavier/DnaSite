@@ -1,8 +1,6 @@
 ﻿function pjTransitionEffect() {
 
-    $('#divPf').hide();
-    $('#divVehicle').hide();
-    $('#divFtp').hide();
+    $('#divPf, #divVehicle, #divFtp').hide();
     $('#btnDefaultPj').hide();
     $('#btnPjPhaseTwo').show();
     $('div.grid-pj').addClass('grid-pj-after');
