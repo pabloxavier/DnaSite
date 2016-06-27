@@ -9,66 +9,7 @@
 
     <div class="col-md-12">
         @Html.Partial("Login/Logged/_HeadingLogged")
-
-        @*<div class="panel-group panel-group-dark" id="accordion2Secondary">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="font-size-xl">
-                                Pesquisa Pessoa Física
-                            </a>
-                        </h4>
-                    </div>
-                    <div>
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por CPF</a></li>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Nome</a></li>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Endereço</a></li>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Telefone</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <hr/>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="font-size-xl">
-                                Pesquisa Pessoa Jurídica
-                            </a>
-                        </h4>
-                    </div>
-                    <div>
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por CNPJ</a></li>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Razão Social</a></li>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Endereço</a></li>
-                                <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Telefone</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>*@
-
     </div>
-
-    @*<ul class="grid cs-style-3">
-            <li>
-                    <figure>
-                        <img src="~/CaptionHoverEffects/images/test.png" alt="img04">
-                        <figcaption class="center">
-                            <h4 style="color:#DDD">Pesquisa por:</h4>
-                            <button class="btn btn-default">CPF</button>
-                            <button class="btn btn-secondary">Nome</button>
-                            <button class="btn btn-primary">Telefone</button>
-                        </figcaption>
-                    </figure>
-                </li>
-        </ul>*@
 
     <div class="content">
         <div class="grid">
@@ -157,14 +98,25 @@
                     <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t3.png" alt="img19" />
                     <figcaption>
                         <h2><i class="fa fa-car"></i> Veículos</h2>
-                        <p>
+                        <p id="btnDefaultVehicle">
                             Pesquisa:
-                            <button class="btn btn-vehicles">Placa</button>
+                            <button class="btn btn-vehicles" id="btnPlate">Placa</button>
+                            <button class="btn btn-vehicles">Modelo</button>
+                            <button class="btn btn-vehicles">Localidade</button>
+                        </p>
+                        <p id="btnVehiclePhaseTwo" hidden="hidden">
+                            Pesquisa:
+                            <button class="btn btn-vehicles" id="btnPlatePhaseTwo">Placa</button>
                             <button class="btn btn-vehicles">Modelo</button>
                             <button class="btn btn-vehicles">Localidade</button>
                         </p>
                     </figcaption>
                 </figure>
+                <div class="col-md-6" hidden="hidden" id="vehiclePlate">
+                    <label style="float:left;">Placa</label>
+                    <input type="text" class="form-control" id="txtPlate" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                </div>
             </div>
 
             <div class="grid-ftp">
@@ -192,10 +144,16 @@
             <input type="button" id="btnBackPj" value="Voltar" class="btn btn-primary" hidden="hidden" />
         </div>
 
+        <div class="col-md-12">
+            <input type="button" id="btnBackVehicle" value="Voltar" class="btn btn-primary" hidden="hidden" />
+        </div>
+
     </div>
 </div>
 
 <script src="~/js/contractServicesPf.js"></script>
 <script src="~/js/contractServicesPj.js"></script>
+<script src="~/js/contractServicesVehicle.js"></script>
 <script src="~/js/pfFunctions.js"></script>
 <script src="~/js/pjFunctions.js"></script>
+<script src="~/js/vehicleFunctions.js"></script>

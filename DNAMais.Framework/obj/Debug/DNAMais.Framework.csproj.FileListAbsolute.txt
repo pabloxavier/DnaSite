@@ -34,3 +34,14 @@ F:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Debug\Newtonsoft.Json.xml
 F:\ProjetoDnaMais\DNAMais\DNAMais.Framework\obj\Debug\DNAMais.Framework.csprojResolveAssemblyReference.cache
 F:\ProjetoDnaMais\DNAMais\DNAMais.Framework\obj\Debug\DNAMais.Framework.dll
 F:\ProjetoDnaMais\DNAMais\DNAMais.Framework\obj\Debug\DNAMais.Framework.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\DNAMais.Framework.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\DNAMais.Framework.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Antlr3.Runtime.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\WebGrease.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Antlr3.Runtime.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Debug\DNAMais.Framework.csprojResolveAssemblyReference.cache
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Debug\DNAMais.Framework.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Debug\DNAMais.Framework.pdb
