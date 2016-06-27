@@ -31,7 +31,7 @@
 
         <section class="contenttxt bodytxt">
             <span class="input input--chisato">
-                <input class="input__field input__field--chisato" type="text" id="txtCpf" onkeyup="CpfMask(this)" />
+                <input class="input__field input__field--chisato" type="text" id="txtCpf" onkeyup="CpfMask(this)" maxlength="14" />
                 <label class="input__label input__label--chisato" for="input-13">
                     <span class="input__label-content input__label-content--chisato" data-content="CPF">CPF</span>
                 </label>
@@ -54,7 +54,7 @@
 
         var cpf = e.value;
 
-        if (event.keyCode == 8) {
+        if (e.keyCode == 8) {
             return;
         }
 
