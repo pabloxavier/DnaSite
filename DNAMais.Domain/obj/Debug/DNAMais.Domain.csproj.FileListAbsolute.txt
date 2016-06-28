@@ -32,3 +32,13 @@ F:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Debug\EntityFramework.xml
 F:\ProjetoDnaMais\DNAMais\DNAMais.Domain\bin\Debug\EntityFramework.SqlServer.xml
 F:\ProjetoDnaMais\DNAMais\DNAMais.Domain\obj\Debug\DNAMais.Domain.dll
 F:\ProjetoDnaMais\DNAMais\DNAMais.Domain\obj\Debug\DNAMais.Domain.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\bin\Debug\DNAMais.Domain.dll.config
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\bin\Debug\DNAMais.Domain.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\bin\Debug\DNAMais.Domain.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\bin\Debug\EntityFramework.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\bin\Debug\EntityFramework.xml
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\obj\Debug\DNAMais.Domain.csprojResolveAssemblyReference.cache
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\obj\Debug\DNAMais.Domain.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Domain\obj\Debug\DNAMais.Domain.pdb
