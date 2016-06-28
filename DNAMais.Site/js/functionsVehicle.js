@@ -3,7 +3,7 @@
     $('#divPf, #divPj, #divFtp').hide();
     $('#btnDefaultVehicle').hide();
     $('#btnVehiclePhaseTwo').show();
-    $('div.grid-vehicle').addClass('grid-vehicle-after-1');
+    $('div.grid-vehicle').addClass('grid-vehicle-after');
     $('#divVehicle').removeClass('effect-dexter');
     $('#divVehicle').addClass('effect-dexter-2');
 
