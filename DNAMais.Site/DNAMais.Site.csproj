@@ -1031,7 +1031,7 @@
     <Content Include="Views\Shared\Home\_CounterHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\Home\_ProductsOnOffHome.cshtml" />
+    <Content Include="Views\Shared\Home\_ProductsOffHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Home\_PostsHome.cshtml" />
@@ -1453,6 +1453,10 @@
     <Content Include="TextInputEffects\TextInputEffects\fonts\font-awesome-4.2.0\fonts\fontawesome-webfont.eot" />
     <Content Include="TextInputEffects\TextInputEffects\fonts\font-awesome-4.2.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="TextInputEffects\TextInputEffects\fonts\font-awesome-4.2.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\Shared\Home\_InfoText01.cshtml" />
+    <Content Include="Views\Shared\Home\_ProductsOnHome.cshtml" />
+    <Content Include="Views\Shared\Home\_InfoText02.cshtml" />
+    <Content Include="Views\Shared\Home\_InfoText03.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
