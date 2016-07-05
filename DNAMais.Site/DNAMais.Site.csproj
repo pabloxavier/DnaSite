@@ -133,7 +133,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NewsletterController.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Facades\Base\BaseFacade.cs" />
     <Compile Include="Facades\NewsletterFacade.cs" />
@@ -1457,6 +1456,15 @@
     <Content Include="Views\Shared\Home\_ProductsOnHome.cshtml" />
     <Content Include="Views\Shared\Home\_InfoText02.cshtml" />
     <Content Include="Views\Shared\Home\_InfoText03.cshtml" />
+    <Content Include="Views\Services\StatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_TitleBarStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_HeadingStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_FirstBoxStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_SecondBoxStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_ThirdBoxStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_ButtonStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_SideMenuStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\StatisticalModels\_IntroStatisticalModels.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
