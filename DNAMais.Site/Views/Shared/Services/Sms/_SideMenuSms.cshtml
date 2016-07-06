@@ -5,15 +5,15 @@
         <h4 class="heading-primary">Outros Produtos</h4>
 
         <h5><a href="@Url.Action("DataEnrichment","Services")">Enriquecimento de Dados</a></h5>
-        <p class="short">A DNA+ consegue ampliar sua base de dados seja ela de clientes ou não, assim como enriquecer as informações que possui. Além de...</p>
+        @Html.Partial("Services/DataEnrichment/_SideMenuTextDataEnrichment")
         <p><a href="@Url.Action("DataEnrichment","Services")">Saiba Mais!</a></p>
 
         <h5><a href="@Url.Action("Search","Services")">Pesquisa CPF / CNPJ</a></h5>
-        <p class="short">DNA+ oferece uma ampla gama de ferramentas de pesquisa de pessoas físicas e pessoas jurídicas, a partir da sua vigorosa base de dados, disponibilizando em uma...</p>
+        @Html.Partial("Services/Search/_SideMenuTextSearch")
         <p><a href="@Url.Action("Search","Services")">Saiba Mais!</a></p>
 
         <h5><a href="@Url.Action("MailMarketing","Services")">E-mail Marketing</a></h5>
-        <p class="short">Forma de comunicação online mais antiga, o e-mail marketing é uma das estratégias mais recorrentes no relacionamento com o cliente, pois apresenta...</p>
+        @Html.Partial("Services/MailMarketing/_SideMenuMailMarketing")
         <p><a href="@Url.Action("MailMarketing","Services")">Saiba Mais!</a></p>
     </blockquote>
 </div>

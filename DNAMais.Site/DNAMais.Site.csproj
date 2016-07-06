@@ -1465,6 +1465,16 @@
     <Content Include="Views\Shared\Services\StatisticalModels\_ButtonStatisticalModels.cshtml" />
     <Content Include="Views\Shared\Services\StatisticalModels\_SideMenuStatisticalModels.cshtml" />
     <Content Include="Views\Shared\Services\StatisticalModels\_IntroStatisticalModels.cshtml" />
+    <Content Include="Views\Shared\Services\QualifiedMailing\_SideMenuTextQualifiedMailing.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_SideMenuTextSearch.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_SideMenuTextProspectingSolutions.cshtml" />
+    <Content Include="Views\Shared\Services\DataTreatment\_SideMenuTextDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Services\AssigningDocs\_SideMenuTextAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Services\DataEnrichment\_SideMenuTextDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Services\MailMarketing\_SideMenuTextMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Services\Sms\_SideMenuTextSms.cshtml" />
+    <Content Include="Views\Shared\Services\Search\_SideMenuTextSearchPj.cshtml" />
+    <Content Include="Views\Shared\Services\ProspectingSolutions\_SideMenuTextProspectingExpansion.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
