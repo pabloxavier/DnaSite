@@ -3,55 +3,165 @@
     Layout = "~/Views/Shared/_LayoutLogged.cshtml";
 }
 
-@Html.Partial("_TitleBarLogged")
+@Html.Partial("Login/Logged/_TitleBarLogged")
 
 <div class="container">
-    @Html.Partial("_HeadingLogged")
 
     <div class="col-md-12">
-        <div class="panel-group panel-group-dark" id="accordion2Secondary">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="font-size-xl">
-                            Pesquisa Pessoa Física
-                        </a>
-                    </h4>
-                </div>
-                <div>
-                    <div class="panel-body">
-                        <ul>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por CPF</a></li>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Nome</a></li>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Endereço</a></li>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Telefone</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <hr/>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="font-size-xl">
-                            Pesquisa Pessoa Jurídica
-                        </a>
-                    </h4>
-                </div>
-                <div>
-                    <div class="panel-body">
-                        <ul>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por CNPJ</a></li>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Razão Social</a></li>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Endereço</a></li>
-                            <li><a href="#" class="font-size-xl line-height-xl">Pesquisa por Telefone</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @Html.Partial("Login/Logged/_HeadingLogged")
     </div>
 
+    <div class="content">
+        <div class="grid">
+            <div class="grid-pf">
+                <figure class="effect-sadie" id="divPf">
+                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t1.png" />
+                    <figcaption>
+                        <h2><i class="fa fa-search-plus"></i> Pessoa <span>Física</span></h2>
+                        <p id="btnDefault">
+                            Pesquisa:
+                            <button class="btn btn-pf" id="btnCpf">CPF</button>
+                            <button class="btn btn-pf" id="btnAddr">Endereço</button>
+                            <button class="btn btn-pf" id="btnName">Nome</button>
+                            <button class="btn btn-pf" id="btnTel">Telefone</button>
+                        </p>
+                        <p id="btnPhaseTwo" hidden="hidden">
+                            Pesquisa:
+                            <button class="btn btn-pf" id="btnCpfPhaseTwo">CPF</button>
+                            <button class="btn btn-pf" id="btnAddrPhaseTwo">Endereço</button>
+                            <button class="btn btn-pf" id="btnNamePhaseTwo">Nome</button>
+                            <button class="btn btn-pf" id="btnTelPhaseTwo">Telefone</button>
+                        </p>
+                    </figcaption>
+                </figure>
+                <div class="col-md-6" hidden="hidden" id="pfCpf">
+                    <label style="float:left;">CPF</label>
+                    <input type="text" class="form-control" id="txtCpf" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                </div>
+                <div class="col-md-6" hidden="hidden" id="pfAddr">
+                    <label style="float:left;">Endereço</label>
+                    <input type="text" class="form-control" id="txtAddr" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
+                </div>
+                <div class="col-md-6" hidden="hidden" id="pfName">
+                    <label style="float:left;">Nome</label>
+                    <input type="text" class="form-control" id="txtName" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
+                </div>
+                <div class="col-md-6" hidden="hidden" id="pfTel">
+                    <label style="float:left;">Telefone</label>
+                    <input type="text" class="form-control" id="txtTel" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
+                </div>
+
+            </div>
+
+            <div class="grid-pj">
+                <figure class="effect-marley" id="divPj">
+                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t2.png" alt="img11" />
+                    <figcaption>
+                        <h2><i class="fa fa-briefcase"></i> Pessoa <span>Jurídica</span></h2>
+                        <p id="btnDefaultPj">
+                            Pesquisa:
+                            <button class="btn btn-pj" id="btnCnpj">CNPJ</button>
+                            <button class="btn btn-pj" id="btnRs">Razão Social</button>
+                            <button class="btn btn-pj" id="btnTelPj">Telefone</button>
+                        </p>
+                        <p id="btnPjPhaseTwo" hidden="hidden">
+                            Pesquisa:
+                            <button class="btn btn-pj" id="btnCnpjPhaseTwo">CNPJ</button>
+                            <button class="btn btn-pj" id="btnRsPhaseTwo">Razão Social</button>
+                            <button class="btn btn-pj" id="btnTelPjPhaseTwo">Telefone</button>
+                        </p>
+                    </figcaption>
+                </figure>
+                <div class="col-md-6" hidden="hidden" id="pjCnpj">
+                    <label style="float:left;">CNPJ</label>
+                    <input type="text" class="form-control" id="txtCnpj" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                </div>
+                <div class="col-md-6" hidden="hidden" id="pjRs">
+                    <label style="float:left;">Razão Social</label>
+                    <input type="text" class="form-control" id="txtRs" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
+                </div>
+                <div class="col-md-6" hidden="hidden" id="pjTel">
+                    <label style="float:left;">Telefone</label>
+                    <input type="text" class="form-control" id="txtTelPj" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
+                </div>
+            </div>
+
+            <div class="grid-vehicle">
+                <figure class="effect-dexter" id="divVehicle">
+                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t3.png" alt="img19" />
+                    <figcaption>
+                        <h2><i class="fa fa-car"></i> Veículos</h2>
+                        <p id="btnDefaultVehicle">
+                            Pesquisa:
+                            <button class="btn btn-vehicles" id="btnPlate">Placa</button>
+                            <button class="btn btn-vehicles">Modelo</button>
+                            <button class="btn btn-vehicles">Localidade</button>
+                        </p>
+                        <p id="btnVehiclePhaseTwo" hidden="hidden">
+                            Pesquisa:
+                            <button class="btn btn-vehicles" id="btnPlatePhaseTwo">Placa</button>
+                            <button class="btn btn-vehicles">Modelo</button>
+                            <button class="btn btn-vehicles">Localidade</button>
+                        </p>
+                    </figcaption>
+                </figure>
+                <div class="col-md-6" hidden="hidden" id="vehiclePlate">
+                    <label style="float:left;">Placa</label>
+                    <input type="text" class="form-control" id="txtPlate" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                </div>
+            </div>
+
+            <div class="grid-ftp">
+                <figure class="effect-apollo" id="divFtp">
+                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t4.png" alt="img18" />
+                    <figcaption>
+                        <h2><i class="fa fa-exchange"></i> Arquivos <span>FTP</span></h2>
+                        <p id="btnDefaultFtp">
+                            Pesquisa:
+                            <button class="btn btn-ftp" id="btnTest">Teste01</button>
+                            <button class="btn btn-ftp">TesteParte02</button>
+                            <button class="btn btn-ftp">Teste Tipo 03</button>
+                        </p>
+                        <p id="btnFtpPhaseTwo" hidden="hidden">
+                            Pesquisa:
+                            <button class="btn btn-ftp" id="btnTestPhaseTwo">Teste01</button>
+                            <button class="btn btn-ftp">TesteParte02</button>
+                            <button class="btn btn-ftp">Teste Tipo 03</button>
+                        </p>
+                    </figcaption>
+                </figure>
+                <div class="col-md-6" hidden="hidden" id="ftpTest">
+                    <label style="float:left;">Teste</label>
+                    <input type="text" class="form-control" id="txtTest" style="margin-bottom:5px;" />
+                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-12">
+            <input type="button" id="btnBack" value="Voltar" class="btn btn-primary" hidden="hidden" />
+        </div>
+
+        <div class="col-md-12">
+            <input type="button" id="btnBackPj" value="Voltar" class="btn btn-primary" hidden="hidden" />
+        </div>
+
+        <div class="col-md-12">
+            <input type="button" id="btnBackVehicle" value="Voltar" class="btn btn-primary" hidden="hidden" />
+        </div>
+
+        <div class="col-md-12">
+            <input type="button" id="btnBackFtp" value="Voltar" class="btn btn-primary" hidden="hidden" />
+        </div>
+
+    </div>
 </div>

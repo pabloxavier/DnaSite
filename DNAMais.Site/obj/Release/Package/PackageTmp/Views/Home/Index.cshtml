@@ -3,22 +3,34 @@
 }
 
 <div role="main" class="main">
-    @Html.Partial("_FullBannerHome")
-    @Html.Partial("_LeadBoxHome")
-    @Html.Partial("_ProductsHome")
-    @Html.Partial("_CounterHome")
-    @Html.Partial("_ProductsOnOffHome")
-    @Html.Partial("_PostsHome")
-    @Html.Partial("_TestimonialHome")
-    @Html.Partial("_EffectBoxHome")
-    @Html.Partial("_ClientsCarouselHome")
-    @Html.Partial("_CallToActionHome")
+
+    @Html.Partial("Home/_FullBannerHome")
+    @Html.Partial("Home/_LeadBoxHome")
+    @Html.Partial("Home/_ProductsHome")
+    @Html.Partial("Home/_CounterHome")
+    @Html.Partial("Home/_InfoText01")
+
+    <div class="container">
+        @Html.Partial("Home/_ProductsOffHome")
+        @Html.Partial("Home/_InfoText02")
+        @Html.Partial("Home/_ProductsOnHome")
+        @Html.Partial("Home/_InfoText03")
+    </div>
+
+    @Html.Partial("Home/_PostsHome")
+    @Html.Partial("Home/_TestimonialHome")
+    @Html.Partial("Home/_EffectBoxHome")
+    @Html.Partial("Home/_ClientsCarouselHome")
+    @Html.Partial("Home/_CallToActionHome")
+
 </div>
 
 <script>
 
     $(document).ready(function () {
+
         $("#homeMenu").addClass("active");
+
     });
 
 </script>

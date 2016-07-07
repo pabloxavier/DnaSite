@@ -55,6 +55,9 @@
     @Scripts.Render("~/Scripts/carousel")
     @Scripts.Render("~/Scripts/vide")
 
+    <!-- Contract Services -->
+    @Scripts.Render("~/Scripts/contractServices")
+
 </head>
 <body>
 
@@ -102,6 +105,7 @@
                                                         <li><a href="@Url.Action("MailMarketing", "Services")">E-mail Marketing</a></li>
                                                         <li><a href="@Url.Action("Sms", "Services")">Sms</a></li>
                                                         <li><a href="@Url.Action("Search", "Services")">Pesquisa CPF / CNPJ</a></li>
+                                                        <li><a href="@Url.Action("StatisticalModels", "Services")">Modelos Estatísticos</a></li>
                                                         <li><a href="@Url.Action("ProspectingSolutions", "Services")"><b style="color: #E4322B">Soluções de Prospecção</b></a></li>
                                                     </ul>
                                                 </li>
@@ -140,11 +144,11 @@
             </div>
         </header>
 
-        @*<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" id="btnUpClose" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" id="formModalLabel">Acesse o Sistema</h4>
                     </div>
                     <div class="modal-body">
@@ -172,7 +176,7 @@
                     </div>
                 </div>
             </div>
-        </div>*@
+        </div>
 
         @RenderBody()
 
@@ -357,12 +361,24 @@
             }
         });
 
-        $('#btnClose').on('click',function(){
+        $('#btnClose').on('click', function () {
             $('#loginMenu').removeClass('active');
         });
 
+        $('#btnUpClose').on('click', function () {
+            $('#loginMenu').removeClass('active');
+        });
+
+        //$('body').on('click', function () {
+
+        //    if ($('#loginMenu').hasClass('active')) {
+        //        $(this).removeClass('active');
+        //    }
+
+        //});
+
         $('#btnLogin').on('click', function () {
-            location.href="@Url.Action("Logged","Login")"
+            location.href = "@Url.Action("Logged","Login")"
         });
 
     });

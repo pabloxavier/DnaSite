@@ -1475,6 +1475,16 @@
     <Content Include="Views\Shared\Services\Sms\_SideMenuTextSms.cshtml" />
     <Content Include="Views\Shared\Services\Search\_SideMenuTextSearchPj.cshtml" />
     <Content Include="Views\Shared\Services\ProspectingSolutions\_SideMenuTextProspectingExpansion.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextSms.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextSearch.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextSearchPj.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextQualifiedMailing.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextProspectingSolutions.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextProspectingExpansion.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextMailMarketing.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextDataTreatment.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextDataEnrichment.cshtml" />
+    <Content Include="Views\Shared\Home\_AllServicesTextAssigningDocs.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
