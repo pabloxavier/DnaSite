@@ -259,13 +259,14 @@ figure.effect-sadie h2 {
 /*Hover Effect - PF*/
 figure.effect-sadie-2 h2 {
 	position: absolute;
-	top: 50%;
+    font-size:50px;
+	top: 20%;
 	left: 0;
 	width: 100%;
-	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	/*-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
 	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);*/
     color: rgba(255,255,255,0.8);
 }
 
