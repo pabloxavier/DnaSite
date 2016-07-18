@@ -1485,6 +1485,12 @@
     <Content Include="Views\Shared\Home\_AllServicesTextDataTreatment.cshtml" />
     <Content Include="Views\Shared\Home\_AllServicesTextDataEnrichment.cshtml" />
     <Content Include="Views\Shared\Home\_AllServicesTextAssigningDocs.cshtml" />
+    <Content Include="Views\Shared\Login\Pf\_ButtonsDefaultPf.cshtml" />
+    <Content Include="Views\Shared\Login\Pf\_ButtonsPhaseTwoPf.cshtml" />
+    <Content Include="Views\Shared\Login\Pf\_TextBoxPf.cshtml" />
+    <Content Include="Views\Shared\Login\Pj\_ButtonsDefaultPj.cshtml" />
+    <Content Include="Views\Shared\Login\Pj\_ButtonsPhaseTwoPj.cshtml" />
+    <Content Include="Views\Shared\Login\Pj\_TextBoxPj.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

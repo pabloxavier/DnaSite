@@ -18,47 +18,15 @@
                     <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t1.png" />
                     <figcaption>
                         <h2><i class="fa fa-search-plus"></i> Pessoa <span>Física</span></h2>
-                        <p id="btnDefault">
-                            Pesquisa:
-                            @*<button class="btn btn-pf" id="btnCpf">CPF</button>
-                            <button class="btn btn-pf" id="btnAddr">Endereço</button>
-                            <button class="btn btn-pf" id="btnName">Nome</button>
-                            <button class="btn btn-pf" id="btnTel">Telefone</button>*@
 
-                            <a href="@Url.Action("CpfPf","Login")" class="btn btn-pf">CPF</a>
-                            <a href="@Url.Action("AllServices","Services")" class="btn btn-pf">Endereço</a>
-                            <a href="@Url.Action("AllServices","Services")" class="btn btn-pf">Nome</a>
-                            <a href="@Url.Action("AllServices","Services")" class="btn btn-pf">Telefone</a>
-                        </p>
-                        <p id="btnPhaseTwo" hidden="hidden">
-                            Pesquisa:
-                            <button class="btn btn-pf" id="btnCpfPhaseTwo">CPF</button>
-                            <button class="btn btn-pf" id="btnAddrPhaseTwo">Endereço</button>
-                            <button class="btn btn-pf" id="btnNamePhaseTwo">Nome</button>
-                            <button class="btn btn-pf" id="btnTelPhaseTwo">Telefone</button>
-                        </p>
+                        @Html.Partial("Login/Pf/_ButtonsDefaultPf")
+                        
+                        @Html.Partial("Login/Pf/_ButtonsPhaseTwoPf")
+                        
                     </figcaption>
                 </figure>
-                <div class="col-md-6" hidden="hidden" id="pfCpf">
-                    <label style="float:left;">CPF</label>
-                    <input type="text" class="form-control" id="txtCpf" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
-                </div>
-                <div class="col-md-6" hidden="hidden" id="pfAddr">
-                    <label style="float:left;">Endereço</label>
-                    <input type="text" class="form-control" id="txtAddr" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
-                </div>
-                <div class="col-md-6" hidden="hidden" id="pfName">
-                    <label style="float:left;">Nome</label>
-                    <input type="text" class="form-control" id="txtName" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
-                </div>
-                <div class="col-md-6" hidden="hidden" id="pfTel">
-                    <label style="float:left;">Telefone</label>
-                    <input type="text" class="form-control" id="txtTel" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
-                </div>
+
+                @Html.Partial("Login/Pf/_TextBoxPf")
 
             </div>
 
@@ -67,35 +35,16 @@
                     <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t2.png" alt="img11" />
                     <figcaption>
                         <h2><i class="fa fa-briefcase"></i> Pessoa <span>Jurídica</span></h2>
-                        <p id="btnDefaultPj">
-                            Pesquisa:
-                            <button class="btn btn-pj" id="btnCnpj">CNPJ</button>
-                            <button class="btn btn-pj" id="btnRs">Razão Social</button>
-                            <button class="btn btn-pj" id="btnTelPj">Telefone</button>
-                        </p>
-                        <p id="btnPjPhaseTwo" hidden="hidden">
-                            Pesquisa:
-                            <button class="btn btn-pj" id="btnCnpjPhaseTwo">CNPJ</button>
-                            <button class="btn btn-pj" id="btnRsPhaseTwo">Razão Social</button>
-                            <button class="btn btn-pj" id="btnTelPjPhaseTwo">Telefone</button>
-                        </p>
+
+                        @Html.Partial("Login/Pj/_ButtonsDefaultPj")
+
+                        @Html.Partial("Login/Pj/_ButtonsPhaseTwoPj")
+                       
                     </figcaption>
                 </figure>
-                <div class="col-md-6" hidden="hidden" id="pjCnpj">
-                    <label style="float:left;">CNPJ</label>
-                    <input type="text" class="form-control" id="txtCnpj" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
-                </div>
-                <div class="col-md-6" hidden="hidden" id="pjRs">
-                    <label style="float:left;">Razão Social</label>
-                    <input type="text" class="form-control" id="txtRs" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
-                </div>
-                <div class="col-md-6" hidden="hidden" id="pjTel">
-                    <label style="float:left;">Telefone</label>
-                    <input type="text" class="form-control" id="txtTelPj" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float: left; margin-bottom: 10px;" />
-                </div>
+
+                @Html.Partial("Login/Pj/_TextBoxPj")
+
             </div>
 
             <div class="grid-vehicle">
