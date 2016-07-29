@@ -12,92 +12,16 @@
     </div>
 
     <div class="content">
+        
         <div class="grid">
-            <div class="grid-pf">
-                <figure class="effect-sadie" id="divPf">
-                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t1.png" />
-                    <figcaption>
-                        <h2><i class="fa fa-search-plus"></i> Pessoa <span>Física</span></h2>
 
-                        @Html.Partial("Login/Pf/_ButtonsDefaultPf")
-                        
-                        @Html.Partial("Login/Pf/_ButtonsPhaseTwoPf")
-                        
-                    </figcaption>
-                </figure>
+            @Html.Partial("Login/Logged/_ContractServicesPf")
 
-                @Html.Partial("Login/Pf/_TextBoxPf")
+            @Html.Partial("Login/Logged/_ContractServicesPj")
 
-            </div>
-
-            <div class="grid-pj">
-                <figure class="effect-marley" id="divPj">
-                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t2.png" alt="img11" />
-                    <figcaption>
-                        <h2><i class="fa fa-briefcase"></i> Pessoa <span>Jurídica</span></h2>
-
-                        @Html.Partial("Login/Pj/_ButtonsDefaultPj")
-
-                        @Html.Partial("Login/Pj/_ButtonsPhaseTwoPj")
-                       
-                    </figcaption>
-                </figure>
-
-                @Html.Partial("Login/Pj/_TextBoxPj")
-
-            </div>
-
-            <div class="grid-vehicle">
-                <figure class="effect-dexter" id="divVehicle">
-                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t3.png" alt="img19" />
-                    <figcaption>
-                        <h2><i class="fa fa-car"></i> Veículos</h2>
-                        <p id="btnDefaultVehicle">
-                            Pesquisa:
-                            <button class="btn btn-vehicles" id="btnPlate">Placa</button>
-                            <button class="btn btn-vehicles">Modelo</button>
-                            <button class="btn btn-vehicles">Localidade</button>
-                        </p>
-                        <p id="btnVehiclePhaseTwo" hidden="hidden">
-                            Pesquisa:
-                            <button class="btn btn-vehicles" id="btnPlatePhaseTwo">Placa</button>
-                            <button class="btn btn-vehicles">Modelo</button>
-                            <button class="btn btn-vehicles">Localidade</button>
-                        </p>
-                    </figcaption>
-                </figure>
-                <div class="col-md-6" hidden="hidden" id="vehiclePlate">
-                    <label style="float:left;">Placa</label>
-                    <input type="text" class="form-control" id="txtPlate" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
-                </div>
-            </div>
-
-            <div class="grid-ftp">
-                <figure class="effect-apollo" id="divFtp">
-                    <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t4.png" alt="img18" />
-                    <figcaption>
-                        <h2><i class="fa fa-exchange"></i> Arquivos <span>FTP</span></h2>
-                        <p id="btnDefaultFtp">
-                            Pesquisa:
-                            <button class="btn btn-ftp" id="btnTest">Teste01</button>
-                            <button class="btn btn-ftp">TesteParte02</button>
-                            <button class="btn btn-ftp">Teste Tipo 03</button>
-                        </p>
-                        <p id="btnFtpPhaseTwo" hidden="hidden">
-                            Pesquisa:
-                            <button class="btn btn-ftp" id="btnTestPhaseTwo">Teste01</button>
-                            <button class="btn btn-ftp">TesteParte02</button>
-                            <button class="btn btn-ftp">Teste Tipo 03</button>
-                        </p>
-                    </figcaption>
-                </figure>
-                <div class="col-md-6" hidden="hidden" id="ftpTest">
-                    <label style="float:left;">Teste</label>
-                    <input type="text" class="form-control" id="txtTest" style="margin-bottom:5px;" />
-                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
-                </div>
-            </div>
+            @Html.Partial("Login/Logged/_ContractServicesVehicle")
+            
+            @Html.Partial("Login/Logged/_ContractServicesFtp")
 
         </div>
 

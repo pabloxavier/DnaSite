@@ -4,8 +4,8 @@
     $('#btnDefaultPj').hide();
     $('#btnPjPhaseTwo').show();
     $('div.grid-pj').addClass('grid-pj-after');
-    $('#divPj').removeClass('effect-marley');
-    $('#divPj').addClass('effect-marley-2');
+    $('#divPj').removeClass('effect-sadie');
+    $('#divPj').addClass('effect-sadie-2');
 
     setTimeout(function () {
 

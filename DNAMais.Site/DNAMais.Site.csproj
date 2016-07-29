@@ -1491,6 +1491,16 @@
     <Content Include="Views\Shared\Login\Pj\_ButtonsDefaultPj.cshtml" />
     <Content Include="Views\Shared\Login\Pj\_ButtonsPhaseTwoPj.cshtml" />
     <Content Include="Views\Shared\Login\Pj\_TextBoxPj.cshtml" />
+    <Content Include="Views\Shared\Login\Vehicle\_ButtonsDefaultVehicle.cshtml" />
+    <Content Include="Views\Shared\Login\Vehicle\_ButtonsPhaseTwoVehicle.cshtml" />
+    <Content Include="Views\Shared\Login\Vehicle\_TextBoxVehicle.cshtml" />
+    <Content Include="Views\Shared\Login\Ftp\_ButtonsDefaultFtp.cshtml" />
+    <Content Include="Views\Shared\Login\Ftp\_ButtonsPhaseTwoFtp.cshtml" />
+    <Content Include="Views\Shared\Login\Ftp\_TextBoxFtp.cshtml" />
+    <Content Include="Views\Shared\Login\Logged\_ContractServicesPj.cshtml" />
+    <Content Include="Views\Shared\Login\Logged\_ContractServicesPf.cshtml" />
+    <Content Include="Views\Shared\Login\Logged\_ContractServicesVehicle.cshtml" />
+    <Content Include="Views\Shared\Login\Logged\_ContractServicesFtp.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -4,8 +4,8 @@
     $('#btnDefaultVehicle').hide();
     $('#btnVehiclePhaseTwo').show();
     $('div.grid-vehicle').addClass('grid-vehicle-after');
-    $('#divVehicle').removeClass('effect-dexter');
-    $('#divVehicle').addClass('effect-dexter-2');
+    $('#divVehicle').removeClass('effect-sadie');
+    $('#divVehicle').addClass('effect-sadie-2');
 
     setTimeout(function () {
 

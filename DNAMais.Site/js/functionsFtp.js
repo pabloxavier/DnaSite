@@ -4,8 +4,8 @@
     $('#btnDefaultFtp').hide();
     $('#btnFtpPhaseTwo').show();
     $('div.grid-ftp').addClass('grid-ftp-after');
-    $('#divFtp').removeClass('effect-apollo');
-    $('#divFtp').addClass('effect-apollo-2');
+    $('#divFtp').removeClass('effect-sadie');
+    $('#divFtp').addClass('effect-sadie-2');
 
     setTimeout(function () {
 

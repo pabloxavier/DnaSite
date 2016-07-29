@@ -27,9 +27,9 @@
 
         $('#btnVehiclePhaseTwo').hide();
         $('#btnDefaultVehicle').show();
-        $('#divVehicle').removeClass('effect-dexter-2');
+        $('#divVehicle').removeClass('effect-sadie-2');
         $('div.grid-vehicle').removeClass('grid-vehicle-after');
-        $('#divVehicle').addClass('effect-dexter');
+        $('#divVehicle').addClass('effect-sadie');
         $('#divPf,#divPj').delay(1000).fadeIn(500);
         $('#divFtp').delay(1100).fadeIn(500);
         $('#vehiclePlate').hide();

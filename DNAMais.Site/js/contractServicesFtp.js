@@ -27,9 +27,9 @@
 
         $('#btnFtpPhaseTwo').hide();
         $('#btnDefaultFtp').show();
-        $('#divFtp').removeClass('effect-apollo-2');
+        $('#divFtp').removeClass('effect-sadie-2');
         $('div.grid-ftp').removeClass('grid-ftp-after');
-        $('#divFtp').addClass('effect-apollo');
+        $('#divFtp').addClass('effect-sadie');
         $('#divPf,#divPj').delay(1000).fadeIn(500);
         $('#divVehicle').delay(1100).fadeIn(500);
         $('#ftpTest').hide();
