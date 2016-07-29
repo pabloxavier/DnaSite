@@ -17,8 +17,8 @@ namespace DNAMais.Infrastructure.Data.Contexts
 
         }
 
-        public DbSet<BackOfficeUser> BackOfficeUsers { get; set; }
-        public DbSet<Message> Messages { get; set; }
+        public DbSet<UsuarioBackoffice> BackOfficeUsers { get; set; }
+        public DbSet<MensagemContato> Messages { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

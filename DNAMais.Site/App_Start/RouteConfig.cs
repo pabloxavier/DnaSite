@@ -62,6 +62,12 @@ namespace DNAMais.Site
             );
 
             routes.MapRoute(
+                name: "Modelos Estatísticos",
+                url: "servicos/modelos-estatisticos",
+                defaults: new { controller = "Services", action = "StatisticalModels" }
+            );
+
+            routes.MapRoute(
                 name: "Soluções de Prospecção",
                 url: "servicos/analise-de-mercado-expansao-de-negocios",
                 defaults: new { controller = "Services", action = "ProspectingSolutions" }

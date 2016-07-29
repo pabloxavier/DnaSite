@@ -55,6 +55,26 @@
     @Scripts.Render("~/Scripts/carousel")
     @Scripts.Render("~/Scripts/vide")
 
+    <!-- Contract Services -->
+    @Scripts.Render("~/Scripts/contractServices")
+
+    <!--CaptionHoverEffects-->
+    @*<link rel="stylesheet" type="text/css" href="~/CaptionHoverEffects/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="~/CaptionHoverEffects/css/component.css" />
+    <script src="~/CaptionHoverEffects/js/modernizr.custom.js"></script>*@
+
+    <!--HoverEffectIdeas-->
+    <link rel="stylesheet" type="text/css" href="~/HoverEffectIdeas/HoverEffectIdeas/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="~/HoverEffectIdeas/HoverEffectIdeas/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/HoverEffectIdeas/HoverEffectIdeas/css/set1.css" />
+    <link rel="stylesheet" type="text/css" href="~/HoverEffectIdeas/HoverEffectIdeas/css/set2.css" />
+
+    <!--TextBoxEffects-->
+    <link rel="stylesheet" type="text/css" href="~/TextInputEffects/TextInputEffects/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/TextInputEffects/TextInputEffects/css/set2.css" />
+    <link rel="stylesheet" type="text/css" href="~/TextInputEffects/TextInputEffects/css/normalize.css" />
+
+
 </head>
 <body>
 
@@ -102,6 +122,7 @@
                                                         <li><a href="@Url.Action("MailMarketing", "Services")">E-mail Marketing</a></li>
                                                         <li><a href="@Url.Action("Sms", "Services")">Sms</a></li>
                                                         <li><a href="@Url.Action("Search", "Services")">Pesquisa CPF / CNPJ</a></li>
+                                                        <li><a href="@Url.Action("StatisticalModels", "Services")">Modelos Estatísticos</a></li>
                                                         <li><a href="@Url.Action("ProspectingSolutions", "Services")"><b style="color: #E4322B">Soluções de Prospecção</b></a></li>
                                                     </ul>
                                                 </li>
@@ -280,6 +301,44 @@
 
 <!-- Theme Custom -->
 @Scripts.Render("~/Scripts/custom")
+
+
+<script src="~/TextInputEffects/TextInputEffects/js/classie.js"></script>
+<script>
+    (function () {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+            (function () {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function () {
+                    return this.replace(rtrim, '');
+                };
+            })();
+        }
+
+        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+            // in case the input is already filled..
+            if (inputEl.value.trim() !== '') {
+                classie.add(inputEl.parentNode, 'input--filled');
+            }
+
+            // events:
+            inputEl.addEventListener('focus', onInputFocus);
+            inputEl.addEventListener('blur', onInputBlur);
+        });
+
+        function onInputFocus(ev) {
+            classie.add(ev.target.parentNode, 'input--filled');
+        }
+
+        function onInputBlur(ev) {
+            if (ev.target.value.trim() === '') {
+                classie.remove(ev.target.parentNode, 'input--filled');
+            }
+        }
+    })();
+</script>
 
 <script>
 

@@ -100,6 +100,16 @@ namespace DNAMais.Site.App_Start
 
             bundles.Add(new ScriptBundle("~/Scripts/custom").Include(
                 "~/js/custom.js"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/contractServices").Include(
+                "~/js/contractServicesPf.js",
+                "~/js/contractServicesPj.js",
+                "~/js/contractServicesVehicle.js",
+                "~/js/contractServicesFtp.js",
+                "~/js/functionsPf.js",
+                "~/js/functionsPj.js",
+                "~/js/functionsVehicle.js",
+                "~/js/functionsFtp.js"));
         }
     }
 }

@@ -2,21 +2,21 @@
     ViewBag.Title = "DNA+ | Blog";
 }
 
-@Html.Partial("_TitleBarBlogList")
+@Html.Partial("Blog/List/_TitleBarBlogList")
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             <div class="blog-posts">
-                @Html.Partial("_PostsBlogList")
-                @Html.Partial("_PaginationBlogList")
+                @Html.Partial("Blog/List/_PostsBlogList")
+                @Html.Partial("Blog/List/_PaginationBlogList")
             </div>
         </div>
         <div class="col-md-3">
             <aside class="sidebar">
-                @Html.Partial("_SearchBlogList")
-                @Html.Partial("_CategoriesBlogList")
-                @Html.Partial("_PopularRecentTabsBlogList")
-                @Html.Partial("_FacebookPluginBlogList")
+                @Html.Partial("Blog/List/_SearchBlogList")
+                @Html.Partial("Blog/List/_CategoriesBlogList")
+                @Html.Partial("Blog/List/_PopularRecentTabsBlogList")
+                @Html.Partial("Blog/List/_FacebookPluginBlogList")
             </aside>
         </div>
     </div>

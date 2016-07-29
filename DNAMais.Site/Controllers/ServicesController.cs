@@ -51,6 +51,11 @@ namespace DNAMais.Site.Controllers
             return View();
         }
 
+        public ActionResult StatisticalModels()
+        {
+            return View();
+        }
+
         public ActionResult ProspectingSolutions()
         {
             return View();
