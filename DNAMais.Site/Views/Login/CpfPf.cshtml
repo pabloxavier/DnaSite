@@ -2,71 +2,42 @@
     ViewBag.Title = "CpfPf";
     Layout = "~/Views/Shared/_LayoutLogged.cshtml";
 }
-<section class="page-header page-header-color page-header-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Área <strong>Restrita</strong></h1>
-                <hr class="short visible-xs visible-sm" />
-                <ul class="breadcrumb breadcrumb-valign-mid">
-                    <li><a href="~/Home">Home</a></li>
-                    <li class="active">Logged</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+
+@Html.Partial("Login/Logged/_TitleBarLogged")
 
 <div class="container">
+
     <div class="col-md-12">
-        <div class="row">
-            <div class="heading heading-secondary heading-border heading-bottom-border">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Consulta PF - <strong>CPF</strong></h1>
-                    </div>
+        @Html.Partial("Login/Logged/_HeadingLogged")
+
+        <div class="content" style="cursor:default;">
+            <div class="grid" style="cursor:default;">
+                <div class=" grid-pf-after" style="cursor:default;">
+                    <figure class="effect-sadie-2" id="divPf" style="cursor:default;">
+                        <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t1.png" />
+                        <figcaption>
+                            <h2><i class="fa fa-search-plus"></i> Pessoa <span>Física</span></h2>
+
+                            <div class="col-md-6" id="pfCpf" style="margin-top:20%;">
+                                <label style="float:left;">CPF</label>
+                                <input type="text" class="form-control" id="txtCpf" style="margin-bottom:5px;" />
+                                <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
 
-        <section class="contenttxt bodytxt">
-            <span class="input input--chisato">
-                <input class="input__field input__field--chisato" type="text" id="txtCpf" onkeyup="CpfMask(this)" maxlength="14" />
-                <label class="input__label input__label--chisato" for="input-13">
-                    <span class="input__label-content input__label-content--chisato" data-content="CPF">CPF</span>
-                </label>
-            </span>
-        </section>
-        <div class="left">
-            <button class="btn btn-lg btn-cpf"><i class="fa fa-search-plus"></i>Pesquisar</button>
-        </div>
     </div>
-
 </div>
 
 <script>
 
     $(document).ready(function () {
+
         $('#txtCpf').focus();
+
     });
-
-    function CpfMask(e) {
-
-        var cpf = e.value;
-
-        if (e.keyCode == 8) {
-            return;
-        }
-
-        if (cpf.length == 3 || cpf.length == 7) {
-            e.value += ".";
-            return cpf;
-        }
-
-        if (cpf.length == 11) {
-            e.value += "-";
-        }
-
-    }
 
 </script>

@@ -27,10 +27,11 @@
 
         $('#btnVehiclePhaseTwo').hide();
         $('#btnDefaultVehicle').show();
-        $('#divVehicle').removeClass('effect-dexter-2');
-        $('div.grid-vehicle').removeClass('grid-vehicle-after-1');
-        $('#divVehicle').addClass('effect-dexter');
-        $('#divPf,#divPj,#divFtp').delay(1000).fadeIn(500);
+        $('#divVehicle').removeClass('effect-sadie-2');
+        $('div.grid-vehicle').removeClass('grid-vehicle-after');
+        $('#divVehicle').addClass('effect-sadie');
+        $('#divPf,#divPj').delay(1000).fadeIn(500);
+        $('#divFtp').delay(1100).fadeIn(500);
         $('#vehiclePlate').hide();
         $('#btnBackVehicle').hide();
 

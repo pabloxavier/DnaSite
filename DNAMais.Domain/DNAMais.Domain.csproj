@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackOfficeUser.cs" />
+    <Compile Include="UsuarioBackOffice.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="Message.cs" />
+    <Compile Include="MensagemContato.cs" />
     <Compile Include="Newsletter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

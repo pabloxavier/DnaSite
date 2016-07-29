@@ -33,7 +33,69 @@
 	cursor: pointer;
 }
 
-/*Formato do Box*/
+.grid-pf figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: rgb(68,99,103);
+	text-align: center;
+	cursor: pointer;
+
+    transition-duration:1s;
+}
+
+.grid-pf-after figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 1000px;
+	max-height: 180px;
+	width: 100%;
+	height: 500px;
+	background: rgb(68,99,103);
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid-pj figure {
+	position: relative;
+	float: right;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: rgb(21,95,142);
+	text-align: center;
+	cursor: pointer;
+
+    transition-duration:1s;
+}
+
+.grid-pj-after figure {
+	position: relative;
+	float: right;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 1000px;
+	max-height: 180px;
+	width: 100%;
+	height: 500px;
+	background: rgb(21,95,142);
+	text-align: center;
+	cursor: pointer;
+}
 
 .grid-vehicle figure {
 	position: relative;
@@ -51,7 +113,7 @@
     transition-duration:1s;
 }
 
-.grid-vehicle-after-1 figure {
+.grid-vehicle-after figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
@@ -62,6 +124,37 @@
 	width: 100%;
 	height: 500px;
 	background: rgb(68,99,103);
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid-ftp figure {
+	position: relative;
+	float: right;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: rgb(23,68,138);
+	text-align: center;
+	cursor: pointer;
+
+    transition-duration:1s;
+}
+
+.grid-ftp-after figure {
+	position: relative;
+	float: right;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 1000px;
+	max-height: 180px;
+	width: 100%;
+	height: 500px;
+	background: rgb(23,68,138);
 	text-align: center;
 	cursor: pointer;
 }
@@ -166,7 +259,7 @@ figure.effect-sadie h2 {
 /*Hover Effect - PF*/
 figure.effect-sadie-2 h2 {
 	position: absolute;
-	top: 50%;
+    top: 50%;
 	left: 0;
 	width: 100%;
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
@@ -282,6 +375,7 @@ figure.effect-marley-2 p {
 figure.effect-marley-2 h2 {
     text-align:center;
     top: 30px;
+    border-bottom:solid;
     color: rgba(255,255,255,0.8);
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -388,11 +482,13 @@ figure.effect-dexter figcaption {
 }
 
 figure.effect-dexter h2 {
+    text-align: center;
 	padding: 10px 10px;
     color: rgba(255,255,255,0.8);
 }
 
 figure.effect-dexter-2 h2 {
+    text-align: center;
 	padding: 10px 10px;
     color: rgba(255,255,255,0.8);
 }
@@ -434,6 +530,95 @@ figure.effect-dexter:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+    color: #FFF;
+}
+
+/*-----------------*/
+/***** Apollo *****/
+/*-----------------*/
+
+figure.effect-apollo {
+	/*background: #3498db;*/
+    background: rgb(23,68,138);
+}
+
+figure.effect-apollo img {
+	opacity: 0.95;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-apollo figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+    position: absolute;
+	bottom: 40px;
+	left: 15px;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+    color:#FFF;
+}
+
+figure.effect-apollo-2 p {
+	position: absolute;
+	top: 90%;
+    bottom:-60px;
+	left: 10px;
+	width: 100%;
+    text-align:center;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+    color: rgba(255,255,255,0.8);
+}
+
+figure.effect-apollo h2 {
+	text-align: center;
+    color: rgba(255,255,255,0.8);
+}
+
+figure.effect-apollo-2 h2 {
+	text-align: center;
+    color: rgba(255,255,255,0.8);
+}
+
+figure.effect-apollo:hover h2 {
+	text-align: center;
+    color: #FFF;
+}
+
+figure.effect-apollo:hover img {
+	opacity: 0.6;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
     color: #FFF;
 }
 
