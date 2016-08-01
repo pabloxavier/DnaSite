@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DNAMais.Domain
+namespace DNAMais.Domain.Entidades
 {
     [Table("MENSAGEM_CONTATO", Schema = "DNASITE")]
     public class MensagemContato
@@ -15,7 +15,7 @@ namespace DNAMais.Domain
 
         [Key]
         [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_MENSAGEM_CONTATO")]
         [Index("TS_DNASITE_INDEX")]
         public int? Id { get; set; }
@@ -47,20 +47,24 @@ namespace DNAMais.Domain
         [Required]
         [Column("DT_REGISTRO")]
         [Display(Name="Data de Registro")]
-        public DateTime? RegisterDate { get; set; }
+        public DateTime? DataRegistro { get; set; }
 
         [Required]
         [Column("IS_RESPONDIDA")]
-        public byte? Respondida { get; set; }
+        public bool? Respondida { get; set; }
 
         [Column("ID_USUARIO_BACKOFFICE_RESPOSTA")]
+        [Index("MENSAGEM_CONTATO_IDX_01")]
         public int? IdUsuarioBackofficeResposta { get; set; }
+        [ForeignKey("IdUsuarioBackofficeResposta")]
+        public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
 
-        [ForeignKey("IdBackOfficeUserAnswer")]
-        public virtual UsuarioBackoffice BackOfficeUserAnswer { get; set; }
+        [Column("DT_RESPOSTA")]
+        public DateTime? DataResposta { get; set; }
 
-        [Column("DT_ANSWER")]
-        public DateTime? Answer { get; set; }
+        [Column("DS_RESPOSTA")]
+        [StringLength(1000)]
+        public string DescricaoResposta { get; set; }
 
         #endregion
 

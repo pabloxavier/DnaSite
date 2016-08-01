@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DNAMais.Domain.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,19 +15,19 @@ namespace DNAMais.Domain
         #region Propriedades Públicas
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         [Column("ID_USUARIO_BACKOFFICE")]
         [Index("TS_DNASITE_INDEX")]
         public int? Id { get; set; }
 
-        [Index("TS_DNASITE_INDEX", 1, IsUnique = true)]
         [Required]
+        [Index("TS_DNASITE_INDEX", 1, IsUnique = true)]
         [Column("NM_USUARIO")]
         public string Nome { get; set; }
 
-        [Index("TS_DNASITE_INDEX", 2, IsUnique = true)]
         [Required]
+        [Index("TS_DNASITE_INDEX", 2, IsUnique = true)]
         [Column("DS_EMAIL")]
         public string Email { get; set; }
 
@@ -47,9 +48,17 @@ namespace DNAMais.Domain
         public byte? Admin { get; set; }
 
         [Column("ID_PERFIL_ACESSO_BACKOFFICE")]
-        public byte? IdPerfilAcessoBackoffice { get; set; }
+        public byte? IdPerfil { get; set; }
 
-        public virtual ICollection<MensagemContato> AnsweredMessages { get; set; }
+        public virtual ICollection<MensagemContato> MensagensContatos { get; set; }
+        public virtual ICollection<UsuarioBackoffice> UsuariosBackoffice { get; set; }
+        public virtual ICollection<ClienteEmpresa> ClientesEmpresas { get; set; }
+        public virtual ICollection<TipoEndereco> TiposEnderecos { get; set; }
+        public virtual ICollection<ClienteEmpresaEndereco> ClientesEmpresasEnderecos { get; set; }
+        public virtual ICollection<TipoContato> TiposContatos { get; set; }
+        public virtual ICollection<ClienteEmpresaContato> ClientesEmpresasContatos { get; set; }
+        public virtual ICollection<ClienteEmpresaContatoFone> ClientesEmpresasContatosFones { get; set; }
+        public virtual ICollection<ClienteEmpresaContatoEmail> ClientesEmpresasContatosEmails { get; set; }
 
         #endregion
 
@@ -57,7 +66,7 @@ namespace DNAMais.Domain
 
         public UsuarioBackoffice()
         {
-            AnsweredMessages = new HashSet<MensagemContato>();
+            MensagensContatos = new HashSet<MensagemContato>();
         }
 
         #endregion

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 
 using DNAMais.Domain;
+using DNAMais.Domain.Entidades;
 
 namespace DNAMais.Infrastructure.Data.Contexts
 {

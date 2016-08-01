@@ -1,4 +1,5 @@
 ﻿using DNAMais.Domain;
+using DNAMais.Domain.Entidades;
 using DNAMais.Infrastructure.Data.Contexts;
 using System;
 using System.Collections.Generic;

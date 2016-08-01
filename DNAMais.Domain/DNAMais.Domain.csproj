@@ -46,10 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UsuarioBackOffice.cs" />
+    <Compile Include="Entidades\CategoriaProduto.cs" />
+    <Compile Include="Entidades\CategoriaProdutoFaixa.cs" />
+    <Compile Include="Entidades\CategoriaProdutoFaixaLog.cs" />
+    <Compile Include="Entidades\ClienteEmpresa.cs" />
+    <Compile Include="Entidades\ClienteEmpresaContato.cs" />
+    <Compile Include="Entidades\ClienteEmpresaContatoEmail.cs" />
+    <Compile Include="Entidades\ClienteEmpresaContatoFone.cs" />
+    <Compile Include="Entidades\ClienteEmpresaEndereco.cs" />
+    <Compile Include="Entidades\FuncionalidadeBackoffice.cs" />
+    <Compile Include="Entidades\ItemProduto.cs" />
+    <Compile Include="Entidades\PerfilAcessoBackoffice.cs" />
+    <Compile Include="Entidades\PerfilAcessoFuncionalidade.cs" />
+    <Compile Include="Entidades\PoliticaComercial.cs" />
+    <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\RamoAtividade.cs" />
+    <Compile Include="Entidades\StatusClienteEmpresa.cs" />
+    <Compile Include="Entidades\TipoContato.cs" />
+    <Compile Include="Entidades\TipoEndereco.cs" />
+    <Compile Include="Entidades\TipoPrecificacao.cs" />
+    <Compile Include="Entidades\Uf.cs" />
+    <Compile Include="Entidades\UsuarioBackOffice.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="MensagemContato.cs" />
-    <Compile Include="Newsletter.cs" />
+    <Compile Include="Entidades\MensagemContato.cs" />
+    <Compile Include="Entidades\Newsletter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
