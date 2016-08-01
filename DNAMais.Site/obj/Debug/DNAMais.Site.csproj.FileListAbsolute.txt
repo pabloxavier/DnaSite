@@ -302,9 +302,3 @@ C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\bin\DNAMais.Infrastructure.Data.pdb
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\obj\Debug\DNAMais.Site.csprojResolveAssemblyReference.cache
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\obj\Debug\DNAMais.Site.dll
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\obj\Debug\DNAMais.Site.pdb
-C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\bin\System.Net.Http.Formatting.dll
-C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\bin\System.Web.Http.dll
-C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\bin\System.Web.Http.WebHost.dll
-C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\bin\System.Net.Http.Formatting.xml
-C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\bin\System.Web.Http.xml
-C:\GitHub\Projects\DNA\DnaSite\DNAMais.Site\bin\System.Web.Http.WebHost.xml

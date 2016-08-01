@@ -1,4 +1,5 @@
-﻿using DNAMais.Infrastructure.Data.Contexts;
+﻿using DNAMais.Domain.Entidades;
+using DNAMais.Infrastructure.Data.Contexts;
 using DNAMais.Infrastructure.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -51,12 +52,12 @@ namespace DNAMais.Domain.Services
 
         public IQueryable<MensagemContato> ListAnswered()
         {
-            return repoMessage.Filter(i => i.Respondida == 1);
+            return repoMessage.Filter(i => i.Respondida == true);
         }
 
         public IQueryable<MensagemContato> ListNonAnswered()
         {
-            return repoMessage.Filter(i => i.Respondida == 0);
+            return repoMessage.Filter(i => i.Respondida == false);
         }
 
         //public Message AssignAnswer()

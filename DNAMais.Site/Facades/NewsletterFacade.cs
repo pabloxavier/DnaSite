@@ -1,4 +1,5 @@
 ﻿using DNAMais.Domain;
+using DNAMais.Domain.Entidades;
 using DNAMais.Domain.Services;
 using DNAMais.Framework;
 using DNAMais.Site.Facades.Base;

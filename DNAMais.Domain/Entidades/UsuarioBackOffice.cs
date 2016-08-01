@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DNAMais.Domain.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,7 +15,7 @@ namespace DNAMais.Domain
         #region Propriedades Públicas
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         [Column("ID_USUARIO_BACKOFFICE")]
         [Index("TS_DNASITE_INDEX")]
@@ -47,9 +48,9 @@ namespace DNAMais.Domain
         public byte? Admin { get; set; }
 
         [Column("ID_PERFIL_ACESSO_BACKOFFICE")]
-        public byte? IdPerfilAcessoBackoffice { get; set; }
+        public byte? IdPerfil { get; set; }
 
-        public virtual ICollection<MensagemContato> AnsweredMessages { get; set; }
+        public virtual ICollection<MensagemContato> MensagensContatos { get; set; }
 
         #endregion
 
@@ -57,7 +58,7 @@ namespace DNAMais.Domain
 
         public UsuarioBackoffice()
         {
-            AnsweredMessages = new HashSet<MensagemContato>();
+            MensagensContatos = new HashSet<MensagemContato>();
         }
 
         #endregion

@@ -1,4 +1,5 @@
-﻿using DNAMais.Infrastructure.Data.Repositories;
+﻿using DNAMais.Domain.Entidades;
+using DNAMais.Infrastructure.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace DNAMais.Domain.Services
 
         public List<MensagemContato> ListarMensagensPendentes()
         {
-            return repositorio.Filtrar(i => i.Answer == null && i.RegisterDate >= DateTime.Now.AddDays(-15));
+            return repositorio.Filtrar(i => i.DataResposta == null && i.DataRegistro >= DateTime.Now.AddDays(-15));
         }
 
         public void Remover(int id)
@@ -33,7 +34,7 @@ namespace DNAMais.Domain.Services
 
         public void RemoverPendentesAntigos()
         {
-            repositorio.Excluir(i => i.Answer == null && i.RegisterDate >= DateTime.Now.AddDays(-15));
+            repositorio.Excluir(i => i.DataResposta == null && i.DataRegistro >= DateTime.Now.AddDays(-15));
         }
     }
 }
