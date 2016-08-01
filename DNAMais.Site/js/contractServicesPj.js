@@ -83,9 +83,9 @@
 
         $('#btnPjPhaseTwo').hide();
         $('#btnDefaultPj').show();
-        $('#divPj').removeClass('effect-marley-2');
+        $('#divPj').removeClass('effect-sadie-2');
         $('div.grid-pj').removeClass('grid-pj-after');
-        $('#divPj').addClass('effect-marley');
+        $('#divPj').addClass('effect-sadie');
         $('#divPf,#divVehicle,#divFtp').delay(1000).fadeIn(500);
         $('#pjCnpj,#pjRs,#pjTel').hide();
         $('#btnBackPj').hide();

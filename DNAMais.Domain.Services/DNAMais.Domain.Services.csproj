@@ -50,6 +50,7 @@
     <Compile Include="MessageService.cs" />
     <Compile Include="NewsletterService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesteServico.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DNAMais.Domain\DNAMais.Domain.csproj">

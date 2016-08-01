@@ -1,4 +1,5 @@
 ﻿using DNAMais.Domain;
+using DNAMais.Domain.Entidades;
 using DNAMais.Framework;
 using DNAMais.Site.Facades;
 using System;
@@ -68,7 +69,7 @@ namespace DNAMais.Site.Controllers
 
                 guidSubscription = Guid.NewGuid().ToString().Substring(0, 32);
 
-                newsletter.Name = newsletterName;
+                newsletter.Nome = newsletterName;
                 newsletter.Email = newsletterEmail;
                 newsletter.GUID = guidSubscription;
 

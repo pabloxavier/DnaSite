@@ -1,9 +1,11 @@
 ﻿using DNAMais.Domain;
+using DNAMais.Domain.Entidades;
 using DNAMais.Domain.Services;
 using DNAMais.Framework;
 using DNAMais.Site.Facades.Base;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;

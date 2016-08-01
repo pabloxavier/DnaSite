@@ -3,16 +3,26 @@
 }
 
 <div role="main" class="main">
+
     @Html.Partial("Home/_FullBannerHome")
     @Html.Partial("Home/_LeadBoxHome")
     @Html.Partial("Home/_ProductsHome")
     @Html.Partial("Home/_CounterHome")
-    @Html.Partial("Home/_ProductsOnOffHome")
+    @Html.Partial("Home/_InfoText01")
+
+    <div class="container">
+        @Html.Partial("Home/_ProductsOffHome")
+        @Html.Partial("Home/_InfoText02")
+        @Html.Partial("Home/_ProductsOnHome")
+        @Html.Partial("Home/_InfoText03")
+    </div>
+
     @Html.Partial("Home/_PostsHome")
     @Html.Partial("Home/_TestimonialHome")
     @Html.Partial("Home/_EffectBoxHome")
     @Html.Partial("Home/_ClientsCarouselHome")
     @Html.Partial("Home/_CallToActionHome")
+
 </div>
 
 <script>

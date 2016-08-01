@@ -46,10 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackOfficeUser.cs" />
+    <Compile Include="Entidades\CategoriaProduto.cs" />
+    <Compile Include="Entidades\CategoriaProdutoFaixa.cs" />
+    <Compile Include="Entidades\CategoriaProdutoFaixaLog.cs" />
+    <Compile Include="Entidades\FuncionalidadeBackoffice.cs" />
+    <Compile Include="Entidades\PerfilAcessoBackoffice.cs" />
+    <Compile Include="Entidades\PerfilAcessoFuncionalidade.cs" />
+    <Compile Include="Entidades\TipoPrecificacao.cs" />
+    <Compile Include="Entidades\UsuarioBackOffice.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="Newsletter.cs" />
+    <Compile Include="Entidades\MensagemContato.cs" />
+    <Compile Include="Entidades\Newsletter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

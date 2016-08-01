@@ -10,3 +10,15 @@ C:\ProjetoDnaMais\DNAMais\DNAMais.Infrastructure.Data\bin\Release\EntityFramewor
 C:\ProjetoDnaMais\DNAMais\DNAMais.Infrastructure.Data\obj\Release\DNAMais.Infrastructure.Data.csprojResolveAssemblyReference.cache
 C:\ProjetoDnaMais\DNAMais\DNAMais.Infrastructure.Data\obj\Release\DNAMais.Infrastructure.Data.dll
 C:\ProjetoDnaMais\DNAMais\DNAMais.Infrastructure.Data\obj\Release\DNAMais.Infrastructure.Data.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\DNAMais.Infrastructure.Data.dll.config
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\DNAMais.Infrastructure.Data.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\DNAMais.Infrastructure.Data.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\DNAMais.Domain.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\EntityFramework.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\DNAMais.Domain.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\EntityFramework.xml
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\obj\Release\DNAMais.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\obj\Release\DNAMais.Infrastructure.Data.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Infrastructure.Data\obj\Release\DNAMais.Infrastructure.Data.pdb

@@ -1,4 +1,5 @@
-﻿using DNAMais.Framework;
+﻿using DNAMais.Domain.Entidades;
+using DNAMais.Framework;
 using DNAMais.Infrastructure.Data.Contexts;
 using DNAMais.Infrastructure.Data.Repositories;
 using System;
@@ -43,7 +44,7 @@ namespace DNAMais.Domain.Services
                 if (subscriptionNewsletter.Id == null)
                 {
                     subscriptionNewsletter.Id = new Random().Next(1,999999);
-                    subscriptionNewsletter.Register = DateTime.Now;
+                    subscriptionNewsletter.DataRegistro = DateTime.Now;
                     subscriptionNewsletter.OptIn = false;
                     subscriptionNewsletter.OptOut = false;
 

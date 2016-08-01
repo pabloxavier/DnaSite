@@ -1,4 +1,5 @@
-﻿using DNAMais.Infrastructure.Data.Contexts;
+﻿using DNAMais.Domain.Entidades;
+using DNAMais.Infrastructure.Data.Contexts;
 using DNAMais.Infrastructure.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,12 @@ namespace DNAMais.Domain.Services
     {
         private DNAMaisSiteContext context;
 
-        private Repository<Message> repoMessage;
+        private Repository<MensagemContato> repoMessage;
 
         public MessageService()
         {
             context = new DNAMaisSiteContext();
-            repoMessage = new Repository<Message>(context);
+            repoMessage = new Repository<MensagemContato>(context);
         }
 
         public void Dispose()
@@ -25,12 +26,12 @@ namespace DNAMais.Domain.Services
             context.Dispose();
         }
 
-        public Message GetById(int id)
+        public MensagemContato GetById(int id)
         {
             return repoMessage.GetById(id);
         }
 
-        public Message Add(Message teste)
+        public MensagemContato Add(MensagemContato teste)
         {
             //var newEntry = repoMessage.Add(teste);
             //return newEntry;
@@ -38,25 +39,25 @@ namespace DNAMais.Domain.Services
             return repoMessage.Add(teste);
         }
 
-        public void Update(Message teste)
+        public void Update(MensagemContato teste)
         {
             var entry = context.Entry(teste);
             entry.State = System.Data.Entity.EntityState.Modified;
         }
 
-        public void Remove(Message teste)
+        public void Remove(MensagemContato teste)
         {
             repoMessage.Remove(teste);
         }
 
-        public IQueryable<Message> ListAnswered()
+        public IQueryable<MensagemContato> ListAnswered()
         {
-            return repoMessage.Filter(i => i.Answered == 1);
+            return repoMessage.Filter(i => i.Respondida == true);
         }
 
-        public IQueryable<Message> ListNonAnswered()
+        public IQueryable<MensagemContato> ListNonAnswered()
         {
-            return repoMessage.Filter(i => i.Answered == 0);
+            return repoMessage.Filter(i => i.Respondida == false);
         }
 
         //public Message AssignAnswer()
