@@ -59,6 +59,11 @@ namespace DNAMais.Domain
         public virtual ICollection<ClienteEmpresaContato> ClientesEmpresasContatos { get; set; }
         public virtual ICollection<ClienteEmpresaContatoFone> ClientesEmpresasContatosFones { get; set; }
         public virtual ICollection<ClienteEmpresaContatoEmail> ClientesEmpresasContatosEmails { get; set; }
+        public virtual ICollection<ContratoEmpresa> ContratosEmpresas { get; set; }
+        public virtual ICollection<UsuarioCliente> UsuariosClientes { get; set; }
+        public virtual ICollection<UsuarioClientePerfil> UsuariosClientesPerfis { get; set; }
+        public virtual ICollection<GrupoUsuarioCliente> GruposUsuariosClientes { get; set; }
+        public virtual ICollection<UsuarioClienteGrupo> UsuariosClientesGrupos { get; set; }
 
         #endregion
 

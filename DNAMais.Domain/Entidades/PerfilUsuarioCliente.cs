@@ -8,37 +8,34 @@ using System.Threading.Tasks;
 
 namespace DNAMais.Domain.Entidades
 {
-    [Table("POLITICA_COMERCIAL", Schema = "DNASITE")]
-    public class PoliticaComercial
+    [Table("PERFIL_USUARIO_CLIENTE", Schema = "DNASITE")]
+    public class PerfilUsuarioCliente
     {
         #region Propriedades Públicas
 
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column("ID_POLITICA_COMERCIAL")]
+        [Column("ID_PERFIL_USUARIO_CLIENTE")]
         public int? Id { get; set; }
 
         [Required]
-        [Column("VL_SOLICITACAO_CONTAGEM")]
-        public int? ValorContagem { get; set; }
+        [Column("NM_PERFIL")]
+        [StringLength(60)]
+        public string Nome { get; set; }
 
         [Required]
-        [Column("DT_INICIO_VIGENCIA")]
-        public DateTime? InicioVigencia { get; set; }
+        [Column("DS_PERFIL")]
+        [StringLength(100)]
+        public string Descricao { get; set; }
 
-        [Column("DT_TERMINO_VIGENCIA")]
-        public DateTime? TerminoVigencia { get; set; }
-
-        [Required]
-        [Column("IS_VIGENTE")]
-        public bool? Vigente { get; set; }
+        public virtual ICollection<UsuarioClientePerfil> UsuariosClientesPerfis { get; set; }
 
         #endregion
 
         #region Construtor
 
-        public PoliticaComercial()
+        public PerfilUsuarioCliente()
         {
 
         }

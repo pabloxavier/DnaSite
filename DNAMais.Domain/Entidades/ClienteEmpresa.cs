@@ -56,8 +56,11 @@ namespace DNAMais.Domain.Entidades
         [ForeignKey("IdUsuarioCadastro")]
         public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
 
-        public virtual IEnumerable<ClienteEmpresaEndereco> ClientesEmpresasEnderecos { get; set; }
-        public virtual IEnumerable<ClienteEmpresaContato> ClientesEmpresasContatos { get; set; }
+        public virtual ICollection<ClienteEmpresaEndereco> ClientesEmpresasEnderecos { get; set; }
+        public virtual ICollection<ClienteEmpresaContato> ClientesEmpresasContatos { get; set; }
+        public virtual ICollection<ContratoEmpresa> ContratosEmpresas { get; set; }
+        public virtual ICollection<UsuarioCliente> UsuariosClientes { get; set; }
+        public virtual ICollection<GrupoUsuarioCliente> GruposUsuariosClientes { get; set; }
 
         #endregion
 

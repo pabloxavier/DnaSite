@@ -38,6 +38,7 @@ namespace DNAMais.Domain.Entidades
         public virtual CategoriaProduto CategoriaProduto { get; set; }
 
         public virtual IEnumerable<ItemProduto> ItensProdutos { get; set; }
+        public virtual IEnumerable<ContratoEmpresaProduto> ContratosEmpresasProdutos { get; set; }
 
         #endregion
 
