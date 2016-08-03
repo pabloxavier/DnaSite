@@ -37,8 +37,8 @@ namespace DNAMais.Domain.Entidades
         [ForeignKey("CodigoCategoria")]
         public virtual CategoriaProduto CategoriaProduto { get; set; }
 
-        public virtual IEnumerable<ItemProduto> ItensProdutos { get; set; }
-        public virtual IEnumerable<ContratoEmpresaProduto> ContratosEmpresasProdutos { get; set; }
+        public virtual ICollection<ItemProduto> ItensProdutos { get; set; }
+        public virtual ICollection<ContratoEmpresaProduto> ContratosEmpresasProdutos { get; set; }
 
         #endregion
 
@@ -46,7 +46,8 @@ namespace DNAMais.Domain.Entidades
 
         public Produto()
         {
-
+            ItensProdutos = new HashSet<ItemProduto>();
+            ContratosEmpresasProdutos = new HashSet<ContratoEmpresaProduto>();
         }
 
         #endregion

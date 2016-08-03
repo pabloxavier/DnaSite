@@ -8,32 +8,31 @@ using System.Threading.Tasks;
 
 namespace DNAMais.Domain.Entidades
 {
-    [Table("UF", Schema = "DNASITE")]
-    public class Uf
+    [Table("STATUS_SOLICITACAO_CONTAGEM", Schema = "DNASITE")]
+    public class StatusSolicitacaoContagem
     {
         #region Propriedades Públicas
 
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column("SG_UF")]
-        [StringLength(2)]
-        public string Sigla { get; set; }
+        [Column("CD_STATUS_SOLICITACAO_CONTAGEM")]
+        public byte? Codigo { get; set; }
 
         [Required]
-        [Column("NM_UF")]
-        [StringLength(60)]
+        [StringLength(30)]
+        [Column("NM_STATUS")]
         public string Nome { get; set; }
 
-        public virtual ICollection<ClienteEmpresaEndereco> ClientesEmpresasEnderecos { get; set; }
+        public virtual ICollection<SolicitacaoContagem> SolicitacoesContagens { get; set; }
 
         #endregion
 
         #region Construtor
 
-        public Uf()
+        public StatusSolicitacaoContagem()
         {
-            ClientesEmpresasEnderecos = new HashSet<ClienteEmpresaEndereco>();
+            SolicitacoesContagens = new HashSet<SolicitacaoContagem>();
         }
 
         #endregion

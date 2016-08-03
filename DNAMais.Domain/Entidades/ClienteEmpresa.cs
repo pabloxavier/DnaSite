@@ -54,13 +54,15 @@ namespace DNAMais.Domain.Entidades
         [Column("ID_USUARIO_CADASTRO")]
         public int? IdUsuarioCadastro { get; set; }
         [ForeignKey("IdUsuarioCadastro")]
-        public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
+        public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
         public virtual ICollection<ClienteEmpresaEndereco> ClientesEmpresasEnderecos { get; set; }
         public virtual ICollection<ClienteEmpresaContato> ClientesEmpresasContatos { get; set; }
         public virtual ICollection<ContratoEmpresa> ContratosEmpresas { get; set; }
         public virtual ICollection<UsuarioCliente> UsuariosClientes { get; set; }
         public virtual ICollection<GrupoUsuarioCliente> GruposUsuariosClientes { get; set; }
+        public virtual ICollection<TransacaoConsulta> TransacoesConsultas { get; set; }
+        public virtual ICollection<SolicitacaoContagem> SolicitacoesContagens { get; set; }
 
         #endregion
 
@@ -68,7 +70,13 @@ namespace DNAMais.Domain.Entidades
 
         public ClienteEmpresa()
         {
-
+            ClientesEmpresasEnderecos = new HashSet<ClienteEmpresaEndereco>();
+            ClientesEmpresasContatos = new HashSet<ClienteEmpresaContato>();
+            ContratosEmpresas = new HashSet<ContratoEmpresa>();
+            UsuariosClientes = new HashSet<UsuarioCliente>();
+            GruposUsuariosClientes = new HashSet<GrupoUsuarioCliente>();
+            TransacoesConsultas = new HashSet<TransacaoConsulta>();
+            SolicitacoesContagens = new HashSet<SolicitacaoContagem>();
         }
 
         #endregion

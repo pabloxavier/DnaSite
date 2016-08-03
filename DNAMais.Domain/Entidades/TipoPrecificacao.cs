@@ -32,7 +32,7 @@ namespace DNAMais.Domain.Entidades
 
         public TipoPrecificacao()
         {
-
+            Categorias = new HashSet<CategoriaProduto>();
         }
 
         #endregion

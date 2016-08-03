@@ -37,7 +37,7 @@ namespace DNAMais.Domain.Entidades
 
         public PerfilUsuarioCliente()
         {
-
+            UsuariosClientesPerfis = new HashSet<UsuarioClientePerfil>();
         }
 
         #endregion

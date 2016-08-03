@@ -24,13 +24,15 @@ namespace DNAMais.Domain.Entidades
         [StringLength(20)]
         public string Nome { get; set; }
 
+        public virtual ICollection<Faturamento> Faturamentos { get; set; }
+
         #endregion
 
         #region Construtor
 
         public StatusFaturamento()
         {
-
+            Faturamentos = new HashSet<Faturamento>();
         }
 
         #endregion

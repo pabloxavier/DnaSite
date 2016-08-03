@@ -41,9 +41,9 @@ namespace DNAMais.Domain.Entidades
 
         [Required]
         [Column("ID_USUARIO_BACKOFFICE_CADASTRO")]
-        public int? IdUsuarioBackofficeCadastro { get; set; }
-        [ForeignKey("IdUsuarioBackofficeCadastro")]
-        public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
+        public int? IdUsuarioBackOfficeCadastro { get; set; }
+        [ForeignKey("IdUsuarioBackOfficeCadastro")]
+        public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
         [Required]
         [Column("ID_USUARIO_CLIENTE_CADASTRO")]
@@ -59,7 +59,7 @@ namespace DNAMais.Domain.Entidades
 
         public GrupoUsuarioCliente()
         {
-
+            UsuariosClientesGrupos = new HashSet<UsuarioClienteGrupo>();
         }
 
         #endregion

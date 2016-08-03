@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace DNAMais.Domain.Entidades
 {
-    [Table("USUARIO_CLIENTE_PERFIL", Schema = "DNASITE")]
-    public class UsuarioClientePerfil
+    [Table("USUARIO_CLIENTE_GRUPO", Schema = "DNASITE")]
+    public class UsuarioClienteGrupo
     {
         #region Propriedades Públicas
 
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_USUARIO_CLIENTE", Order = 1)]
         public int? IdUsuarioCliente { get; set; }
         [ForeignKey("IdUsuarioCliente")]
@@ -22,10 +23,11 @@ namespace DNAMais.Domain.Entidades
 
         [Key]
         [Required]
-        [Column("ID_PERFIL_USUARIO_CLIENTE", Order = 2)]
-        public int? IdPerfilUsuarioCliente { get; set; }
-        [ForeignKey("IdPerfilUsuarioCliente")]
-        public virtual PerfilUsuarioCliente PerfilUsuarioCliente { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("ID_GRUPO_USUARIO_CLIENTE", Order = 2)]
+        public int? IdGrupoUsuarioCliente { get; set; }
+        [ForeignKey("IdGrupoUsuarioCliente")]
+        public virtual GrupoUsuarioCliente GrupoUsuarioCliente { get; set; }
 
         [Required]
         [Column("DT_CADASTRO")]
@@ -47,7 +49,7 @@ namespace DNAMais.Domain.Entidades
 
         #region Construtor
 
-        public UsuarioClientePerfil()
+        public UsuarioClienteGrupo()
         {
 
         }

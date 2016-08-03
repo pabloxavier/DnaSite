@@ -17,7 +17,7 @@ namespace DNAMais.Infrastructure.Data.Repositories
             context = new DNAMaisSiteContext();
         }
 
-        public List<UsuarioBackoffice> ListarTodos()
+        public List<UsuarioBackOffice> ListarTodos()
         {
             return context.BackOfficeUsers.ToList();
         }

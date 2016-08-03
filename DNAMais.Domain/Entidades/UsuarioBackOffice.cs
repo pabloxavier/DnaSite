@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DNAMais.Domain
 {
     [Table("USUARIO_BACKOFFICE", Schema = "DNASITE")]
-    public class UsuarioBackoffice
+    public class UsuarioBackOffice
     {
         #region Propriedades Públicas
 
@@ -51,7 +51,7 @@ namespace DNAMais.Domain
         public byte? IdPerfil { get; set; }
 
         public virtual ICollection<MensagemContato> MensagensContatos { get; set; }
-        public virtual ICollection<UsuarioBackoffice> UsuariosBackoffice { get; set; }
+        public virtual ICollection<UsuarioBackOffice> UsuariosBackOffice { get; set; }
         public virtual ICollection<ClienteEmpresa> ClientesEmpresas { get; set; }
         public virtual ICollection<TipoEndereco> TiposEnderecos { get; set; }
         public virtual ICollection<ClienteEmpresaEndereco> ClientesEmpresasEnderecos { get; set; }
@@ -69,9 +69,22 @@ namespace DNAMais.Domain
 
         #region Construtor
 
-        public UsuarioBackoffice()
+        public UsuarioBackOffice()
         {
             MensagensContatos = new HashSet<MensagemContato>();
+            UsuariosBackOffice = new HashSet<UsuarioBackOffice>();
+            ClientesEmpresas = new HashSet<ClienteEmpresa>();
+            TiposEnderecos = new HashSet<TipoEndereco>();
+            ClientesEmpresasEnderecos = new HashSet<ClienteEmpresaEndereco>();
+            TiposContatos = new HashSet<TipoContato>();
+            ClientesEmpresasContatos = new HashSet<ClienteEmpresaContato>();
+            ClientesEmpresasContatosFones = new HashSet<ClienteEmpresaContatoFone>();
+            ClientesEmpresasContatosEmails = new HashSet<ClienteEmpresaContatoEmail>();
+            ContratosEmpresas = new HashSet<ContratoEmpresa>();
+            UsuariosClientes = new HashSet<UsuarioCliente>();
+            UsuariosClientesPerfis = new HashSet<UsuarioClientePerfil>();
+            GruposUsuariosClientes = new HashSet<GrupoUsuarioCliente>();
+            UsuariosClientesGrupos = new HashSet<UsuarioClienteGrupo>();
         }
 
         #endregion

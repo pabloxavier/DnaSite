@@ -24,7 +24,7 @@ namespace DNAMais.Domain.Entidades
         [StringLength(30)]
         public string Nome { get; set; }
 
-        public virtual IEnumerable<ClienteEmpresa> ClientesEmpresas { get; set; }
+        public virtual ICollection<ClienteEmpresa> ClientesEmpresas { get; set; }
 
         #endregion
 
@@ -32,7 +32,7 @@ namespace DNAMais.Domain.Entidades
 
         public StatusClienteEmpresa()
         {
-
+            ClientesEmpresas = new HashSet<ClienteEmpresa>();
         }
 
         #endregion

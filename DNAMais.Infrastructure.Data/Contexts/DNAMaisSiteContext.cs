@@ -18,7 +18,7 @@ namespace DNAMais.Infrastructure.Data.Contexts
 
         }
 
-        public DbSet<UsuarioBackoffice> BackOfficeUsers { get; set; }
+        public DbSet<UsuarioBackOffice> BackOfficeUsers { get; set; }
         public DbSet<MensagemContato> Messages { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
 

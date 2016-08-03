@@ -55,9 +55,9 @@ namespace DNAMais.Domain.Entidades
 
         [Column("ID_USUARIO_BACKOFFICE_RESPOSTA")]
         [Index("MENSAGEM_CONTATO_IDX_01")]
-        public int? IdUsuarioBackofficeResposta { get; set; }
-        [ForeignKey("IdUsuarioBackofficeResposta")]
-        public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
+        public int? IdUsuarioBackOfficeResposta { get; set; }
+        [ForeignKey("IdUsuarioBackOfficeResposta")]
+        public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
         [Column("DT_RESPOSTA")]
         public DateTime? DataResposta { get; set; }

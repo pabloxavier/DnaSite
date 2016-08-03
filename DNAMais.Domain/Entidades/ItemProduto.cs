@@ -37,13 +37,17 @@ namespace DNAMais.Domain.Entidades
         [ForeignKey("CodigoProduto")]
         public virtual Produto Produto { get; set; }
 
+        public virtual ICollection<TransacaoConsulta> TransacoesConsultas { get; set; }
+        public virtual ICollection<SolicitacaoContagem> SolicitacoesContagens { get; set; }
+
         #endregion
 
         #region Construtor
 
         public ItemProduto()
         {
-
+            TransacoesConsultas = new HashSet<TransacaoConsulta>();
+            SolicitacoesContagens = new HashSet<SolicitacaoContagem>();
         }
 
         #endregion

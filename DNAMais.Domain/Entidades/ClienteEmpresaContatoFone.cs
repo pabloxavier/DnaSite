@@ -37,7 +37,7 @@ namespace DNAMais.Domain.Entidades
         public short? Ramal { get; set; }
 
         [Column("DS_OBSERVACAO")]
-        [StringLength(100)]
+        [StringLength(1000)]
         public string Observacao { get; set; }
 
         [Required]
@@ -48,7 +48,7 @@ namespace DNAMais.Domain.Entidades
         [Column("ID_USUARIO_CADASTRO")]
         public int? IdUsuarioCadastro { get; set; }
         [ForeignKey("IdUsuarioCadastro")]
-        public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
+        public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
         #endregion
 

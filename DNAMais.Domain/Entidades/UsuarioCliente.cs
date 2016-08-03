@@ -51,9 +51,9 @@ namespace DNAMais.Domain.Entidades
 
         [Required]
         [Column("ID_USUARIO_BACKOFFICE_CADASTRO")]
-        public int? IdUsuarioBackofficeCadastro { get; set; }
-        [ForeignKey("IdUsuarioBackofficeCadastro")]
-        public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
+        public int? IdUsuarioBackOfficeCadastro { get; set; }
+        [ForeignKey("IdUsuarioBackOfficeCadastro")]
+        public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
         [Required]
         [Column("ID_USUARIO_CLIENTE_CADASTRO")]
@@ -62,14 +62,15 @@ namespace DNAMais.Domain.Entidades
         //Verificar como efetuar o relacionamento
         //(Foreign Key referenciando a própria classe/tabela e pluralização)
 
-        //[ForeignKey("IdUsuarioClienteCadastro")]
-        //public virtual UsuarioCliente UsuarioCliente { get; set; }
+        [ForeignKey("IdUsuarioClienteCadastro")]
+        public virtual UsuarioCliente UsuarioClienteCadastro { get; set; }
 
-        //public virtual ICollection<UsuarioCliente> UsuariosClientes { get; set; }
-
+        public virtual ICollection<UsuarioCliente> UsuariosCadastrados { get; set; }
         public virtual ICollection<UsuarioClientePerfil> UsuariosClientesPerfis { get; set; }
         public virtual ICollection<GrupoUsuarioCliente> GruposUsuariosClientes { get; set; }
         public virtual ICollection<UsuarioClienteGrupo> UsuariosClientesGrupos { get; set; }
+        public virtual ICollection<TransacaoConsulta> TransacoesConsultas { get; set; }
+        public virtual ICollection<SolicitacaoContagem> SolicitacoesContagens { get; set; }
 
         #endregion
 
@@ -77,7 +78,12 @@ namespace DNAMais.Domain.Entidades
 
         public UsuarioCliente()
         {
-
+            UsuariosCadastrados = new HashSet<UsuarioCliente>();
+            UsuariosClientesPerfis = new HashSet<UsuarioClientePerfil>();
+            GruposUsuariosClientes = new HashSet<GrupoUsuarioCliente>();
+            UsuariosClientesGrupos = new HashSet<UsuarioClienteGrupo>();
+            TransacoesConsultas = new HashSet<TransacaoConsulta>();
+            SolicitacoesContagens = new HashSet<SolicitacaoContagem>();
         }
 
         #endregion

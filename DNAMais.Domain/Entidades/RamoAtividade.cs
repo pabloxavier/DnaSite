@@ -31,9 +31,9 @@ namespace DNAMais.Domain.Entidades
         [Column("ID_USUARIO_CADASTRO")]
         public int? IdUsuarioCadastro { get; set; }
         [ForeignKey("IdUsuarioCadastro")]
-        public virtual UsuarioBackoffice UsuarioBackoffice { get; set; }
+        public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
-        public virtual IEnumerable<ClienteEmpresa> ClientesEmpresas { get; set; }
+        public virtual ICollection<ClienteEmpresa> ClientesEmpresas { get; set; }
 
         #endregion
 
@@ -41,7 +41,7 @@ namespace DNAMais.Domain.Entidades
 
         public RamoAtividade()
         {
-
+            ClientesEmpresas = new HashSet<ClienteEmpresa>();
         }
 
         #endregion

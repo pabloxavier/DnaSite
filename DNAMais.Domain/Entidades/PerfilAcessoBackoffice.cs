@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DNAMais.Domain.Entidades
 {
     [Table("PERFIL_ACESSO_BACKOFFICE", Schema = "DNASITE")]
-    public class PerfilAcessoBackoffice
+    public class PerfilAcessoBackOffice
     {
         #region Propriedades Públicas
 
@@ -31,9 +31,9 @@ namespace DNAMais.Domain.Entidades
 
         #region Construtor
 
-        public PerfilAcessoBackoffice()
+        public PerfilAcessoBackOffice()
         {
-
+            PerfisFuncionalidades = new HashSet<PerfilAcessoFuncionalidade>();
         }
 
         #endregion

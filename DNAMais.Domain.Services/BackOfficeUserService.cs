@@ -13,12 +13,12 @@ namespace DNAMais.Domain.Services
     {
         private DNAMaisSiteContext context;
 
-        private Repository<UsuarioBackoffice> repoBackOfficeUser;
+        private Repository<UsuarioBackOffice> repoBackOfficeUser;
 
         public BackOfficeUserService()
         {
             context = new DNAMaisSiteContext();
-            repoBackOfficeUser = new Repository<UsuarioBackoffice>(context);
+            repoBackOfficeUser = new Repository<UsuarioBackOffice>(context);
         }
 
         public void Dispose()
@@ -26,22 +26,22 @@ namespace DNAMais.Domain.Services
             context.Dispose();
         }
 
-        public IQueryable<UsuarioBackoffice> GetAll()
+        public IQueryable<UsuarioBackOffice> GetAll()
         {
             return repoBackOfficeUser.GetAll();
         }
 
-        public UsuarioBackoffice GetById(int id)
+        public UsuarioBackOffice GetById(int id)
         {
             return repoBackOfficeUser.GetById(id);
         }
 
-        public UsuarioBackoffice GetByLogin(string login)
+        public UsuarioBackOffice GetByLogin(string login)
         {
             return repoBackOfficeUser.FindFirst(i => i.Login == login);
         }
 
-        public UsuarioBackoffice Add(UsuarioBackoffice teste)
+        public UsuarioBackOffice Add(UsuarioBackOffice teste)
         {
             //var newEntry = repoBackOfficeUser.Add(teste);
             //return newEntry;
@@ -49,13 +49,13 @@ namespace DNAMais.Domain.Services
             return repoBackOfficeUser.Add(teste);
         }
 
-        public void Update(UsuarioBackoffice teste)
+        public void Update(UsuarioBackOffice teste)
         {
             var entry = context.Entry(teste);
             entry.State = System.Data.Entity.EntityState.Modified;
         }
 
-        public void Remove(UsuarioBackoffice teste)
+        public void Remove(UsuarioBackOffice teste)
         {
             repoBackOfficeUser.Remove(teste);
         }

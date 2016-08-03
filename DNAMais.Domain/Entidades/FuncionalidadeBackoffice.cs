@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DNAMais.Domain.Entidades
 {
     [Table("FUNCIONALIDADE_BACKOFFICE", Schema = "DNASITE")]
-    public class FuncionalidadeBackoffice
+    public class FuncionalidadeBackOffice
     {
         #region Propriedades Públicas
 
@@ -30,7 +30,7 @@ namespace DNAMais.Domain.Entidades
 
         #region Construtor
 
-        public FuncionalidadeBackoffice()
+        public FuncionalidadeBackOffice()
         {
 
         }
