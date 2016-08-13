@@ -27,7 +27,7 @@ namespace DNAMais.Domain.Services
             context.Dispose();
         }
 
-        public ResultValidation Save(Newsletter subscriptionNewsletter)
+        public ResultValidation Salvar(Newsletter subscriptionNewsletter)
         {
             ResultValidation returnValidation = new ResultValidation();
 
@@ -65,7 +65,7 @@ namespace DNAMais.Domain.Services
             return returnValidation;
         }
 
-        public ResultValidation Remove(int id)
+        public ResultValidation Excluir(int id)
         {
             ResultValidation returnValidation = new ResultValidation();
 
@@ -84,32 +84,32 @@ namespace DNAMais.Domain.Services
             return returnValidation;
         }
 
-        public IQueryable<Newsletter> ListNotConfirmed()
+        public IQueryable<Newsletter> ListarNaoConfirmadas()
         {
             return repoNewsletter.Filter(i => i.OptIn == false);
         }
 
-        public Newsletter GetById(int id)
+        public Newsletter ConsultarPorId(int id)
         {
             return repoNewsletter.GetById(id);
         }
 
-        public Newsletter GetByGuid(string guid)
+        public Newsletter ConsultarPorGuid(string guid)
         {
             return repoNewsletter.FindFirst(i => i.GUID == guid);
         }
 
-        public Newsletter GetByEmail(string email)
+        public Newsletter ConsultarPorEmail(string email)
         {
             return repoNewsletter.FindFirst(i => i.Email == email);
         }
 
-        public void Confirm()
+        public void Confirmar()
         {
             
         }
 
-        public void Cancel()
+        public void Cancelar()
         {
 
         }

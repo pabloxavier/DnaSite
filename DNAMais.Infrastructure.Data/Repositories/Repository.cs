@@ -62,6 +62,11 @@ namespace DNAMais.Infrastructure.Data.Repositories
             return DbSet.FirstOrDefault(predicate);
         }
 
+        public T FindFirst()
+        {
+            return DbSet.FirstOrDefault();
+        }
+
         public T Add(T t)
         {
             var newEntry = DbSet.Add(t);

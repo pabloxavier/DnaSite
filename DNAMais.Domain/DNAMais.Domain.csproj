@@ -54,6 +54,15 @@
     <Compile Include="Entidades\ClienteEmpresaContatoEmail.cs" />
     <Compile Include="Entidades\ClienteEmpresaContatoFone.cs" />
     <Compile Include="Entidades\ClienteEmpresaEndereco.cs" />
+    <Compile Include="Entidades\Consultas\InfoOrigemDados.cs" />
+    <Compile Include="Entidades\Consultas\InfoPessoaFisica.cs" />
+    <Compile Include="Entidades\Consultas\InfoPessoaFisicaCadastro.cs" />
+    <Compile Include="Entidades\Consultas\InfoPessoaFisicaEmail.cs" />
+    <Compile Include="Entidades\Consultas\InfoPessoaFisicaEndereco.cs" />
+    <Compile Include="Entidades\Consultas\InfoPessoaFisicaTelefone.cs" />
+    <Compile Include="Entidades\Consultas\InfoTipoEndereco.cs" />
+    <Compile Include="Entidades\Consultas\InfoTipoTelefone.cs" />
+    <Compile Include="Entidades\Consultas\InfoUf.cs" />
     <Compile Include="Entidades\ContratoEmpresa.cs" />
     <Compile Include="Entidades\ContratoEmpresaPrecificacao.cs" />
     <Compile Include="Entidades\ContratoEmpresaProduto.cs" />

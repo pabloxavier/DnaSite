@@ -13,9 +13,9 @@ namespace DNAMais_Program
     {
         static void Main(string[] args)
         {
-            BackOfficeUserService teste = new BackOfficeUserService();
+            UsuarioBackOfficeService teste = new UsuarioBackOfficeService();
 
-            Console.Write("Teste: " + teste.GetById(1));
+            Console.Write("Teste: " + teste.ConsultarPorId(1));
             Console.ReadKey();
 
             //BackOfficeUser user = new BackOfficeUser();
