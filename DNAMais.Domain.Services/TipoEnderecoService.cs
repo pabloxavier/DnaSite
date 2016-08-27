@@ -37,7 +37,7 @@ namespace DNAMais.Domain.Services
             return repoTipoEndereco.GetById(id);
         }
 
-        public ResultValidation Salvar(TipoEndereco tipoEndereco)
+        public ResultValidation Incluir(TipoEndereco tipoEndereco)
         {
             ResultValidation returnValidation = new ResultValidation();
 
@@ -45,18 +45,7 @@ namespace DNAMais.Domain.Services
 
             try
             {
-                if (tipoEndereco.Id == null)
-                {
-                    tipoEndereco.Id = new Random().Next(1, 999999);
-
-                    tipoEndereco.DataCadastro = DateTime.Now;
-
-                    repoTipoEndereco.Add(tipoEndereco);
-                }
-                else
-                {
-                    repoTipoEndereco.Update(tipoEndereco);
-                }
+                repoTipoEndereco.Add(tipoEndereco);
 
                 context.SaveChanges();
             }
@@ -68,9 +57,44 @@ namespace DNAMais.Domain.Services
             return returnValidation;
         }
 
-        public void Excluir(int id)
+        public ResultValidation Alterar(TipoEndereco tipoEndereco)
         {
-            repoTipoEndereco.Remove(id);
+            ResultValidation returnValidation = new ResultValidation();
+
+            if (!returnValidation.Ok) return returnValidation;
+
+            try
+            {
+                repoTipoEndereco.Update(tipoEndereco);
+
+                context.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                returnValidation.AddMessage("", err.Message);
+            }
+
+            return returnValidation;
+        }
+
+        public ResultValidation Excluir(int id)
+        {
+            ResultValidation returnValidation = new ResultValidation();
+
+            if (!returnValidation.Ok) return returnValidation;
+
+            try
+            {
+                repoTipoEndereco.Remove(id);
+
+                context.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                returnValidation.AddMessage("", err.Message);
+            }
+
+            return returnValidation;
         }
     }
 }

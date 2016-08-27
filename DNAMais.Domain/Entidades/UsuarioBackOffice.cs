@@ -1,4 +1,6 @@
-﻿using DNAMais.Domain.Entidades;
+﻿using DNAMais.Domain.CustomAttributes;
+using DNAMais.Domain.Entidades;
+using DNAMais.Domain.Validacao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,51 +9,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DNAMais.Domain
+namespace DNAMais.Domain.Entidades
 {
     [Table("USUARIO_BACKOFFICE", Schema = "DNASITE")]
+    [SequenceOracle("SQ_USUARIO_BACKOFFICE")]
     public class UsuarioBackOffice
     {
         #region Propriedades Públicas
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Required]
         [Column("ID_USUARIO_BACKOFFICE")]
-        [Index("TS_DNASITE_INDEX")]
         public int? Id { get; set; }
 
-        [Required]
-        [Index("TS_DNASITE_INDEX", 1, IsUnique = true)]
         [Column("NM_USUARIO")]
+        [Required(ErrorMessage = "Informe o nome.")]
+        [StringLength(200)]
         public string Nome { get; set; }
 
-        [Required]
-        [Index("TS_DNASITE_INDEX", 2, IsUnique = true)]
         [Column("DS_EMAIL")]
+        [Required(ErrorMessage = "Informe o e-mail.")]
+        [EmailValidation(ErrorMessage="Informe um e-mail válido.")]
+        [StringLength(80)]
         public string Email { get; set; }
 
-        [Required]
         [Column("DS_LOGIN")]
+        [Required(ErrorMessage = "Informe o login.")]
+        [StringLength(20)]
         public string Login { get; set; }
 
-        [Required]
         [Column("DS_SENHA")]
+        [Required(ErrorMessage="Informe a senha.")]
+        [StringLength(32)]
         public string Senha { get; set; }
 
-        [Required]
         [Column("DT_CRIACAO")]
         public DateTime? DataCriacao { get; set; }
 
-        [Required]
+        [NotMapped]
+        public bool? Admin { get; set; }
+
         [Column("IS_ADMIN")]
-        public byte? Admin { get; set; }
+        public string AdminDescricao
+        {
+            get { return Admin ?? false ? "S" : "N"; }
+            set { Admin = value == "S" ? true : false; }
+        }
 
         [Column("ID_PERFIL_ACESSO_BACKOFFICE")]
         public byte? IdPerfil { get; set; }
 
+        [ForeignKey("IdPerfil")]
+        public PerfilAcessoBackOffice PerfilAcessoBackOffice { get; set; }
+
         public virtual ICollection<MensagemContato> MensagensContatos { get; set; }
-        public virtual ICollection<UsuarioBackOffice> UsuariosBackOffice { get; set; }
+        //public virtual ICollection<UsuarioBackOffice> UsuariosBackOffice { get; set; }
         public virtual ICollection<ClienteEmpresa> ClientesEmpresas { get; set; }
         public virtual ICollection<TipoEndereco> TiposEnderecos { get; set; }
         public virtual ICollection<ClienteEmpresaEndereco> ClientesEmpresasEnderecos { get; set; }
@@ -72,7 +84,7 @@ namespace DNAMais.Domain
         public UsuarioBackOffice()
         {
             MensagensContatos = new HashSet<MensagemContato>();
-            UsuariosBackOffice = new HashSet<UsuarioBackOffice>();
+            //UsuariosBackOffice = new HashSet<UsuarioBackOffice>();
             ClientesEmpresas = new HashSet<ClienteEmpresa>();
             TiposEnderecos = new HashSet<TipoEndereco>();
             ClientesEmpresasEnderecos = new HashSet<ClienteEmpresaEndereco>();

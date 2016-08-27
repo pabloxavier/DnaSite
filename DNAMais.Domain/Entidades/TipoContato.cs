@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DNAMais.Domain.CustomAttributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,21 +15,21 @@ namespace DNAMais.Domain.Entidades
         #region Propriedades Públicas
 
         [Key]
-        [Required]
+        [Required(ErrorMessage = "Informe o código.")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_TIPO_CONTATO")]
+        [Display(Name="Código")]
         public int? Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="Informe o nome.")]
         [Column("NM_TIPO_CONTATO")]
         [StringLength(20)]
+        [Display(Name = "Nome")]
         public string Nome { get; set; }
 
-        [Required]
         [Column("DT_CADASTRO")]
         public DateTime? DataCadastro { get; set; }
 
-        [Required]
         [Column("ID_USUARIO_CADASTRO")]
         public int? IdUsuarioCadastro { get; set; }
         [ForeignKey("IdUsuarioCadastro")]

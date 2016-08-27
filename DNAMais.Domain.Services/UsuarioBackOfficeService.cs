@@ -1,4 +1,5 @@
-﻿using DNAMais.Framework;
+﻿using DNAMais.Domain.Entidades;
+using DNAMais.Framework;
 using DNAMais.Infrastructure.Data.Contexts;
 using DNAMais.Infrastructure.Data.Repositories;
 using System;
@@ -51,8 +52,8 @@ namespace DNAMais.Domain.Services
             {
                 if (usuarioBackOffice.Id == null)
                 {
-                    usuarioBackOffice.Id = new Random().Next(1, 999999);
                     usuarioBackOffice.DataCriacao = DateTime.Now;
+                    usuarioBackOffice.Senha = Security.Encryption(usuarioBackOffice.Login + usuarioBackOffice.Senha);
                     
                     repoUsuarioBackOffice.Add(usuarioBackOffice);
                 }
@@ -71,9 +72,24 @@ namespace DNAMais.Domain.Services
             return returnValidation;
         }
 
-        public void Remove(int id)
+        public ResultValidation Excluir(int id)
         {
-            repoUsuarioBackOffice.Remove(id);
+            ResultValidation returnValidation = new ResultValidation();
+
+            if (!returnValidation.Ok) return returnValidation;
+
+            try
+            {
+                repoUsuarioBackOffice.Remove(id);
+
+                context.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                returnValidation.AddMessage("", err.Message);
+            }
+
+            return returnValidation;
         }
     }
 }

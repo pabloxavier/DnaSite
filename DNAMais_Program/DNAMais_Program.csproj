@@ -65,6 +65,10 @@
       <Project>{a6e1ef7c-d622-4362-b780-ea6171a55185}</Project>
       <Name>DNAMais.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DNAMais.Framework\DNAMais.Framework.csproj">
+      <Project>{a6c06abb-4570-4f8e-8a53-724d670bc11c}</Project>
+      <Name>DNAMais.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DNAMais.Infrastructure.Data\DNAMais.Infrastructure.Data.csproj">
       <Project>{d30c0aa4-c088-40a0-840c-430851563a76}</Project>
       <Name>DNAMais.Infrastructure.Data</Name>

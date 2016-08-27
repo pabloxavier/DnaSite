@@ -16,7 +16,7 @@ namespace DNAMais.BackOffice.Facades.Base
             this.modelState = modelState;
         }
 
-        protected void FillModelState(ResultValidation result)
+        protected void PreencherModelState(ResultValidation result)
         {
             if (!result.Ok)
             {

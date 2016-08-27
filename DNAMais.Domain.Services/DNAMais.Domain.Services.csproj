@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutenticacaoService.cs" />
     <Compile Include="ClienteEmpresaContatoFoneService.cs" />
     <Compile Include="ClienteEmpresaEnderecoService.cs" />
     <Compile Include="ContratoEmpresaPrecificacaoService.cs" />

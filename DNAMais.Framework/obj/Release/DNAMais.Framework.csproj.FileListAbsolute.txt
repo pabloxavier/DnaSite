@@ -8,3 +8,13 @@ C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\Antlr3.Runtime.pdb
 C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\bin\Release\Newtonsoft.Json.xml
 C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\obj\Release\DNAMais.Framework.dll
 C:\ProjetoDnaMais\DNAMais\DNAMais.Framework\obj\Release\DNAMais.Framework.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\DNAMais.Framework.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\DNAMais.Framework.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\Antlr3.Runtime.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\Newtonsoft.Json.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\WebGrease.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\Antlr3.Runtime.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Release\Newtonsoft.Json.xml
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Release\DNAMais.Framework.dll
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Release\DNAMais.Framework.pdb

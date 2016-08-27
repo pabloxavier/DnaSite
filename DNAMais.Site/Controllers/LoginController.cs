@@ -16,22 +16,22 @@ namespace DNAMais.Site.Controllers
             return View();
         }
 
-        public ActionResult CpfPf()
+        public ActionResult PesquisaPessoaFisica()
         {
             return View();
         }
 
-        public ActionResult AddressPf()
+        public ActionResult PesquisaPessoaJuridica()
         {
             return View();
         }
 
-        public ActionResult NamePf()
+        public ActionResult PesquisaFtp()
         {
             return View();
         }
 
-        public ActionResult PhonePf()
+        public ActionResult PesquisaVeiculo()
         {
             return View();
         }

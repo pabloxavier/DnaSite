@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DNAMais.Domain.CustomAttributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace DNAMais.Domain.Entidades
 {
-    [Table("ID_CLI_EMPRESA_CONTATO", Schema = "DNASITE")]
+    [Table("CLIENTE_EMPRESA_CONTATO", Schema = "DNASITE")]
+    [SequenceOracle("SQ_CLIENTE_EMPRESA_CONTATO")]
     public class ClienteEmpresaContato
     {
         #region Propriedades Públicas

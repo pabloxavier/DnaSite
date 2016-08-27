@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using DNAMais.Infrastructure.Data.Contexts;
+﻿using DNAMais.Infrastructure.Data.Contexts;
+using System;
 using System.Data.Entity;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace DNAMais.Infrastructure.Data.Repositories

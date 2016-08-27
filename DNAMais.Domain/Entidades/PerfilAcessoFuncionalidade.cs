@@ -14,18 +14,16 @@ namespace DNAMais.Domain.Entidades
         #region Propriedades Públicas
 
         [Key]
-        [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Index("TS_DNASITE_INDEX")]
-        [Column("ID_PERFIL_ACESSO_BACKOFFICE")]
+        [Column("ID_PERFIL_ACESSO_BACKOFFICE", Order = 1)]
         public byte? IdPerfilBackOffice { get; set; }
+
         [ForeignKey("IdPerfilBackOffice")]
         public virtual PerfilAcessoBackOffice PerfilAcessoBackOffice { get; set; }
 
-        [Required]
-        [Column("CD_FUNCIONALIDADE_BACKOFFICE")]
-        [StringLength(15)]
-        public string CodigoFuncionalidadeBackOffice;
+        [Key]
+        [Column("CD_FUNCIONALIDADE_BACKOFFICE", Order = 2)]
+        public string CodigoFuncionalidadeBackOffice { get; set; }
+
         [ForeignKey("CodigoFuncionalidadeBackOffice")]
         public virtual FuncionalidadeBackOffice FuncionalidadeBackOffice { get; set; }
 

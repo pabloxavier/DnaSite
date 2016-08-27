@@ -43,7 +43,6 @@ namespace DNAMais.Domain.Services
             {
                 if (subscriptionNewsletter.Id == null)
                 {
-                    subscriptionNewsletter.Id = new Random().Next(1,999999);
                     subscriptionNewsletter.DataRegistro = DateTime.Now;
                     subscriptionNewsletter.OptIn = false;
                     subscriptionNewsletter.OptOut = false;

@@ -7,11 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DNAMais.Domain.Extensions;
+using DNAMais.Domain.CustomAttributes;
 
 
 namespace DNAMais.Domain.Entidades
 {
     [Table("NEWSLETTER", Schema = "DNASITE")]
+    [SequenceOracle("SQ_NEWSLETTER")]
     public class Newsletter
     {
         #region Propriedades Públicas

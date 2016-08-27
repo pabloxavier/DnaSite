@@ -47,8 +47,6 @@ namespace DNAMais.Domain.Services
             {
                 if (clienteEmpresaContatoFone.Id == null)
                 {
-                    clienteEmpresaContatoFone.Id = new Random().Next(1, 999999);
-
                     clienteEmpresaContatoFone.DataCadastro = DateTime.Now;
 
                     repoClienteEmpresaContatoFone.Add(clienteEmpresaContatoFone);

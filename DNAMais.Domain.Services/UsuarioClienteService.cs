@@ -52,7 +52,6 @@ namespace DNAMais.Domain.Services
             {
                 if (usuarioCliente.Id == null)
                 {
-                    usuarioCliente.Id = new Random().Next(1, 999999);
                     usuarioCliente.DataCadastro = DateTime.Now;
 
                     repoUsuarioCliente.Add(usuarioCliente);

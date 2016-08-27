@@ -17,10 +17,10 @@ namespace DNAMais.Infrastructure.Data.Repositories
             context = new DNAMaisSiteContext();
         }
 
-        public List<UsuarioBackOffice> ListarTodos()
-        {
-            return context.BackOfficeUsers.ToList();
-        }
+        //public List<UsuarioBackOffice> ListarTodos()
+        //{
+        //    return context.BackOfficeUsers.ToList();
+        //}
 
     }
 }

@@ -14,17 +14,16 @@ namespace DNAMais.Domain.Entidades
         #region Propriedades Públicas
 
         [Key]
-        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("CD_FUNCIONALIDADE_BACKOFFICE")]
-        [Index("TS_DNASITE_INDEX")]
-        [StringLength(15)]
         public string Codigo { get; set; }
 
         [Required]
         [Column("NM_FUNCIONALIDADE")]
         [StringLength(80)]
-        public string Nome;
+        public string Nome { get; set; }
+
+        public virtual ICollection<PerfilAcessoFuncionalidade> PerfisFuncionalidades { get; set; }
 
         #endregion
 
@@ -32,7 +31,7 @@ namespace DNAMais.Domain.Entidades
 
         public FuncionalidadeBackOffice()
         {
-
+            PerfisFuncionalidades = new HashSet<PerfilAcessoFuncionalidade>();
         }
 
         #endregion

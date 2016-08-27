@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using DNAMais.Domain;
 using DNAMais.Domain.Services;
+using DNAMais.Framework;
 
 namespace DNAMais_Program
 {
@@ -13,6 +14,8 @@ namespace DNAMais_Program
     {
         static void Main(string[] args)
         {
+            string x = Security.Encryption("admin1234");
+
             UsuarioBackOfficeService teste = new UsuarioBackOfficeService();
 
             Console.Write("Teste: " + teste.ConsultarPorId(1));

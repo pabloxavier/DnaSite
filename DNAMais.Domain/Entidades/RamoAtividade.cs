@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DNAMais.Domain.CustomAttributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,25 +10,25 @@ using System.Threading.Tasks;
 namespace DNAMais.Domain.Entidades
 {
     [Table("RAMO_ATIVIDADE", Schema = "DNASITE")]
+    [SequenceOracle("SQ_RAMO_ATIVIDADE")]
     public class RamoAtividade
     {
         #region Propriedades Públicas
 
         [Key]
-        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_RAMO_ATIVIDADE")]
-        public int? Id { get; set; }
+        public int? Id { get; private set; }
 
-        [Required]
+        [Required(ErrorMessage = "Informe o nome.")]
         [Column("NM_RAMO_ATIVIDADE")]
+        [StringLength(100)]
+        [Display(Name = "Nome")]
         public string Nome { get; set; }
 
-        [Required]
-        [Column("DT_RAMO_ATIVIDADE")]
+        [Column("DT_CADASTRO")]
         public DateTime? DataCadastro { get; set; }
 
-        [Required]
         [Column("ID_USUARIO_CADASTRO")]
         public int? IdUsuarioCadastro { get; set; }
         [ForeignKey("IdUsuarioCadastro")]

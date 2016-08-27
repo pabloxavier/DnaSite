@@ -47,10 +47,6 @@ namespace DNAMais.Domain.Services
             {
                 if (ramoAtividade.Id == null)
                 {
-                    ramoAtividade.Id = new Random().Next(1, 999999);
-
-                    ramoAtividade.DataCadastro = DateTime.Now;
-
                     repoRamoAtividade.Add(ramoAtividade);
                 }
                 else
@@ -68,9 +64,24 @@ namespace DNAMais.Domain.Services
             return returnValidation;
         }
 
-        public void Excluir(int id)
+        public ResultValidation Excluir(int id)
         {
-            repoRamoAtividade.Remove(id);
+            ResultValidation returnValidation = new ResultValidation();
+
+            if (!returnValidation.Ok) return returnValidation;
+
+            try
+            {
+                repoRamoAtividade.Remove(id);
+
+                context.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                returnValidation.AddMessage("", err.Message);
+            }
+
+            return returnValidation;
         }
     }
 }

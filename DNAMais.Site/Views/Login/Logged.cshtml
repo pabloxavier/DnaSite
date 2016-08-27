@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Logged";
+    ViewBag.Title = "Área Restrita";
     Layout = "~/Views/Shared/_LayoutLogged.cshtml";
 }
 
@@ -11,35 +11,85 @@
         @Html.Partial("Login/Logged/_HeadingLogged")
     </div>
 
-    <div class="content">
-        
-        <div class="grid">
+    @*<div class="content">
 
-            @Html.Partial("Login/Logged/_ContractServicesPf")
+        <div class="grid">*@
 
-            @Html.Partial("Login/Logged/_ContractServicesPj")
+    <div class="featured-boxes">
+        <div class="row">
 
-            @Html.Partial("Login/Logged/_ContractServicesVehicle")
-            
-            @Html.Partial("Login/Logged/_ContractServicesFtp")
+            <div class="col-md-3 col-sm-6">
+                <div class="featured-box featured-box-secondary featured-box-effect-1">
+                    <div class="box-content">
+                        <i class="icon-featured fa fa-search-plus" style=""></i>
+                        <h4 class="text-uppercase"><strong>Pessoa Física</strong></h4>
+                        <p>Disponibilizamos relatórios completos e detalhados sobre o CPF, Endereço, Nome ou Telefone consultado.</p>
+                        <p><a href="@Url.Action("PesquisaPessoaFisica","Login")" class="lnk-secondary learn-more" target="_blank"><strong>Clique para exibir as opções</strong></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="featured-box featured-box-primary featured-box-effect-1">
+                    <div class="box-content">
+                        <i class="icon-featured fa fa-briefcase"></i>
+                        <h4 class="text-uppercase"><strong>Pessoa Jurídica</strong></h4>
+                        <p>Relatórios completos e detalhados sobre o CNPJ, Razão Social ou Telefone consultado.</p>
+                        <p><a href="@Url.Action("PesquisaPessoaJuridica","Login")" class="lnk-primary learn-more" target="_blank"><strong>Clique para exibir as opções</strong></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hidden">
+                <div class="featured-box featured-box-quaternary featured-box-effect-1">
+                    <div class="box-content">
+                        <i class="icon-featured fa fa-exchange"></i>
+                        <h4 class="text-uppercase"><strong>FTP</strong></h4>
+                        <p>Enriquecimento de dados, adaptáveis às necessidades de sua empresa.  </p>
+                        <p><a href="@Url.Action("PesquisaFtp","Login")" class="lnk-quaternary learn-more" target="_blank"><strong>Clique para exibir as opções</strong></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hidden">
+                <div class="featured-box featured-box-tertiary featured-box-effect-1">
+                    <div class="box-content">
+                        <i class="icon-featured fa fa-car"></i>
+                        <h4 class="text-uppercase"><strong>Veículo</strong></h4>
+                        <p>Em breve um novo serviço para você! Pesquisas detalhadas sobre veículos.</p>
+                        <p class="lnk-tertiary learn-more"><strong>Em breve!</strong></p>
+                    </div>
+                </div>
+            </div>
 
         </div>
-
-        <div class="col-md-12">
-            <input type="button" id="btnBack" value="Voltar" class="btn btn-primary" hidden="hidden" />
-        </div>
-
-        <div class="col-md-12">
-            <input type="button" id="btnBackPj" value="Voltar" class="btn btn-primary" hidden="hidden" />
-        </div>
-
-        <div class="col-md-12">
-            <input type="button" id="btnBackVehicle" value="Voltar" class="btn btn-primary" hidden="hidden" />
-        </div>
-
-        <div class="col-md-12">
-            <input type="button" id="btnBackFtp" value="Voltar" class="btn btn-primary" hidden="hidden" />
-        </div>
-
     </div>
+
+    @*@Html.Partial("Login/Logged/_ContractServicesPf")
+
+        @Html.Partial("Login/Logged/_ContractServicesPj")
+
+        @Html.Partial("Login/Logged/_ContractServicesVehicle")
+
+        @Html.Partial("Login/Logged/_ContractServicesFtp")*@
+
+    @*</div>*@
+
+    @*<div class="col-md-12">
+                <input type="button" id="btnBack" value="Voltar" class="btn btn-primary" hidden="hidden" />
+            </div>
+
+            <div class="col-md-12">
+                <input type="button" id="btnBackPj" value="Voltar" class="btn btn-primary" hidden="hidden" />
+            </div>
+
+            <div class="col-md-12">
+                <input type="button" id="btnBackVehicle" value="Voltar" class="btn btn-primary" hidden="hidden" />
+            </div>
+
+            <div class="col-md-12">
+                <input type="button" id="btnBackFtp" value="Voltar" class="btn btn-primary" hidden="hidden" />
+            </div>
+
+        </div>*@
 </div>

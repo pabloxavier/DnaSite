@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomAttributes\SequenceOracle.cs" />
+    <Compile Include="DTO\LoginUser.cs" />
     <Compile Include="Entidades\CategoriaProduto.cs" />
     <Compile Include="Entidades\CategoriaProdutoFaixa.cs" />
     <Compile Include="Entidades\CategoriaProdutoFaixaLog.cs" />
@@ -96,6 +98,10 @@
     <Compile Include="Entidades\MensagemContato.cs" />
     <Compile Include="Entidades\Newsletter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validacao\CNPJValidation.cs" />
+    <Compile Include="Validacao\CPFValidation.cs" />
+    <Compile Include="Validacao\EmailValidation.cs" />
+    <Compile Include="Validacao\ValidationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

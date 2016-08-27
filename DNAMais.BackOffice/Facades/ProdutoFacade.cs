@@ -33,6 +33,8 @@ namespace DNAMais.BackOffice.Facades
             serviceItemProduto.Dispose();
         }
 
+        #region Categoria Produto
+
         public IQueryable<CategoriaProduto> ListarCategoriasProduto()
         {
             return serviceCategoriaProduto.ListarTodos();
@@ -42,6 +44,10 @@ namespace DNAMais.BackOffice.Facades
         {
             return serviceCategoriaProduto.ConsultarPorId(id);
         }
+
+        #endregion
+
+        #region Produto
 
         public IQueryable<Produto> ListarProdutos()
         {
@@ -53,6 +59,10 @@ namespace DNAMais.BackOffice.Facades
             return serviceProduto.ConsultarPorId(id);
         }
 
+        #endregion
+
+        #region Item Produto
+
         public IQueryable<ItemProduto> ListarItensProduto()
         {
             return serviceItemProduto.ListarTodos();
@@ -62,5 +72,7 @@ namespace DNAMais.BackOffice.Facades
         {
             return serviceItemProduto.ConsultarPorId(id);
         }
+
+        #endregion
     }
 }

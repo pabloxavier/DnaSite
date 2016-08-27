@@ -47,8 +47,6 @@ namespace DNAMais.Domain.Services
             {
                 if (grupoUsuarioCliente.Id == null)
                 {
-                    grupoUsuarioCliente.Id = new Random().Next(1, 999999);
-
                     grupoUsuarioCliente.DataCadastro = DateTime.Now;
 
                     repoGrupoUsuarioCliente.Add(grupoUsuarioCliente);

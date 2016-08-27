@@ -16,7 +16,7 @@ namespace DNAMais.Domain.Entidades
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column("ID_CONTRATO_EMPRESA")]
+        [Column("ID_CONTRATO_EMPRESA", Order=1)]
         public int? IdContratoEmpresa { get; set; }
         [ForeignKey("IdContratoEmpresa")]
         public virtual ContratoEmpresa ContratoEmpresa { get; set; }
@@ -24,14 +24,14 @@ namespace DNAMais.Domain.Entidades
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column("CD_CATEGORIA_PRODUTO_CONSULTA")]
+        [Column("CD_CATEGORIA_PRODUTO_CONSULTA", Order=2)]
         public string CodigoCategoriaConsulta { get; set; }
         [ForeignKey("CodigoCategoriaConsulta")]
         public virtual CategoriaProduto CategoriaProduto { get; set; }
 
         [Key]
         [Required]
-        [Column("CD_FAIXA")]
+        [Column("CD_FAIXA", Order=3)]
         public bool? CodigoFaixa { get; set; }
 
         [Required]

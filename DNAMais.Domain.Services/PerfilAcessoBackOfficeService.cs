@@ -32,7 +32,7 @@ namespace DNAMais.Domain.Services
             return repoPerfilAcessoBackOffice.GetAll();
         }
 
-        public PerfilAcessoBackOffice ConsultarPorId(int id)
+        public PerfilAcessoBackOffice ConsultarPorId(byte id)
         {
             return repoPerfilAcessoBackOffice.GetById(id);
         }
@@ -47,8 +47,6 @@ namespace DNAMais.Domain.Services
             {
                 if (perfilAcessoBackOffice.Id == null)
                 {
-                    perfilAcessoBackOffice.Id = (byte)new Random().Next(1, 99);
-
                     repoPerfilAcessoBackOffice.Add(perfilAcessoBackOffice);
                 }
                 else
@@ -66,9 +64,24 @@ namespace DNAMais.Domain.Services
             return returnValidation;
         }
 
-        public void Excluir(int id)
+        public ResultValidation Excluir(byte id)
         {
-            repoPerfilAcessoBackOffice.Remove(id);
+            ResultValidation returnValidation = new ResultValidation();
+
+            if (!returnValidation.Ok) return returnValidation;
+
+            try
+            {
+                repoPerfilAcessoBackOffice.Remove(id);
+
+                context.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                returnValidation.AddMessage("", err.Message);
+            }
+
+            return returnValidation;
         }
     }
 }

@@ -42,7 +42,6 @@ namespace DNAMais.Domain.Services
             {
                 if (mensagemContato.Id == null)
                 {
-                    mensagemContato.Id = new Random().Next(1, 999999);
                     mensagemContato.DataRegistro = DateTime.Now;
                     mensagemContato.Respondida = false;
 
