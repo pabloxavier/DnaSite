@@ -143,16 +143,18 @@
     <Compile Include="Areas\ControleAcesso\ControleAcessoAreaRegistration.cs" />
     <Compile Include="Areas\ControleAcesso\Controllers\UsuarioBackOfficeController.cs" />
     <Compile Include="Areas\ControleAcesso\Controllers\PerfilAcessoBackOfficeController.cs" />
+    <Compile Include="Areas\Mensagens\Controllers\MensagensNaoRespondidasController.cs" />
+    <Compile Include="Areas\Mensagens\Controllers\MensagensRespondidasController.cs" />
+    <Compile Include="Areas\Mensagens\MensagensAreaRegistration.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Facades\AutenticacaoFacade.cs" />
     <Compile Include="Facades\Base\BaseFacade.cs" />
     <Compile Include="Facades\AcessoClienteFacade.cs" />
     <Compile Include="Facades\ClienteEmpresaFacade.cs" />
     <Compile Include="Facades\AcessoFacade.cs" />
     <Compile Include="Facades\ContratoEmpresaFacade.cs" />
-    <Compile Include="Facades\MensagensFacade.cs" />
+    <Compile Include="Facades\MensagemContatoFacade.cs" />
     <Compile Include="Facades\ProdutoFacade.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1529,6 +1531,12 @@
     <Content Include="assets\javascripts\jquery-validation\README.md" />
     <Content Include="Areas\Cadastros\Views\ContratoEmpresa\Index.cshtml" />
     <Content Include="Areas\Cadastros\Views\ContratoEmpresa\Cadastro.cshtml" />
+    <Content Include="Areas\Mensagens\Views\MensagensNaoRespondidas\Index.cshtml" />
+    <Content Include="Areas\Mensagens\Views\Web.config" />
+    <Content Include="Areas\Mensagens\Views\MensagensNaoRespondidas\Details.cshtml" />
+    <Content Include="Areas\Mensagens\Views\MensagensNaoRespondidas\Answer.cshtml" />
+    <Content Include="Areas\Mensagens\Views\MensagensRespondidas\Index.cshtml" />
+    <Content Include="Areas\Mensagens\Views\MensagensRespondidas\Details.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
@@ -1549,6 +1557,8 @@
     <Folder Include="Areas\ControleAcessoCliente\Views\Shared\" />
     <Folder Include="Areas\ControleAcesso\Models\" />
     <Folder Include="Areas\ControleAcesso\Views\Shared\" />
+    <Folder Include="Areas\Mensagens\Models\" />
+    <Folder Include="Areas\Mensagens\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

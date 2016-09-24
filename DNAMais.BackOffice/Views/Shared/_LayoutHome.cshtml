@@ -132,17 +132,17 @@
                                         <span>Newsletter</span>
                                     </a>
                                     <ul class="nav nav-children">
-                                        <li>
+                                        <li id="MENU-NEWSLETTER-NAO-CONFIRMADA">
                                             <a href="@Url.Action("NotConfirmed","Newsletter")">
                                                 Não Confirmados
                                             </a>
                                         </li>
-                                        <li>
+                                        <li id="MENU-NEWSLETTER-CONFIRMADA">
                                             <a href="@Url.Action("Confirmed","Newsletter")">
                                                 Confirmados
                                             </a>
                                         </li>
-                                        <li>
+                                        <li id="MENU-NEWSLETTER-CANCELADA">
                                             <a href="@Url.Action("Canceled","Newsletter")">
                                                 Cancelados
                                             </a>
@@ -155,13 +155,13 @@
                                         <span>Mensagens</span>
                                     </a>
                                     <ul class="nav nav-children">
-                                        <li>
-                                            <a href="@Url.Action("NotAnswered","Messages")">
+                                        <li id="MENU-MENSAGEM-NAO-RESPONDIDA">
+                                            <a href="@Url.Action("Index", "MensagensNaoRespondidas", new { area = "Mensagens" })">
                                                 Não Respondidas
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="@Url.Action("Answered","Messages")">
+                                        <li id="MENU-MENSAGEM-RESPONDIDA">
+                                            <a href="@Url.Action("Index","MensagensRespondidas", new { area = "Mensagens" })">
                                                 Respondidas
                                             </a>
                                         </li>
