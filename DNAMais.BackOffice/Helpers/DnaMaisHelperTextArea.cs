@@ -15,11 +15,11 @@ namespace DNAMais.BackOffice.Helpers
         // ********************************************
         public static HtmlString DnaMaisTextArea(this HtmlHelper htmlHelper, string display, string name, string value, int maxlength, int width, int rows, bool disabled)
         {
-            var superDiv = new TagBuilder("div");
-            superDiv.Attributes["style"] = "margin-bottom: 5px;";
+            //var superDiv = new TagBuilder("div");
+            //superDiv.Attributes["style"] = "margin-bottom: 5px;";
 
             var label = new TagBuilder("label");
-            label.Attributes["class"] = "control-label";
+            label.Attributes["class"] = "col-md-2 control-label";
             label.InnerHtml = "<label for=\"" + name + "\">" + (display ?? name) + "</label>";
 
             var controle = new TagBuilder("div");
@@ -29,6 +29,7 @@ namespace DNAMais.BackOffice.Helpers
             input.Attributes["type"] = "text";
             input.Attributes["id"] = name;
             input.Attributes["name"] = name;
+            input.Attributes["class"] = "form-control";
             input.Attributes["maxlength"] = maxlength.ToString();
             input.Attributes["style"] = "width:" + width.ToString() + "px;";
             input.Attributes["rows"] = rows.ToString();
@@ -45,9 +46,9 @@ namespace DNAMais.BackOffice.Helpers
             div.Attributes["class"] = "control-group";
             div.InnerHtml = label.ToString() + controle.ToString();
 
-            superDiv.InnerHtml = div.ToString();
+            //superDiv.InnerHtml = div.ToString();
 
-            return new HtmlString(superDiv.ToString());
+            return new HtmlString(div.ToString());
         }
 
         public static HtmlString DnaMaisTextAreaFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, int width, int rows, bool disabled)

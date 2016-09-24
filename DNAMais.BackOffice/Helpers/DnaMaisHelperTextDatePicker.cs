@@ -15,11 +15,12 @@ namespace DNAMais.BackOffice.Helpers
         // ********************************************
         public static HtmlString DnaMaisDatePicker(this HtmlHelper htmlHelper, string display, string name, Object value, bool disabled)
         {
-            var superDiv = new TagBuilder("div");
+            //var superDiv = new TagBuilder("div");
 
             var label = new TagBuilder("label");
-            label.Attributes["class"] = "control-label";
-            label.InnerHtml = "<label for=\"" + name + "\">" + (display ?? name) + "</label>";
+            label.Attributes["class"] = "col-md-2 control-label";
+            label.Attributes["for"] = name;
+            label.InnerHtml = (display ?? name);
 
             var controle = new TagBuilder("div");
             controle.Attributes["class"] = "controls";
@@ -31,7 +32,7 @@ namespace DNAMais.BackOffice.Helpers
             input.Attributes["type"] = "text";
             input.Attributes["id"] = name;
             input.Attributes["name"] = name;
-            input.Attributes["class"] = "span12";
+            input.Attributes["class"] = "form-control";
             input.Attributes["maxlength"] = "10";
             input.Attributes["style"] = "width:100px;";
             input.Attributes["onkeyup"] = "maskDate(this)";
@@ -42,21 +43,21 @@ namespace DNAMais.BackOffice.Helpers
                 input.Attributes["disabled"] = "disabled";
             }
 
-            var span = new TagBuilder("span");
-            span.Attributes["class"] = "add-on fa calendar";
-            span.InnerHtml = "<i></i>";
+            //var span = new TagBuilder("span");
+            //span.Attributes["class"] = "icon icon-lg";
+            //span.InnerHtml = "<i class='fa fa-calendar'></i>";
 
-            divInput.InnerHtml = input.ToString() + span.ToString();
+            divInput.InnerHtml = input.ToString();
 
             controle.InnerHtml = divInput.ToString();
 
             var div = new TagBuilder("div");
-            div.Attributes["class"] = "control-group";
+            div.Attributes["class"] = "form-group";
             div.InnerHtml = label.ToString() + controle.ToString();
 
-            superDiv.InnerHtml = System.Web.HttpUtility.HtmlDecode(div.ToString());
+            //superDiv.InnerHtml = System.Web.HttpUtility.HtmlDecode(div.ToString());
 
-            return new HtmlString(superDiv.ToString());
+            return new HtmlString(div.ToString());
         }
 
         public static HtmlString DnaMaisDatePickerFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, bool disabled)

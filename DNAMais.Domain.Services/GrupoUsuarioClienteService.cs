@@ -47,8 +47,6 @@ namespace DNAMais.Domain.Services
             {
                 if (grupoUsuarioCliente.Id == null)
                 {
-                    grupoUsuarioCliente.DataCadastro = DateTime.Now;
-
                     repoGrupoUsuarioCliente.Add(grupoUsuarioCliente);
                 }
                 else
@@ -66,9 +64,24 @@ namespace DNAMais.Domain.Services
             return returnValidation;
         }
 
-        public void Excluir(int id)
+        public ResultValidation Excluir(int id)
         {
-            repoGrupoUsuarioCliente.Remove(id);
+            ResultValidation returnValidation = new ResultValidation();
+
+            if (!returnValidation.Ok) return returnValidation;
+
+            try
+            {
+                repoGrupoUsuarioCliente.Remove(id);
+
+                context.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                returnValidation.AddMessage("", err.Message);
+            }
+
+            return returnValidation;
         }
     }
 }

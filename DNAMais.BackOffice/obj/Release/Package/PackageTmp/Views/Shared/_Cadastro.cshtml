@@ -24,7 +24,7 @@
 
     @using (Html.DnaMaisBeginForm(area, controller, action, (object)Model.Id, "frmStandard", true, enctype))
     {
-        using (Html.DnaMaisBeginContent("Dados de " + (string)ViewBag.TituloPagina))
+        using (Html.DnaMaisBeginContent((string)ViewBag.TituloPagina))
         {
             <div class="row-fluid">
                 @RenderSection("cadastro", false)
@@ -39,7 +39,7 @@
             else
             {
                 <div class="form-actions">
-                    @Html.DnaMaisButton("Index", "btnVoltar", ViewData["messageReturn"].ToString(), "default", "arror-circle-left")
+                    @Html.DnaMaisButton("Index", "btnVoltar", ViewData["messageReturn"].ToString(), "default", "arrow-circle-left")
                 </div>
             }
         

@@ -47,8 +47,6 @@ namespace DNAMais.Domain.Services
             {
                 if (clienteEmpresa.Id == null)
                 {
-                    clienteEmpresa.DataCadastro = DateTime.Now;
-
                     repoClienteEmpresa.Add(clienteEmpresa);
                 }
                 else

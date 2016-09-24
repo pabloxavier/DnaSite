@@ -195,8 +195,12 @@ namespace DNAMais.BackOffice.Facades
 
             clienteEmpresa.DataCadastro = DateTime.Now;
             clienteEmpresa.IdUsuarioCadastro = ((UsuarioBackOffice)HttpContext.Current.Session["user"]).Id;
-            clienteEmpresa.CodigoStatus = 1;
 
+            if (clienteEmpresa.Id == null)
+            {
+                clienteEmpresa.CodigoStatus = 1;
+            }
+            
             ResultValidation retorno = serviceClienteEmpresa.Salvar(clienteEmpresa);
 
             PreencherModelState(retorno);

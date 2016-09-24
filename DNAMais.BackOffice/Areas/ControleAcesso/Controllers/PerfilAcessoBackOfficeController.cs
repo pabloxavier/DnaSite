@@ -73,6 +73,7 @@ namespace DNAMais.BackOffice.Areas.ControleAcesso.Controllers
         //[AutorizacaoDnaMais]
         public ActionResult Edit(byte id)
         {
+            //facade.RemoverPerfilAcessoFuncionalidade(id);
             return View("Cadastro", facade.ConsultarPerfilAcessoBackOfficePorId(id));
         }
 
@@ -80,7 +81,8 @@ namespace DNAMais.BackOffice.Areas.ControleAcesso.Controllers
         //[AutorizacaoDnaMais]
         public ActionResult Edit(PerfilAcessoBackOffice perfilAcessoBackOffice, string[] Funcionalidades)
         {
-            perfilAcessoBackOffice.PerfisFuncionalidades.Clear();
+            //perfilAcessoBackOffice.PerfisFuncionalidades.Clear();
+            
             foreach (string codigoFuncionalidade in Funcionalidades)
             {
                 perfilAcessoBackOffice.PerfisFuncionalidades.Add(new PerfilAcessoFuncionalidade
@@ -96,6 +98,7 @@ namespace DNAMais.BackOffice.Areas.ControleAcesso.Controllers
         //[AutorizacaoDnaMais]
         public ActionResult Remove(byte id)
         {
+            facade.RemoverPerfilAcessoFuncionalidade(id);
             facade.RemoverPerfilAcessoBackOffice(id);
 
             ViewData["Title"] = "DNA+ :: Perfis de Acesso BackOffice";

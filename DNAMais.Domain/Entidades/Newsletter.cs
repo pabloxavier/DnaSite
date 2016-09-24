@@ -48,7 +48,6 @@ namespace DNAMais.Domain.Entidades
 
         [NotMapped]
         public bool? OptIn { get; set; }
-
         [Required]
         [Column("IS_OPT_IN")]
         public string OptInText

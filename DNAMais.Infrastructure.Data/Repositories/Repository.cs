@@ -117,5 +117,9 @@ namespace DNAMais.Infrastructure.Data.Repositories
             return DbSet.Count();
         }
 
+        public bool Exists(Expression<Func<T, bool>> predicate)
+        {
+            return DbSet.Count(predicate) > 0;
+        }
     }
 }

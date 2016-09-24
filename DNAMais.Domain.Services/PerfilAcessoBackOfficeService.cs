@@ -15,11 +15,13 @@ namespace DNAMais.Domain.Services
         private DNAMaisSiteContext context;
 
         private Repository<PerfilAcessoBackOffice> repoPerfilAcessoBackOffice;
+        private Repository<PerfilAcessoFuncionalidade> repoPerfilAcessoFuncionalidade;
 
         public PerfilAcessoBackOfficeService()
         {
             context = new DNAMaisSiteContext();
             repoPerfilAcessoBackOffice = new Repository<PerfilAcessoBackOffice>(context);
+            repoPerfilAcessoFuncionalidade = new Repository<PerfilAcessoFuncionalidade>(context);
         }
 
         public void Dispose()
@@ -41,6 +43,12 @@ namespace DNAMais.Domain.Services
         {
             ResultValidation returnValidation = new ResultValidation();
 
+            if (repoPerfilAcessoBackOffice.Exists(i => i.Nome.ToUpper().Trim() == perfilAcessoBackOffice.Nome.ToUpper().Trim()
+                && i.Id != perfilAcessoBackOffice.Id))
+            {
+                returnValidation.AddMessage("Nome", "Nome de perfil já cadastrado.");
+            }
+
             if (!returnValidation.Ok) return returnValidation;
 
             try
@@ -51,7 +59,16 @@ namespace DNAMais.Domain.Services
                 }
                 else
                 {
+                    repoPerfilAcessoFuncionalidade.Remove(i => i.IdPerfilBackOffice == perfilAcessoBackOffice.Id);
+
+                    context.SaveChanges();
+
                     repoPerfilAcessoBackOffice.Update(perfilAcessoBackOffice);
+
+                    perfilAcessoBackOffice.PerfisFuncionalidades.ToList().ForEach(func =>
+                    {
+                        repoPerfilAcessoFuncionalidade.Add(func);
+                    });
                 }
 
                 context.SaveChanges();

@@ -24,6 +24,9 @@ namespace DNAMais.BackOffice.Controllers
         {
             LoginUser login = new LoginUser();
 
+            login.Login = "admin";
+            login.Password = "1234";
+
             return View(login);
         }
 

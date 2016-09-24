@@ -62,5 +62,32 @@ namespace DNAMais.BackOffice.Areas.Cadastros.Controllers
             return View("Cadastro", clienteEmpresa);
         }
 
+        //[AutorizacaoDnaMais]
+        public ActionResult Edit(int id)
+        {
+            return View("Cadastro", facade.ConsultarClienteEmpresaPorId(id));
+        }
+
+        [HttpPost]
+        //[AutorizacaoDnaMais]
+        public ActionResult Edit(ClienteEmpresa clienteEmpresa)
+        {
+            facade.SalvarClienteEmpresa(clienteEmpresa);
+            return View("Cadastro", clienteEmpresa);
+        }
+
+        //[AutorizacaoDnaMais]
+        public ActionResult Remove(int id)
+        {
+            facade.RemoverClienteEmpresa(id);
+
+            ViewData["Title"] = "DNA+ :: Clientes Empresa";
+            ViewData["TituloPagina"] = "Clientes Empresa";
+            ViewData["messageSuccess"] = "Cliente Empresa removido com sucesso";
+            ViewData["messageReturn"] = "Voltar para lista de Clientes Empresa";
+
+            return View("_Remove");
+        }
+
     }
 }

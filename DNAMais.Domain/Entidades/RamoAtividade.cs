@@ -18,7 +18,7 @@ namespace DNAMais.Domain.Entidades
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_RAMO_ATIVIDADE")]
-        public int? Id { get; private set; }
+        public int? Id { get; set; }
 
         [Required(ErrorMessage = "Informe o nome.")]
         [Column("NM_RAMO_ATIVIDADE")]

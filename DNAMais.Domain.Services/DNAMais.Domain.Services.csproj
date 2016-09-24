@@ -53,6 +53,7 @@
     <Compile Include="ClienteEmpresaEnderecoService.cs" />
     <Compile Include="ContratoEmpresaPrecificacaoService.cs" />
     <Compile Include="ClienteEmpresaService.cs" />
+    <Compile Include="PerfilAcessoFuncionalidadeService.cs" />
     <Compile Include="PoliticaComercialService.cs" />
     <Compile Include="ItemProdutoService.cs" />
     <Compile Include="FuncionalidadeBackOfficeService.cs" />

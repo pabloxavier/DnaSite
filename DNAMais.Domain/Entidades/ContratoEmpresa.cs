@@ -16,45 +16,50 @@ namespace DNAMais.Domain.Entidades
         #region Propriedades Públicas
 
         [Key]
-        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_CONTRATO_EMPRESA")]
         public int? Id { get; set; }
 
         [Required]
         [Column("ID_CLIENTE_EMPRESA")]
+        [Display(Name = "Cliente")]
         public int? IdClienteEmpresa { get; set; }
         [ForeignKey("IdClienteEmpresa")]
         public virtual ClienteEmpresa ClienteEmpresa { get; set; }
 
         [Required]
         [Column("NR_CONTRATO")]
+        [Display(Name = "Número Contrato")]
         public int? Numero { get; set; }
 
         [Required]
         [Column("DT_AQUISICAO")]
+        [Display(Name = "Data de Aquisição")]
         public DateTime? DataAquisicao { get; set; }
 
-        [Required]
-        [Column("IS_VIGENTE")]
+        [NotMapped]
         public bool? Vigente { get; set; }
+
+        [Column("IS_VIGENTE")]
+        public string VigenteDescricao
+        {
+            get { return Vigente ?? false ? "S" : "N"; }
+            set { Vigente = value == "S" ? true : false; }
+        }
 
         [Required]
         [Column("DD_CORTE")]
+        [Display(Name = "Dia de Corte")]
         public byte? DiaCorte { get; set; }
 
         [Required]
         [Column("DD_FATURAMENTO")]
+        [Display(Name = "Dia do Faturamento")]
         public byte? DiaFaturamento { get; set; }
 
-        [Column("DT_PREVISAO_ENCERRAMENTO")]
-        public DateTime? DataEncerramento { get; set; }
-
-        [Required]
         [Column("DT_CADASTRO")]
         public DateTime? DataCadastro { get; set; }
 
-        [Required]
         [Column("ID_USUARIO_CADASTRO")]
         public int? IdUsuarioCadastro { get; set; }
         [ForeignKey("IdUsuarioCadastro")]

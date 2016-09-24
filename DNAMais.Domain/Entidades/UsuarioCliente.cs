@@ -1,4 +1,6 @@
 ﻿using DNAMais.Domain.CustomAttributes;
+using DNAMais.Domain.Validacao;
+using DNAMais.Domain.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,48 +18,66 @@ namespace DNAMais.Domain.Entidades
         #region Propriedades Públicas
 
         [Key]
-        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_USUARIO_CLIENTE")]
         public int? Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="Selecione o Cliente Empresa")]
         [Column("ID_CLIENTE_EMPRESA")]
+        [Display(Name="Cliente Empresa")]
         public int? IdClienteEmpresa { get; set; }
         [ForeignKey("IdClienteEmpresa")]
         public virtual ClienteEmpresa ClienteEmpresa { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Informe o nome")]
+        [Display(Name = "Nome")]
+        [Column("NM_USUARIO")]
+        [StringLength(200)]
+        public string Nome { get; set; }
+
+        [Required(ErrorMessage = "Informe o login")]
+        [Display(Name="Login")]
         [Column("DS_LOGIN")]
+        [StringLength(20)]
         public string Login { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="Informe a senha")]
+        [Display(Name = "Senha")]
         [Column("DS_SENHA")]
+        [StringLength(10)]
         public string Senha { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="Informe o CPF")]
+        [CPFValidation(ErrorMessage="Informe um CPF válido.")]
+        [Display(Name = "CPF")]
         [Column("NR_CPF")]
         public string Cpf { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="Informe o e-mail.")]
+        [EmailValidation(ErrorMessage="Informe um e-mail válido.")]
+        [Display(Name = "E-mail")]
         [Column("DS_EMAIL")]
+        [StringLength(80)]
         public string Email { get; set; }
 
+        [NotMapped]
+        public bool? Master { get; set; }
         [Required]
         [Column("IS_MASTER")]
-        public bool? Master { get; set; }
+        public string IsMaster 
+        {
+            get { return Master.ParseFlag(); }
+            protected set { Master = value.ParseFlag(); }
+        }
 
-        [Required]
         [Column("DT_CADASTRO")]
         public DateTime? DataCadastro { get; set; }
 
-        [Required]
         [Column("ID_USUARIO_BACKOFFICE_CADASTRO")]
         public int? IdUsuarioBackOfficeCadastro { get; set; }
         [ForeignKey("IdUsuarioBackOfficeCadastro")]
         public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
-        [Required]
         [Column("ID_USUARIO_CLIENTE_CADASTRO")]
         public int? IdUsuarioClienteCadastro { get; set; }
 

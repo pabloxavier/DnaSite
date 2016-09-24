@@ -12,7 +12,7 @@
     //bool permiteEdicao = new AutorizacaoDnaMais().Authorize(ViewContext.HttpContext);
     string mensagemExclusao = "Tem certeza que deseja remover este Usuário BackOffice?";
 
-    WebGrid grid = new WebGrid(Model, canSort: false);
+    WebGrid grid = new WebGrid(Model, canSort: true, defaultSort: "Nome", sortDirectionFieldName: "Asc");
 
     WebGridColumn coluna1 = grid.Column(columnName: "Id", header: "No.", format: @<span>@(item.Id)</span>, style: "col-md-1");
     WebGridColumn coluna2 = grid.Column(columnName: "Nome", header: "Nome", format: @<span>@(item.Nome)</span>, style: "col-md-3");

@@ -15,6 +15,7 @@ namespace DNAMais.BackOffice.Facades
     {
         private FuncionalidadeBackOfficeService serviceFuncionalidade;
         private PerfilAcessoBackOfficeService servicePerfilAcesso;
+        private PerfilAcessoFuncionalidadeService servicePerfilAcessoFuncionalidade;
         private UsuarioBackOfficeService serviceUsuario;
         private RamoAtividadeService serviceRamoAtividade;
 
@@ -23,6 +24,7 @@ namespace DNAMais.BackOffice.Facades
         {
             serviceFuncionalidade = new FuncionalidadeBackOfficeService();
             servicePerfilAcesso = new PerfilAcessoBackOfficeService();
+            servicePerfilAcessoFuncionalidade = new PerfilAcessoFuncionalidadeService();
             serviceUsuario = new UsuarioBackOfficeService();
             serviceRamoAtividade = new RamoAtividadeService();
         }
@@ -31,6 +33,7 @@ namespace DNAMais.BackOffice.Facades
         {
             serviceFuncionalidade.Dispose();
             servicePerfilAcesso.Dispose();
+            servicePerfilAcessoFuncionalidade.Dispose();
             serviceUsuario.Dispose();
             serviceRamoAtividade.Dispose();
         }
@@ -94,7 +97,18 @@ namespace DNAMais.BackOffice.Facades
 
         #endregion
 
-        #region Perfil de Acesso BackOffice
+        #region Perfil de Acesso Funcionalidade
+
+        public void RemoverPerfilAcessoFuncionalidade(byte id)
+        {
+            ResultValidation retorno = servicePerfilAcessoFuncionalidade.Excluir(id);
+
+            PreencherModelState(retorno);
+        }
+
+        #endregion
+
+        #region Usuário BackOffice
 
         public List<UsuarioBackOffice> ListarUsuariosBackOffice()
         {
@@ -125,6 +139,8 @@ namespace DNAMais.BackOffice.Facades
                 return;
             }
 
+            usuarioBackOffice.DataCriacao = DateTime.Now;
+
             ResultValidation retorno = serviceUsuario.Salvar(usuarioBackOffice);
 
             PreencherModelState(retorno);
@@ -135,15 +151,6 @@ namespace DNAMais.BackOffice.Facades
             ResultValidation retorno = serviceUsuario.Excluir(id);
 
             PreencherModelState(retorno);
-        }
-
-        #endregion
-
-        #region Ramo de Atividade
-
-        public IQueryable<RamoAtividade> ListarRamoAtividade()
-        {
-            return serviceRamoAtividade.ListarTodos();
         }
 
         #endregion

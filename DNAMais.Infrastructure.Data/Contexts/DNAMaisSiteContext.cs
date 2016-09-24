@@ -86,19 +86,24 @@ namespace DNAMais.Infrastructure.Data.Contexts
 
                 if (entityType == null)
                 {
-                    break;
+                    continue;
                 }
 
                 var entityCustomAttributes = TypeDescriptor.GetAttributes(entityType);
 
                 if (entityCustomAttributes == null)
                 {
-                    break;
+                    continue;
                 }
 
                 if (entityCustomAttributes.Count == 0)
                 {
-                    break;
+                    continue;
+                }
+
+                if (changeSet.State != EntityState.Added)
+                {
+                    continue;
                 }
 
                 foreach (Attribute attribute in entityCustomAttributes)

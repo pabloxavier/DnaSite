@@ -15,7 +15,7 @@
     ViewData["messageReturn"] = "Voltar para lista de Usuários BackOffice";
 
     bool locked = ViewData["LOCKED"] == null ? false : (bool)ViewData["LOCKED"];
-    
+
     List<SelectListItem> perfis = new AcessoFacade(null).ListarPerfisAcessoBackOffice().ToList().Select(i => new SelectListItem
     {
         Value = i.Id.ToString(),
@@ -29,58 +29,72 @@
 {
     @if (Request.HttpMethod == "GET" || !ViewData.ModelState.IsValid)
     {
-    <div class="col-lg-12" style="width:100%;">
+        <div class="col-lg-12" style="width:100%;">
 
-        @Html.HiddenFor(
+            @if (Model.Id != null)
+            {
+                <div class="form-group">
+                    @Html.Label("Login: ", new { @style = "font-weight: bold; font-size: 14pt;" })
+                    @Html.Label(Model.Login, new { @style = "font-size: 13pt;" })
+                </div>
+                <hr />
+            }
+
+
+            @Html.HiddenFor(
                 expression: m => m.Id)
 
-        @Html.DnaMaisTextBoxFor(
+            @Html.DnaMaisTextBoxFor(
                 expression: m => m.Nome,
                 width: 300,
                 disabled: locked)
 
-        @Html.DnaMaisTextBoxFor(
+            @Html.DnaMaisTextBoxFor(
                 expression: m => m.Email,
                 width: 300,
                 disabled: locked)
 
-        @Html.DnaMaisTextBoxFor(
+            @if (Model.Id == null)
+            {
+                @Html.DnaMaisTextBoxFor(
                 expression: m => m.Login,
                 width: 150,
                 disabled: locked)
 
-        @if (Model.Id == null)
-        { 
-            @Html.DnaMaisTextBoxFor(
-                    expression: m => m.Senha,
-                    width: 300,
-                    disabled: locked)
-        }
-        else
-        {
-            @Html.Hidden(
+                @Html.DnaMaisTextBoxFor(
+                expression: m => m.Senha,
+                width: 300,
+                disabled: locked)
+            }
+            else
+            {
+                @Html.Hidden(
+                name: "Login",
+                value: Model.Login)
+
+                @Html.Hidden(
                 name: "Senha",
                 value: Model.Senha)
-        }
-        <hr class="separator" />
+            }
+            <hr class="separator" />
 
-        <label class="col-lg-2"></label>
-        @Html.CheckBox(
+            <label class="col-lg-2"></label>
+            @Html.CheckBox(
             name: "Admin",
             isChecked: Model.Admin ?? true)
-        Administrador
+            Administrador
 
-        <br />
+            <br />
 
-        <div class="form-group" id="grpPerfil">
-            <label class="col-md-2 control-label" for="IdPerfil">Perfil de Acesso</label>
-            <div class="">
-                @Html.DropDownListFor(m => m.IdPerfil, perfis, new { @class = "form-control", style = "width:300px;" })
+            <div class="form-group" id="grpPerfil">
+                <label class="col-md-2 control-label" for="IdPerfil">Perfil de Acesso</label>
+                <div class="">
+                    @Html.DropDownListFor(m => m.IdPerfil, perfis, new { @class = "form-control", style = "width:300px;" })
+                </div>
             </div>
-        </div>
-        <hr class="separator" />
+            <hr class="separator" />
 
-    </div>
+        </div>
 
 
     }

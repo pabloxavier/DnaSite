@@ -42,6 +42,6 @@ C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Newtonsoft.Json.dll
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\WebGrease.dll
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Antlr3.Runtime.pdb
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\bin\Debug\Newtonsoft.Json.xml
-C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Debug\DNAMais.Framework.csprojResolveAssemblyReference.cache
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Debug\DNAMais.Framework.dll
 C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Debug\DNAMais.Framework.pdb
+C:\GitHub\Projects\DNA\DnaSite\DNAMais.Framework\obj\Debug\DNAMais.Framework.csprojResolveAssemblyReference.cache
