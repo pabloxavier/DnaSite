@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DNAMais.Domain.Extensions;
 
 namespace DNAMais.Domain.Entidades
 {
@@ -16,8 +17,6 @@ namespace DNAMais.Domain.Entidades
         #region Propriedades Públicas
 
         [Key]
-        [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_MENSAGEM_CONTATO")]
         [Index("TS_DNASITE_INDEX")]
         public int? Id { get; set; }
@@ -46,14 +45,19 @@ namespace DNAMais.Domain.Entidades
         [StringLength(1000)]
         public string Conteudo { get; set; }
 
-        [Required]
         [Column("DT_REGISTRO")]
         [Display(Name="Data de Registro")]
         public DateTime? DataRegistro { get; set; }
 
+        [NotMapped]
+        public bool? Respondida { get; set; }
         [Required]
         [Column("IS_RESPONDIDA")]
-        public bool? Respondida { get; set; }
+        public string MensagemRespondida
+        {
+            get { return Respondida.ParseFlag(); }
+            set { Respondida = value.ParseFlag(); }
+        }
 
         [Column("ID_USUARIO_BACKOFFICE_RESPOSTA")]
         [Index("MENSAGEM_CONTATO_IDX_01")]

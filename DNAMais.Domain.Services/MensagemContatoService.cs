@@ -69,17 +69,13 @@ namespace DNAMais.Domain.Services
 
         public IQueryable<MensagemContato> ListarRespondidas()
         {
-            return repoMensagemContato.Filter(i => i.Respondida == true);
+            return repoMensagemContato.Filter(i => i.MensagemRespondida == "S");
         }
 
         public IQueryable<MensagemContato> ListarNaoRespondidas()
         {
-            return repoMensagemContato.Filter(i => i.Respondida == false);
+            return repoMensagemContato.Filter(i => i.MensagemRespondida == "N");
         }
 
-        //public Message AssignAnswer()
-        //{
-
-        //}
     }
 }

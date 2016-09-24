@@ -1,0 +1,71 @@
+﻿@using DNAMais.Domain.Entidades
+@using DNAMais.Framework
+@using DNAMais.BackOffice.Facades
+
+@model MensagemContato
+
+@{
+    Layout = "~/Views/Shared/_Listagem.cshtml";
+
+    ViewBag.Title = "DNA+ :: Mensagens";
+    ViewBag.TituloPagina = "Mensagens";
+    ViewBag.TituloGrid = "Detalhes da Mensagem de " + Model.Nome;
+
+    ViewData["messageReturn"] = "Voltar para lista de mensagens";
+
+}
+
+@section grid
+{
+
+    <table class="table table-bordered table-hover mb-none">
+        <thead>
+            <tr>
+                <th>N.</th>
+                <th>Nome</th>
+                <th>E-Mail</th>
+                <th>Data do Envio</th>
+                <th>Título/Assunto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Nome</td>
+                <td>@Model.Email</td>
+                <td>@Model.DataRegistro</td>
+                <td>@Model.Assunto</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <p class="text-justify text-md" style="line-height:30px; text-indent: 25px;">@Model.Conteudo</p>
+            </td>
+        </tr>
+
+    </table>
+    <table class="table table-bordered table-hover mb-none">
+        <thead>
+            <tr>
+                <th>Resposta</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <p class="text-justify text-md" style="line-height:30px; text-indent: 25px;">@Model.DescricaoResposta</p>
+            </td>
+        </tr>
+    </table>
+
+    <hr />
+
+    @Html.DnaMaisButton("Index", "btnVoltar", ViewData["messageReturn"].ToString(), "default", "arrow-circle-left")
+
+}
