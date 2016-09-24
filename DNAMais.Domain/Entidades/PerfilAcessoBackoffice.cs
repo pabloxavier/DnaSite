@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DNAMais.Domain.CustomAttributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,19 +10,18 @@ using System.Threading.Tasks;
 namespace DNAMais.Domain.Entidades
 {
     [Table("PERFIL_ACESSO_BACKOFFICE", Schema = "DNASITE")]
-    public class PerfilAcessoBackoffice
+    [SequenceOracle("SQ_PERFIL_ACESSO_BACKOFFICE")]
+    public class PerfilAcessoBackOffice
     {
         #region Propriedades Públicas
 
         [Key]
-        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_PERFIL_ACESSO_BACKOFFICE")]
-        [Index("TS_DNASITE_INDEX")]
         public byte? Id { get; set; }
 
-        [Required]
         [Column("NM_PERFIL")]
+        [Required(ErrorMessage="Informe o nome")]
         [StringLength(40)]
         public string Nome { get; set; }
 
@@ -31,9 +31,9 @@ namespace DNAMais.Domain.Entidades
 
         #region Construtor
 
-        public PerfilAcessoBackoffice()
+        public PerfilAcessoBackOffice()
         {
-
+            PerfisFuncionalidades = new HashSet<PerfilAcessoFuncionalidade>();
         }
 
         #endregion

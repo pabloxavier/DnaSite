@@ -9,30 +9,29 @@ using System.Threading.Tasks;
 namespace DNAMais.Domain.Entidades
 {
     [Table("FUNCIONALIDADE_BACKOFFICE", Schema = "DNASITE")]
-    public class FuncionalidadeBackoffice
+    public class FuncionalidadeBackOffice
     {
         #region Propriedades Públicas
 
         [Key]
-        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("CD_FUNCIONALIDADE_BACKOFFICE")]
-        [Index("TS_DNASITE_INDEX")]
-        [StringLength(15)]
         public string Codigo { get; set; }
 
         [Required]
         [Column("NM_FUNCIONALIDADE")]
         [StringLength(80)]
-        public string Nome;
+        public string Nome { get; set; }
+
+        public virtual ICollection<PerfilAcessoFuncionalidade> PerfisFuncionalidades { get; set; }
 
         #endregion
 
         #region Construtor
 
-        public FuncionalidadeBackoffice()
+        public FuncionalidadeBackOffice()
         {
-
+            PerfisFuncionalidades = new HashSet<PerfilAcessoFuncionalidade>();
         }
 
         #endregion

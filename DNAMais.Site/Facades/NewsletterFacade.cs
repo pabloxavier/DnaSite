@@ -34,19 +34,19 @@ namespace DNAMais.Site.Facades
                 return;
             }
 
-            ResultValidation result = serviceNewsletter.Save(subscriptionNewsletter);
+            ResultValidation result = serviceNewsletter.Salvar(subscriptionNewsletter);
 
             FillModelState(result);
         }
 
         public Newsletter GetNewsletterByGUID(string guid)
         {
-            return serviceNewsletter.GetByGuid(guid);
+            return serviceNewsletter.ConsultarPorGuid(guid);
         }
 
         public Newsletter GetNewsletterByEmail(string email)
         {
-            return serviceNewsletter.GetByEmail(email);
+            return serviceNewsletter.ConsultarPorEmail(email);
         }
     }
 }

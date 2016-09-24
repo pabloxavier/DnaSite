@@ -1,0 +1,148 @@
+﻿@{
+    ViewBag.Title = "Pessoa Jurídica";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+@Html.Partial("Login/Pj/_TitleBarPj")
+
+<div class="container">
+
+    <div class="col-md-12">
+        @Html.Partial("Login/Pj/_HeadingPj")
+
+        <div class="col-md-12">
+            <div class="tabs tabs-primary">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#tabCnpj" id="cnpj" data-toggle="tab"><i class="fa fa-building"></i> CNPJ</a>
+                    </li>
+                    <li>
+                        <a href="#tabRs" id="razaoSocial" data-toggle="tab"><i class="fa fa-registered"></i> Razão Social</a>
+                    </li>
+                    <li>
+                        <a href="#tabTelefone" id="telefone" data-toggle="tab"><i class="fa fa-phone"></i> Telefone</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tabCnpj" class="tab-pane active">
+                        <p>
+                            <div id="pfCnpj">
+                                <label>CNPJ</label>
+                                <input type="text" class="form-control hidden-xs" id="txtCnpj" style="width:200px;" />
+                                <input type="text" class="form-control hidden-lg hidden-md hidden-sm" id="txtCnpj" />
+                                <input type="button" value="Pesquisar" class="btn btn-default" />
+                            </div>
+                        </p>
+                    </div>
+                    <div id="tabRs" class="tab-pane">
+                        <p>
+                            <div id="pfRs">
+                                <label>Razão Social</label>
+                                <input type="text" class="form-control hidden-xs" id="txtRs" style="width:500px;" />
+                                <input type="text" class="form-control hidden-lg hidden-md hidden-sm" id="txtRs" />
+                            </div>
+
+                            <br />
+
+                            <div class="form-group">
+                                <label for="Uf">UF</label>
+                                <select class="form-control hidden-xs" id="Uf" style="width:500px;">
+                                    <option>Selecione uma UF</option>
+                                </select>
+                                <select class="form-control hidden-lg hidden-md hidden-sm" id="Uf">
+                                    <option>Selecione uma UF</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Cidade">Cidade</label>
+                                <select class="form-control hidden-xs" id="Uf" disabled="disabled" style="width:500px;">
+                                    <option>Selecione uma Cidade</option>
+                                </select>
+                                <select class="form-control hidden-lg hidden-md hidden-sm" id="Uf">
+                                    <option>Selecione uma Cidade</option>
+                                </select>
+                            </div>
+                            <input type="button" value="Pesquisar" class="btn btn-default" />
+                        </p>
+                    </div>
+                    <div id="tabTelefone" class="tab-pane">
+                        <p>
+                            <div class="container">
+                                <div class="row">
+                                    <div style="float:left">
+                                        <label>DDD</label>
+                                        <input type="text" class="form-control" id="txtDdd" style="width:40px;" />
+                                    </div>
+                                    <div style="float:left">
+                                        <label>Telefone</label>
+                                        <input type="text" class="form-control hidden-xs" id="txtTel" style="width:200px;" />
+                                        <input type="text" class="form-control hidden-lg hidden-md hidden-sm" id="txtTel" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="button" value="Pesquisar" class="btn btn-default" />
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*<div class="content" style="cursor:default;">
+                <div class="grid" style="cursor:default;">
+                    <div class=" grid-pf-after" style="cursor:default;">
+                        <figure class="effect-sadie-2" id="divPf" style="cursor:default;">
+                            <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t1.png" />
+                            <figcaption>
+                                <h2><i class="fa fa-search-plus"></i> Pessoa <span>Física</span></h2>
+
+                                <div class="col-md-6" id="pfCpf" style="margin-top:20%;">
+                                    <label style="float:left;">CPF</label>
+                                    <input type="text" class="form-control" id="txtCpf" style="margin-bottom:5px;" />
+                                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>*@
+
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#txtCnpj').focus();
+
+        $('a').click(function (e) {
+
+            var abaClicada = e.target.id;
+
+            if (abaClicada == "cnpj")
+            {
+                setTimeout(function () {
+                    $('#txtCnpj').focus();
+                }, 1);
+            }
+            else if (abaClicada == "razaoSocial")
+            {
+                setTimeout(function () {
+                    $('#txtRs').focus();
+                }, 1);
+            }
+            else if (abaClicada == "telefone")
+            {
+                setTimeout(function () {
+                    $('#txtDdd').focus();
+                }, 1);
+            }
+
+        });
+
+    });
+
+</script>

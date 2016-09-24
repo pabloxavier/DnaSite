@@ -15,15 +15,15 @@ namespace DNAMais.Domain.Entidades
 
         [Key]
         [Required]
-        [Column("CD_CATEGORIA_PRODUTO")]
+        [Column("CD_CATEGORIA_PRODUTO", Order=1)]
         [StringLength(10)]
         public string CodigoCategoria { get; set; }
         [ForeignKey("CodigoCategoria")]
-        public virtual CategoriaProduto CodigoCategoriaProduto { get; set; }
+        public virtual CategoriaProduto CategoriaProduto { get; set; }
 
         [Key]
         [Required]
-        [Column("CD_FAIXA")]
+        [Column("CD_FAIXA", Order=2)]
         public bool? CodigoFaixa { get; set; }
 
         [Required]
@@ -32,7 +32,7 @@ namespace DNAMais.Domain.Entidades
 
         [Key]
         [Required]
-        [Column("DT_TERMINO_VIGENCIA")]
+        [Column("DT_TERMINO_VIGENCIA", Order=3)]
         public DateTime? TerminoVigencia { get; set; }
 
         [Required]

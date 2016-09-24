@@ -1,4 +1,13 @@
-﻿<!doctype html>
+﻿@using DNAMais.Domain.Entidades
+
+@{
+    if (Session["user"] == null)
+    {
+        Response.Redirect("~/Autenticacao/Index");
+    }
+}
+
+<!doctype html>
 <html class="fixed">
 <head>
 
@@ -72,9 +81,9 @@
                         <figure class="profile-picture">
                             <img src="~/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                         </figure>
-                        <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                            <span class="name">John Doe</span>
-                            <span class="role">Adm</span>
+                        <div class="profile-info" data-lock-name="Administrador" data-lock-email="email@email.com">
+                            <span class="name">@(((UsuarioBackOffice)HttpContext.Current.Session["user"]).Nome)</span>
+                            <span class="role">@(((UsuarioBackOffice)HttpContext.Current.Session["user"]).Login)</span>
                         </div>
 
                         <i class="fa custom-caret"></i>
@@ -84,13 +93,13 @@
                         <ul class="list-unstyled">
                             <li class="divider"></li>
                             <li>
-                                <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> Perfil</a>
+                                <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-user"></i> Perfil</a>
                             </li>
                             <li>
                                 <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Bloquear Tela</a>
                             </li>
                             <li>
-                                <a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
+                                <a role="menuitem" tabindex="-1" href="~/Autenticacao/LogOff"><i class="fa fa-power-off"></i> Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -117,7 +126,7 @@
                     <div class="nano-content">
                         <nav id="menu" class="nav-main" role="navigation">
                             <ul class="nav nav-main">
-                                <li class="nav-parent" id="navParentNewsletter">
+                                <li class="nav-parent">
                                     <a>
                                         <i class="fa fa-send" aria-hidden="true"></i>
                                         <span>Newsletter</span>
@@ -140,7 +149,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-parent" id="navParentMessages">
+                                <li class="nav-parent">
                                     <a>
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                         <span>Mensagens</span>
@@ -154,6 +163,111 @@
                                         <li>
                                             <a href="@Url.Action("Answered","Messages")">
                                                 Respondidas
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-archive" aria-hidden="true"></i>
+                                        <span>Configurações Produto</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li id="MENU-CATEGORIA-PRODUTO">
+                                            <a href="#">
+                                                Categorias
+                                            </a>
+                                        </li>
+                                        <li id="MENU-PRODUTO">
+                                            <a href="#">
+                                                Produtos
+                                            </a>
+                                        </li>
+                                        <li id="MENU-ITEM-PRODUTO">
+                                            <a href="#">
+                                                Itens de Produto
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <span>Clientes & Contratos</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li id="MENU-CLIENTE">
+                                            <a href="@Url.Action("Index", "ClienteEmpresa", new { area = "Cadastros" }) ">
+                                                Clientes
+                                            </a>
+                                        </li>
+                                        <li id="MENU-CONTRATO">
+                                            <a href="@Url.Action("Index", "ContratoEmpresa", new { area = "Cadastros" })">
+                                                Contratos
+                                            </a>
+                                        </li>
+                                        <li id="MENU-FATURAMENTO">
+                                            <a href="#">
+                                                Faturamento
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span>Acesso Clientes</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li id="MENU-GRUPO-USUARIO-CLIENTE">
+                                            <a href="@Url.Action("Index", "GrupoUsuarioCliente", new { area = "ControleAcessoCliente" })">
+                                                Grupo de Usuários
+                                            </a>
+                                        </li>
+                                        <li id="MENU-USUARIO-CLIENTE">
+                                            <a href="@Url.Action("Index", "UsuarioCliente", new { area = "ControleAcessoCliente" })">
+                                                Usuários Cliente
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-unlock" aria-hidden="true"></i>
+                                        <span>Acesso BackOffice</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li id="MENU-PERFIL-ACESSO-BACKOFFICE">
+                                            <a href="@Url.Action("Index", "PerfilAcessoBackOffice", new { area = "ControleAcesso" })">
+                                                Perfis de Acesso
+                                            </a>
+                                        </li>
+                                        <li id="MENU-USUARIO-BACKOFFICE">
+                                            <a href="@Url.Action("Index", "UsuarioBackOffice", new { area = "ControleAcesso" })">
+                                                Usuários BackOffice
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                        <span>Cadastros Gerais</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li id="MENU-RAMO-ATIVIDADE">
+                                            <a href="@Url.Action("Index", "RamoAtividade", new { area = "Cadastros" })">
+                                                Ramos de Atividade
+                                            </a>
+                                        </li>
+                                        <li id="MENU-TIPO-CONTATO">
+                                            <a href="@Url.Action("Index", "TipoContato", new { area = "Cadastros" })">
+                                                Tipos de Contato
+                                            </a>
+                                        </li>
+                                        <li id="MENU-TIPO-ENDERECO">
+                                            <a href="@Url.Action("Index", "TipoEndereco", new { area = "Cadastros" })">
+                                                Tipos de Endereço
                                             </a>
                                         </li>
                                     </ul>
@@ -178,14 +292,14 @@
 
             </aside>
             <!-- end: sidebar -->
-
             <section role="main" class="content-body">
                 <!-- start: page -->
+                <header class="page-header">
+                    <h2>@ViewBag.TituloPagina</h2>
+                </header>
                 @RenderBody()
                 <!-- end: page -->
             </section>
-
-
         </div>
     </section>
 
@@ -193,10 +307,25 @@
     @Scripts.Render("~/Scripts/select2")
     @Scripts.Render("/Scripts/datatables")
 
-    <!-- Theme Base, Components and Settings -->
+    <script src="~/assets/javascripts/dnamais.js"></script>
+
+    <script type="text/javascript">
+        function posicionarMenu(habilitado) {
+            $('.nav-parent').parents().removeClass('nav-expanded');
+            $('li').removeClass('nav-active');
+            $('#' + habilitado).closest('.nav-parent').addClass('nav-expanded');
+            $('#' + habilitado).attr('class', 'nav-active');
+        }
+
+        posicionarMenu('@((string)ViewBag.Menu)');
+    </script>
+
+<!-- Theme Base, Components and Settings -->
     <!-- Theme Custom -->
     <!-- Theme Initialization Files -->
     @Scripts.Render("~/Scripts/theme")
+
+    @RenderSection("scripts", false)
 
 </body>
 </html>

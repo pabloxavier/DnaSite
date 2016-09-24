@@ -18,9 +18,9 @@ namespace DNAMais.Infrastructure.Data.Repositories
             context = new DNAMaisSiteContext();
         }
 
-        public List<MensagemContato> ListarTodos()
-        {
-            return context.Messages.ToList();
-        }
+        //public List<MensagemContato> ListarTodos()
+        //{
+        //    return context.Messages.ToList();
+        //}
     }
 }

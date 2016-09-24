@@ -43,9 +43,21 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.2400\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.1.2400\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -119,11 +131,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Areas\Cadastros\CadastrosAreaRegistration.cs" />
+    <Compile Include="Areas\Cadastros\Controllers\ClienteEmpresaController.cs" />
+    <Compile Include="Areas\Cadastros\Controllers\ContratoEmpresaController.cs" />
+    <Compile Include="Areas\Cadastros\Controllers\RamoAtividadeController.cs" />
+    <Compile Include="Areas\Cadastros\Controllers\TipoEnderecoController.cs" />
+    <Compile Include="Areas\Cadastros\Controllers\TipoContatoController.cs" />
+    <Compile Include="Areas\ControleAcessoCliente\ControleAcessoClienteAreaRegistration.cs" />
+    <Compile Include="Areas\ControleAcessoCliente\Controllers\GrupoUsuarioClienteController.cs" />
+    <Compile Include="Areas\ControleAcessoCliente\Controllers\UsuarioClienteController.cs" />
+    <Compile Include="Areas\ControleAcesso\ControleAcessoAreaRegistration.cs" />
+    <Compile Include="Areas\ControleAcesso\Controllers\UsuarioBackOfficeController.cs" />
+    <Compile Include="Areas\ControleAcesso\Controllers\PerfilAcessoBackOfficeController.cs" />
+    <Compile Include="Controllers\AutenticacaoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Facades\AutenticacaoFacade.cs" />
+    <Compile Include="Facades\Base\BaseFacade.cs" />
+    <Compile Include="Facades\AcessoClienteFacade.cs" />
+    <Compile Include="Facades\ClienteEmpresaFacade.cs" />
+    <Compile Include="Facades\AcessoFacade.cs" />
+    <Compile Include="Facades\ContratoEmpresaFacade.cs" />
+    <Compile Include="Facades\MensagensFacade.cs" />
+    <Compile Include="Facades\ProdutoFacade.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DnaMaisHelperButton.cs" />
+    <Compile Include="Helpers\DnaMaisHelperCheckBoxList.cs" />
+    <Compile Include="Helpers\DnaMaisHelperDropDownList.cs" />
+    <Compile Include="Helpers\DnaMaisHelperFileDownload.cs" />
+    <Compile Include="Helpers\DnaMaisHelperFileUpload.cs" />
+    <Compile Include="Helpers\DnaMaisHelperForm.cs" />
+    <Compile Include="Helpers\DnaMaisHelperFormValidation.cs" />
+    <Compile Include="Helpers\DnaMaisHelperMessage.cs" />
+    <Compile Include="Helpers\DnaMaisHelperRadioButtonList.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTab.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTable.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextArea.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextBox.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextBoxCombinated.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextCNPJ.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextCPF.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextDatePicker.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextEmail.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextNumber.cs" />
+    <Compile Include="Helpers\DnaMaisHelperTextValue.cs" />
+    <Compile Include="Helpers\DnaMaisHelperWebGrid.cs" />
+    <Compile Include="Helpers\DnaMaisHelperWidget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\NewsletterController.cs" />
   </ItemGroup>
@@ -152,6 +207,7 @@
     <Content Include="assets\images\logo-default.png" />
     <Content Include="assets\images\logo-light.png" />
     <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\LogoDNAMais.png" />
     <Content Include="assets\images\patterns\az_subtle.png" />
     <Content Include="assets\images\patterns\blizzard.png" />
     <Content Include="assets\images\patterns\bright_squares.png" />
@@ -184,10 +240,69 @@
     <Content Include="assets\images\projects\project.jpg" />
     <Content Include="assets\images\widget-twitter-profile.jpg" />
     <Content Include="assets\javascripts\dashboard\examples.dashboard.js" />
+    <Content Include="assets\javascripts\dnamais.js" />
     <Content Include="assets\javascripts\extra\examples.ajax.made.easy.js" />
     <Content Include="assets\javascripts\forms\examples.advanced.form.js" />
     <Content Include="assets\javascripts\forms\examples.validation.js" />
     <Content Include="assets\javascripts\forms\examples.wizard.js" />
+    <Content Include="assets\javascripts\jquery-validation\changelog.txt" />
+    <Content Include="assets\javascripts\jquery-validation\dist\additional-methods.js" />
+    <Content Include="assets\javascripts\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="assets\javascripts\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="assets\javascripts\jquery-validation\grunt.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery-1.3.2.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery-1.4.2.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery-1.4.4.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery-1.5.2.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery-1.6.1.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery-1.7.2.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery.form.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery.metadata.js" />
+    <Content Include="assets\javascripts\jquery-validation\lib\jquery.mockjax.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_ar.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_bg.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_ca.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_cs.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_da.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_de.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_el.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_es.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_et.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_eu.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_fa.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_fi.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_fr.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_he.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_hr.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_hu.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_it.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_ja.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_ka.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_kk.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_lt.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_lv.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_nl.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_no.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_pl.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_ro.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_ru.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_si.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_sk.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_sl.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_sr.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_sv.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_th.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_tr.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_uk.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_vi.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_zh.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\methods_de.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\methods_nl.js" />
+    <Content Include="assets\javascripts\jquery-validation\localization\methods_pt.js" />
     <Content Include="assets\javascripts\maps\examples.gmap.js" />
     <Content Include="assets\javascripts\maps\examples.map.builder.js" />
     <Content Include="assets\javascripts\maps\examples.vector.maps.js" />
@@ -1406,6 +1521,17 @@
     <Content Include="assets\vendor\summernote\summernote.js" />
     <Content Include="assets\vendor\summernote\summernote.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Areas\ControleAcessoCliente\Views\UsuarioCliente\Cadastro.cshtml" />
+    <Content Include="Areas\ControleAcessoCliente\Views\UsuarioCliente\Index.cshtml" />
+    <Content Include="assets\javascripts\jquery-validation\package.json" />
+    <Content Include="assets\javascripts\jquery-validation\README.md" />
+    <Content Include="Areas\Cadastros\Views\ContratoEmpresa\Index.cshtml" />
+    <Content Include="Areas\Cadastros\Views\ContratoEmpresa\Cadastro.cshtml" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1417,6 +1543,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Cadastros\Models\" />
+    <Folder Include="Areas\Cadastros\Views\Shared\" />
+    <Folder Include="Areas\ControleAcessoCliente\Models\" />
+    <Folder Include="Areas\ControleAcessoCliente\Views\Shared\" />
+    <Folder Include="Areas\ControleAcesso\Models\" />
+    <Folder Include="Areas\ControleAcesso\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -1864,6 +1996,90 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_ModalMsgAnswered.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DNAMais.Domain.Services\DNAMais.Domain.Services.csproj">
+      <Project>{c43f6364-a880-4ace-bbfa-878c99f6b43c}</Project>
+      <Name>DNAMais.Domain.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNAMais.Domain\DNAMais.Domain.csproj">
+      <Project>{a6e1ef7c-d622-4362-b780-ea6171a55185}</Project>
+      <Name>DNAMais.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNAMais.Framework\DNAMais.Framework.csproj">
+      <Project>{a6c06abb-4570-4f8e-8a53-724d670bc11c}</Project>
+      <Name>DNAMais.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\TipoContato\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Listagem.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\TipoContato\Cadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Cadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_DivChanges.cshtml" />
+    <Content Include="Views\Shared\_StandardButtons.cshtml" />
+    <Content Include="Views\Shared\_StandardMessages.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_StandardRemove.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Remove.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\TipoEndereco\Cadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\TipoEndereco\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Autenticacao\AcessoNegado.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Autenticacao\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\RamoAtividade\Cadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\RamoAtividade\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ControleAcesso\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ControleAcesso\Views\PerfilAcessoBackOffice\Cadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ControleAcesso\Views\PerfilAcessoBackOffice\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ControleAcesso\Views\UsuarioBackOffice\Cadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ControleAcesso\Views\UsuarioBackOffice\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Cadastros\Views\ClienteEmpresa\Index.cshtml" />
+    <Content Include="Areas\Cadastros\Views\ClienteEmpresa\Cadastro.cshtml" />
+    <Content Include="Areas\ControleAcessoCliente\Views\Web.config" />
+    <Content Include="Areas\ControleAcessoCliente\Views\GrupoUsuarioCliente\Cadastro.cshtml" />
+    <Content Include="Areas\ControleAcessoCliente\Views\GrupoUsuarioCliente\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\Homologacao.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

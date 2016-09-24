@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Ftp";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+@Html.Partial("Login/Ftp/_TitleBarFtp")
+
+<div class="container">
+
+    <div class="col-md-12">
+        @Html.Partial("Login/Ftp/_HeadingFtp")
+
+        <div class="col-md-12">
+            <div class="tabs tabs-quaternary">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#tabCnpj" id="cnpj" data-toggle="tab"><i class="fa fa-question"></i> ####</a>
+                    </li>
+                    <li>
+                        <a href="#tabRs" id="razaoSocial" data-toggle="tab"><i class="fa fa-question"></i> ###</a>
+                    </li>
+                    <li>
+                        <a href="#tabTelefone" id="telefone" data-toggle="tab"><i class="fa fa-question"></i> XXX</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                   <p>fafasdadasd</p>
+                    <p>fhuhfahsudhuiahdahduhasuhdiasda</p>
+                </div>
+            </div>
+        </div>
+
+        @*<div class="content" style="cursor:default;">
+                <div class="grid" style="cursor:default;">
+                    <div class=" grid-pf-after" style="cursor:default;">
+                        <figure class="effect-sadie-2" id="divPf" style="cursor:default;">
+                            <img src="~/HoverEffectIdeas/HoverEffectIdeas/img/t1.png" />
+                            <figcaption>
+                                <h2><i class="fa fa-search-plus"></i> Pessoa <span>Física</span></h2>
+
+                                <div class="col-md-6" id="pfCpf" style="margin-top:20%;">
+                                    <label style="float:left;">CPF</label>
+                                    <input type="text" class="form-control" id="txtCpf" style="margin-bottom:5px;" />
+                                    <input type="button" value="Pesquisar" class="btn btn-default" style="float:left;margin-bottom:10px;" />
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>*@
+
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#txtCnpj').focus();
+
+    });
+
+</script>

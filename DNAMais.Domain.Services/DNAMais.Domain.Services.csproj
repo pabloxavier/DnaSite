@@ -30,10 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -46,8 +48,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackOfficeUserService.cs" />
-    <Compile Include="MessageService.cs" />
+    <Compile Include="AutenticacaoService.cs" />
+    <Compile Include="ClienteEmpresaContatoFoneService.cs" />
+    <Compile Include="ClienteEmpresaEnderecoService.cs" />
+    <Compile Include="ContratoEmpresaPrecificacaoService.cs" />
+    <Compile Include="ClienteEmpresaService.cs" />
+    <Compile Include="PerfilAcessoFuncionalidadeService.cs" />
+    <Compile Include="PoliticaComercialService.cs" />
+    <Compile Include="ItemProdutoService.cs" />
+    <Compile Include="FuncionalidadeBackOfficeService.cs" />
+    <Compile Include="ProdutoService.cs" />
+    <Compile Include="GrupoUsuarioClienteService.cs" />
+    <Compile Include="CategoriaProdutoService.cs" />
+    <Compile Include="PerfilUsuarioClienteService.cs" />
+    <Compile Include="StatusClienteEmpresaService.cs" />
+    <Compile Include="StatusFaturamentoService.cs" />
+    <Compile Include="StatusSolicitacaoContagemService.cs" />
+    <Compile Include="ContratoEmpresaService.cs" />
+    <Compile Include="ClienteEmpresaContatoService.cs" />
+    <Compile Include="ClienteEmpresaContatoEmailService.cs" />
+    <Compile Include="TipoPrecificacaoService.cs" />
+    <Compile Include="TipoParametroContagemService.cs" />
+    <Compile Include="UfService.cs" />
+    <Compile Include="PerfilAcessoBackOfficeService.cs" />
+    <Compile Include="RamoAtividadeService.cs" />
+    <Compile Include="TipoEnderecoService.cs" />
+    <Compile Include="TipoContatoService.cs" />
+    <Compile Include="UsuarioClienteService.cs" />
+    <Compile Include="UsuarioBackOfficeService.cs" />
+    <Compile Include="MensagemContatoService.cs" />
     <Compile Include="NewsletterService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TesteServico.cs" />

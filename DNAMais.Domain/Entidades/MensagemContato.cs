@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DNAMais.Domain.CustomAttributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace DNAMais.Domain.Entidades
 {
     [Table("MENSAGEM_CONTATO", Schema = "DNASITE")]
+    [SequenceOracle("SQ_MENSAGEM_CONTATO")]
     public class MensagemContato
     {
         #region Propriedades Públicas
@@ -55,9 +57,9 @@ namespace DNAMais.Domain.Entidades
 
         [Column("ID_USUARIO_BACKOFFICE_RESPOSTA")]
         [Index("MENSAGEM_CONTATO_IDX_01")]
-        public int? IdUsuarioBackofficeResposta { get; set; }
-        [ForeignKey("IdUsuarioBackofficeResposta")]
-        public virtual UsuarioBackoffice IdUsuarioBackoffice { get; set; }
+        public int? IdUsuarioBackOfficeResposta { get; set; }
+        [ForeignKey("IdUsuarioBackOfficeResposta")]
+        public virtual UsuarioBackOffice UsuarioBackOffice { get; set; }
 
         [Column("DT_RESPOSTA")]
         public DateTime? DataResposta { get; set; }

@@ -1442,9 +1442,9 @@
     <Content Include="Views\Login\Logged.cshtml" />
     <Content Include="Views\Shared\Login\Logged\_HeadingLogged.cshtml" />
     <Content Include="Views\Shared\Login\Logged\_TitleBarLogged.cshtml" />
-    <Content Include="Views\Login\CpfPf.cshtml" />
-    <Content Include="Views\Login\AddressPf.cshtml" />
-    <Content Include="Views\Login\NamePf.cshtml" />
+    <Content Include="Views\Login\PesquisaPessoaFisica.cshtml" />
+    <Content Include="Views\Login\PesquisaPessoaJuridica.cshtml" />
+    <Content Include="Views\Login\PesquisaFtp.cshtml" />
     <Content Include="Views\Login\PhonePf.cshtml" />
     <Content Include="TextInputEffects\TextInputEffects\fonts\codropsicons\codropsicons.eot" />
     <Content Include="TextInputEffects\TextInputEffects\fonts\codropsicons\codropsicons.ttf" />
@@ -1501,6 +1501,12 @@
     <Content Include="Views\Shared\Login\Logged\_ContractServicesPf.cshtml" />
     <Content Include="Views\Shared\Login\Logged\_ContractServicesVehicle.cshtml" />
     <Content Include="Views\Shared\Login\Logged\_ContractServicesFtp.cshtml" />
+    <Content Include="Views\Shared\Login\Pf\_HeadingPf.cshtml" />
+    <Content Include="Views\Shared\Login\Pj\_HeadingPj.cshtml" />
+    <Content Include="Views\Shared\Login\Pf\_TitleBarPf.cshtml" />
+    <Content Include="Views\Shared\Login\Pj\_TitleBarPj.cshtml" />
+    <Content Include="Views\Shared\Login\Ftp\_TitleBarFtp.cshtml" />
+    <Content Include="Views\Shared\Login\Ftp\_HeadingFtp.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

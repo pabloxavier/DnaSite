@@ -15,6 +15,7 @@ namespace DNAMais.Domain.Entidades
 
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("CD_CATEGORIA_PRODUTO")]
         [StringLength(10)]
         public string Codigo { get; set; }
@@ -28,10 +29,13 @@ namespace DNAMais.Domain.Entidades
         [Column("CD_TIPO_PRECIFICACAO")]
         public short? CodigoPrecificacao { get; set; }
         [ForeignKey("CodigoPrecificacao")]
-        public virtual TipoPrecificacao CodigoTipoPrecificacao { get; set; }
+        public virtual TipoPrecificacao TipoPrecificacao { get; set; }
 
         public virtual ICollection<CategoriaProdutoFaixa> CategoriasFaixas { get; set; }
         public virtual ICollection<CategoriaProdutoFaixaLog> LogCategoriasFaixas { get; set; }
+        public virtual ICollection<Produto> Produtos { get; set; }
+        public virtual ICollection<ContratoEmpresaPrecificacao> ContratosEmpresasPrecificacoes { get; set; }
+        public virtual ICollection<ItemFaturamento> ItensFaturamentos { get; set; }
 
         #endregion
 
@@ -39,7 +43,11 @@ namespace DNAMais.Domain.Entidades
 
         public CategoriaProduto()
         {
-
+            CategoriasFaixas = new HashSet<CategoriaProdutoFaixa>();
+            LogCategoriasFaixas = new HashSet<CategoriaProdutoFaixaLog>();
+            Produtos = new HashSet<Produto>();
+            ContratosEmpresasPrecificacoes = new HashSet<ContratoEmpresaPrecificacao>();
+            ItensFaturamentos = new HashSet<ItemFaturamento>();
         }
 
         #endregion

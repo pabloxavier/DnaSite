@@ -77,6 +77,14 @@ namespace DNAMais.BackOffice.App_Start
                 "~/assets/javascripts/theme.custom.js",
                 "~/assets/javascripts/theme.init.js"));
 
+            bundles.Add(new ScriptBundle("~/scripts/jqueryvalidation").Include(
+                        "~/assets/javascripts/jquery-validation/dist/jquery.validate.js",
+                        "~/assets/javascripts/form_validator.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                "~/Scripts/jquery.unobtrusive*",
+                "~/Scripts/jquery.validate*")); 
+            
             bundles.Add(new ScriptBundle("~/Scripts/"));
         }
 
