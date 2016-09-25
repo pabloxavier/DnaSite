@@ -13,16 +13,19 @@ namespace DNAMais.BackOffice.Facades
     public class MensagemContatoFacade : BaseFacade, IDisposable
     {
         private MensagemContatoService serviceMensagem;
+        private UsuarioBackOfficeService serviceBackOffice;
 
         public MensagemContatoFacade(ModelStateDictionary modelState)
             : base(modelState)
         {
             serviceMensagem = new MensagemContatoService();
+            serviceBackOffice = new UsuarioBackOfficeService();
         }
 
         public void Dispose()
         {
             serviceMensagem.Dispose();
+            serviceBackOffice.Dispose();
         }
 
         #region Mensagem Contato
@@ -37,11 +40,20 @@ namespace DNAMais.BackOffice.Facades
             return serviceMensagem.ListarRespondidas();
         }
 
-        public MensagemContato ConsultarMensagemPorId(int id)
+        public MensagemContato ConsultarMensagemNaoRespondidaPorId(int id)
         {
             var teste = serviceMensagem.ConsultarPorId(id);
 
             return serviceMensagem.ConsultarPorId(id);
+        }
+
+        public MensagemContato ConsultarMensagemRespondidaPorId(int id)
+        {
+            MensagemContato mensagemContato = serviceMensagem.ConsultarPorId(id);
+
+            mensagemContato.UsuarioBackOffice = serviceBackOffice.ConsultarPorId(id);
+
+            return mensagemContato;
         }
 
         public void SalvarMensagemContato(MensagemContato mensagemContato)
