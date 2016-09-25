@@ -43,12 +43,12 @@ namespace DNAMais.BackOffice.Areas.Mensagens.Controllers
 
         public ActionResult Details(int id)
         {
-            return View(facade.ConsultarMensagemPorId(id));
+            return View(facade.ConsultarMensagemNaoRespondidaPorId(id));
         }
 
         public ActionResult Answer(int id)
         {
-            return View(facade.ConsultarMensagemPorId(id));
+            return View(facade.ConsultarMensagemNaoRespondidaPorId(id));
         }
 
         [HttpPost]

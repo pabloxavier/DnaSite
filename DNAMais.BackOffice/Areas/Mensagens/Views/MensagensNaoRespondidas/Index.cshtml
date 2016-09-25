@@ -24,7 +24,10 @@
         <p style="color:#449010; font-size:medium;">@TempData["msgSucesso"]</p>
     }
 
-    @grid.GetHtml(
+    @if (grid.Rows.Count > 0)
+    {
+
+        @grid.GetHtml(
         tableStyle: "table table-bordered table-condensed table-striped table-primary table-vertical-center",
         columns:
             grid.Columns(
@@ -38,7 +41,12 @@
                     format: @<span>
                         @Html.DnaMaisTableLinkDetails("Details", (object)item.Id) Exibir Detalhes
                     </span>
-                                                                        )
-                                                                    )
-                                                                )
+                    )
+                )
+            )
+    }
+    else
+    {
+        <p style="color:#449010; font-size:medium;">Não há mensagens pendentes.</p>
+    }
 }

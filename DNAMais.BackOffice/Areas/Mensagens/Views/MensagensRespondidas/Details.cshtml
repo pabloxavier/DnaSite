@@ -21,11 +21,11 @@
     <table class="table table-bordered table-hover mb-none">
         <thead>
             <tr>
-                <th>N.</th>
-                <th>Nome</th>
-                <th>E-Mail</th>
-                <th>Data do Envio</th>
-                <th>Título/Assunto</th>
+                <th class="col-md-1">N.</th>
+                <th class="col-md-3">Nome</th>
+                <th class="col-md-3">E-Mail</th>
+                <th class="col-md-2">Data do Envio</th>
+                <th class="col-md-3">Título/Assunto</th>
             </tr>
         </thead>
         <tbody>
@@ -49,7 +49,25 @@
                 <p class="text-justify text-md" style="line-height:30px; text-indent: 25px;">@Model.Conteudo</p>
             </td>
         </tr>
-
+    </table>
+    <hr />
+    <table class="table table-bordered table-hover mb-none">
+        <thead>
+            <tr>
+                <th class="col-md-1">N.</th>
+                <th class="col-md-3">Usuário Responsável</th>
+                <th class="col-md-3">E-Mail</th>
+                <th class="col-md-5">Data da Resposta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.UsuarioBackOffice.Id</td>
+                <td>@Model.UsuarioBackOffice.Nome</td>
+                <td>@Model.UsuarioBackOffice.Email</td>
+                <td>@Model.DataResposta</td>
+            </tr>
+        </tbody>
     </table>
     <table class="table table-bordered table-hover mb-none">
         <thead>
