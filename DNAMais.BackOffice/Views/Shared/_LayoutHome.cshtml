@@ -133,18 +133,18 @@
                                     </a>
                                     <ul class="nav nav-children">
                                         <li id="MENU-NEWSLETTER-NAO-CONFIRMADA">
-                                            <a href="@Url.Action("NotConfirmed","Newsletter")">
-                                                Não Confirmados
+                                            <a href="@Url.Action("Index", "NewsletterNaoConfirmada", new { area = "Newsletter" })">
+                                                Não Confirmadas
                                             </a>
                                         </li>
                                         <li id="MENU-NEWSLETTER-CONFIRMADA">
-                                            <a href="@Url.Action("Confirmed","Newsletter")">
-                                                Confirmados
+                                            <a href="@Url.Action("Index", "NewsletterConfirmada", new { area = "Newsletter" })">
+                                                Confirmadas
                                             </a>
                                         </li>
                                         <li id="MENU-NEWSLETTER-CANCELADA">
-                                            <a href="@Url.Action("Canceled","Newsletter")">
-                                                Cancelados
+                                            <a href="@Url.Action("Index", "NewsletterCancelada", new { area = "Newsletter" })">
+                                                Canceladas
                                             </a>
                                         </li>
                                     </ul>

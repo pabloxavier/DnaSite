@@ -22,6 +22,17 @@ namespace DNAMais.BackOffice.Helpers
             return new HtmlString(tag);
         }
 
+        public static HtmlString DnaMaisTableLinkCheck(this HtmlHelper helper, string action, object id)
+        {
+            string area = helper.ViewContext.RouteData.DataTokens["area"].ToString();
+            string controller = helper.ViewContext.Controller.ValueProvider.GetValue("Controller").RawValue.ToString();
+
+            string href = new UrlHelper(helper.ViewContext.HttpContext.Request.RequestContext).Action(action, controller, new { area = area, id = id });
+
+            string tag = String.Format("<a href=\"{0}\" class=\"btn btn-default\" title=\"confirmar\">&nbsp;<i class=\"fa fa-check\"></i>&nbsp;</a>&nbsp;", href);
+            return new HtmlString(tag);
+        }
+
         public static HtmlString DnaMaisTableLinkEdit(this HtmlHelper helper, string action, object id)
         {
             string area = helper.ViewContext.RouteData.DataTokens["area"].ToString();
