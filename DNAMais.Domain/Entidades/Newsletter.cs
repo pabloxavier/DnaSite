@@ -19,16 +19,12 @@ namespace DNAMais.Domain.Entidades
         #region Propriedades Públicas
 
         [Key]
-        [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID_NEWSLETTER")]
-        [Index("TS_DNASITE_INDEX")]
         public int? Id { get; set; }
 
         [Required]
         [Column("CD_GUID")]
         [StringLength(32)]
-        [Index("NEWSLETTER_IDX_02")]
         public string GUID { get; set; }
 
         [Required]
@@ -39,7 +35,6 @@ namespace DNAMais.Domain.Entidades
         [Required]
         [Column("DS_EMAIL")]
         [StringLength(80)]
-        [Index("NEWSLETTER_IDX_01")]
         public string Email { get; set; }
 
         [Required]

@@ -85,7 +85,17 @@ namespace DNAMais.Domain.Services
 
         public IQueryable<Newsletter> ListarNaoConfirmadas()
         {
-            return repoNewsletter.Filter(i => i.OptIn == false);
+            return repoNewsletter.Filter(i => i.OptInText == "N");
+        }
+
+        public IQueryable<Newsletter> ListarConfirmadas()
+        {
+            return repoNewsletter.Filter(i => i.OptInText == "S" && i.OptOutText == "N");
+        }
+
+        public IQueryable<Newsletter> ListarCanceladas()
+        {
+            return repoNewsletter.Filter(i => i.OptOutText == "S" && i.OptInText == "S");
         }
 
         public Newsletter ConsultarPorId(int id)
@@ -103,14 +113,22 @@ namespace DNAMais.Domain.Services
             return repoNewsletter.FindFirst(i => i.Email == email);
         }
 
-        public void Confirmar()
+        public Newsletter ConfirmarNewsletter(int id)
         {
-            
+            Newsletter newsletter = repoNewsletter.GetById(id);
+
+            newsletter.OptInText = "S";
+
+            return newsletter;
         }
 
-        public void Cancelar()
+        public Newsletter CancelarNewsletter(int id)
         {
+            Newsletter newsletter = repoNewsletter.GetById(id);
 
+            newsletter.OptOutText = "S";
+
+            return newsletter;
         }
     }
 }

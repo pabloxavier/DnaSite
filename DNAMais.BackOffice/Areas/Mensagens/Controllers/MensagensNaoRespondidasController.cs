@@ -55,7 +55,7 @@ namespace DNAMais.BackOffice.Areas.Mensagens.Controllers
         public ActionResult Answer(MensagemContato mensagemContato)
         {
             facade.SalvarMensagemContato(mensagemContato);
-            TempData["msgSucesso"] = "Resposta Enviada com Sucesso";
+            TempData["msgSucesso"] = "Resposta Enviada com sucesso";
             return View("Index", facade.ListarNaoRespondidas());
         }
     }
